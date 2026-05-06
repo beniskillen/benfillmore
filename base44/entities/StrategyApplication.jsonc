@@ -1,0 +1,62 @@
+{
+  "name": "StrategyApplication",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Applicant's full name"
+    },
+    "business_name": {
+      "type": "string",
+      "description": "Name of the business"
+    },
+    "website": {
+      "type": "string",
+      "description": "Business website URL"
+    },
+    "niche": {
+      "type": "string",
+      "enum": [
+        "hospitality",
+        "ecommerce",
+        "other"
+      ],
+      "description": "Business niche"
+    },
+    "monthly_ad_spend": {
+      "type": "string",
+      "enum": [
+        "under_5k",
+        "5k_15k",
+        "15k_50k",
+        "50k_plus",
+        "not_sure"
+      ],
+      "description": "Monthly advertising spend range"
+    },
+    "biggest_challenge": {
+      "type": "string",
+      "description": "Their biggest marketing challenge"
+    },
+    "email": {
+      "type": "string",
+      "description": "Contact email address"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "contacted",
+        "scheduled",
+        "completed"
+      ],
+      "default": "new",
+      "description": "Application status"
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "business_name"
+  ]
+}
