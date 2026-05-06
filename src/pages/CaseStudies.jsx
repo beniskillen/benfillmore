@@ -125,8 +125,15 @@ function CaseStudyDetail({ study, onClose }) {
   );
 }
 
+const FILTER_TABS = ['All', 'Hospitality', 'E-Commerce', 'Lead Gen'];
+
 export default function CaseStudies() {
   const [selectedStudy, setSelectedStudy] = useState(null);
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const filtered = activeFilter === 'All'
+    ? CASE_STUDIES
+    : CASE_STUDIES.filter(s => s.industry.toLowerCase().includes(activeFilter.toLowerCase()));
 
   return (
     <>
@@ -147,8 +154,25 @@ export default function CaseStudies() {
       {/* Grid */}
       <section className="pb-24 md:pb-32 bg-background">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
+          {/* Filter tabs */}
+          <div className="flex flex-wrap gap-2 mb-10">
+            {FILTER_TABS.map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveFilter(tab)}
+                className={`font-body text-sm font-medium px-5 py-2 rounded-full border transition-all duration-200 ${
+                  activeFilter === tab
+                    ? 'bg-black text-white border-black'
+                    : 'bg-white text-black/60 border-black/10 hover:border-black hover:text-black'
+                }`}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {CASE_STUDIES.map((study, i) => (
+            {filtered.map((study, i) => (
               <ScrollReveal key={study.id} delay={i * 0.08}>
                 <CaseStudyCard study={study} onClick={() => setSelectedStudy(study)} />
               </ScrollReveal>

@@ -6,8 +6,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 const NAV_ITEMS = [
   { label: 'Home', path: '/' },
   { label: 'Services', path: '/services' },
-  { label: 'Niches', path: '/niches' },
+  { label: 'Hospitality', path: '/hospitality' },
+  { label: 'E-Commerce', path: '/e-commerce' },
   { label: 'Case Studies', path: '/case-studies' },
+  { label: 'Pricing', path: '/pricing' },
   { label: 'About', path: '/about' },
 ];
 
@@ -41,17 +43,17 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-8 flex items-center justify-between">
-          <Link to="/" className="font-heading font-bold text-2xl tracking-tight text-black">
+          <Link to="/" className="font-heading font-bold text-2xl tracking-tight text-black flex-shrink-0">
             FILLMORE
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-sm font-medium transition-colors relative group ${
+                className={`text-sm font-medium transition-colors relative group whitespace-nowrap ${
                   location.pathname === item.path ? 'text-black' : 'text-black/60 hover:text-black'
                 }`}
               >
@@ -63,7 +65,7 @@ export default function Navbar() {
             ))}
             <Link
               to="/apply"
-              className="bg-black text-white text-sm font-semibold px-6 py-2.5 rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200"
+              className="bg-black text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 whitespace-nowrap flex-shrink-0"
             >
               Apply Now
             </Link>
@@ -72,7 +74,7 @@ export default function Navbar() {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-black"
+            className="lg:hidden p-2 text-black"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -88,19 +90,19 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-white flex flex-col items-center justify-center"
+            className="fixed inset-0 z-40 bg-white flex flex-col items-center justify-center overflow-y-auto py-24"
           >
-            <nav className="flex flex-col items-center gap-8">
+            <nav className="flex flex-col items-center gap-6">
               {NAV_ITEMS.map((item, i) => (
                 <motion.div
                   key={item.path}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.05 }}
+                  transition={{ delay: i * 0.04 }}
                 >
                   <Link
                     to={item.path}
-                    className="font-heading font-bold text-4xl uppercase tracking-tight text-black hover:text-black/60 transition-colors"
+                    className="font-heading font-bold text-3xl uppercase tracking-tight text-black hover:text-black/50 transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -109,11 +111,12 @@ export default function Navbar() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.25 }}
+                transition={{ delay: 0.3 }}
+                className="mt-4"
               >
                 <Link
                   to="/apply"
-                  className="bg-black text-white text-lg font-semibold px-8 py-3 rounded-full mt-4 inline-block"
+                  className="bg-black text-white text-lg font-semibold px-8 py-3 rounded-full inline-block"
                 >
                   Apply Now
                 </Link>

@@ -16,22 +16,26 @@ export default function NichesSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <ScrollReveal delay={0}>
             <Link
-              to="/niches#hospitality"
-              className="group block bg-black rounded-2xl p-10 md:p-14 min-h-[280px] md:min-h-[340px] flex flex-col justify-end relative overflow-hidden transition-all duration-500 hover:shadow-2xl"
+              to="/hospitality"
+              className="group block rounded-2xl p-10 md:p-14 min-h-[300px] md:min-h-[360px] flex flex-col justify-end relative overflow-hidden transition-all duration-500 hover:shadow-2xl"
+              style={{ background: '#000' }}
             >
-              <div className="absolute inset-0 bg-[#961621] opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
+              <div
+                className="absolute inset-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100"
+                style={{ background: '#961621' }}
+              />
               <div className="relative z-10">
                 <span className="font-heading font-bold text-white/40 text-sm uppercase tracking-widest">
                   Niche
                 </span>
-                <h3 className="font-heading font-bold text-white text-3xl md:text-5xl uppercase tracking-tight mt-2">
+                <h3 className="font-heading font-bold text-white text-4xl md:text-6xl uppercase tracking-tight mt-2">
                   Hospitality
                 </h3>
                 <p className="font-body text-white/60 text-base mt-4 max-w-sm">
                   Fill every table. From quiet nights to waitlists.
                 </p>
-                <div className="mt-6 flex items-center gap-2 text-white/60 group-hover:text-white transition-colors">
-                  <span className="font-body text-sm font-medium">Learn more</span>
+                <div className="mt-6 flex items-center gap-2 text-white/50 group-hover:text-white transition-colors">
+                  <span className="font-body text-sm font-medium">See how we do it</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
@@ -40,22 +44,26 @@ export default function NichesSection() {
 
           <ScrollReveal delay={0.1}>
             <Link
-              to="/niches#ecommerce"
-              className="group block bg-black rounded-2xl p-10 md:p-14 min-h-[280px] md:min-h-[340px] flex flex-col justify-end relative overflow-hidden transition-all duration-500 hover:shadow-2xl"
+              to="/e-commerce"
+              className="group block rounded-2xl p-10 md:p-14 min-h-[300px] md:min-h-[360px] flex flex-col justify-end relative overflow-hidden transition-all duration-500 hover:shadow-2xl"
+              style={{ background: '#000' }}
             >
-              <div className="absolute inset-0 bg-[#EF6A3F] opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
+              <div
+                className="absolute inset-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100"
+                style={{ background: '#EF6A3F' }}
+              />
               <div className="relative z-10">
                 <span className="font-heading font-bold text-white/40 text-sm uppercase tracking-widest">
                   Niche
                 </span>
-                <h3 className="font-heading font-bold text-white text-3xl md:text-5xl uppercase tracking-tight mt-2">
+                <h3 className="font-heading font-bold text-white text-4xl md:text-6xl uppercase tracking-tight mt-2">
                   E-Commerce
                 </h3>
                 <p className="font-body text-white/60 text-base mt-4 max-w-sm">
-                  Turn clicks into customers. Scroll to checkout.
+                  Turn clicks into customers. From scroll to checkout.
                 </p>
-                <div className="mt-6 flex items-center gap-2 text-white/60 group-hover:text-white transition-colors">
-                  <span className="font-body text-sm font-medium">Learn more</span>
+                <div className="mt-6 flex items-center gap-2 text-white/50 group-hover:text-white transition-colors">
+                  <span className="font-body text-sm font-medium">See how we do it</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>

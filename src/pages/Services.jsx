@@ -113,6 +113,13 @@ export default function Services() {
                 </ScrollReveal>
               ))}
             </div>
+            <ScrollReveal delay={0.3}>
+              <div className="mt-10">
+                <a href="/pricing" className={`font-body text-sm font-medium underline underline-offset-4 transition-colors ${si % 2 === 0 ? 'text-white/50 hover:text-white' : 'text-black/40 hover:text-black'}`}>
+                  See pricing for this →
+                </a>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
       ))}

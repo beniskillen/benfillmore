@@ -9,8 +9,10 @@ import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import SiteLayout from './components/layout/SiteLayout';
 import Home from './pages/Home';
 import Services from './pages/Services';
-import Niches from './pages/Niches';
+import Hospitality from './pages/Hospitality';
+import Ecommerce from './pages/Ecommerce';
 import CaseStudies from './pages/CaseStudies';
+import Pricing from './pages/Pricing';
 import About from './pages/About';
 import Apply from './pages/Apply';
 
@@ -41,8 +43,10 @@ const AuthenticatedApp = () => {
       <Route element={<SiteLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/niches" element={<Niches />} />
+        <Route path="/hospitality" element={<Hospitality />} />
+        <Route path="/e-commerce" element={<Ecommerce />} />
         <Route path="/case-studies" element={<CaseStudies />} />
+        <Route path="/pricing" element={<Pricing />} />
         <Route path="/about" element={<About />} />
         <Route path="/apply" element={<Apply />} />
       </Route>
