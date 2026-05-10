@@ -5,30 +5,38 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ScrollReveal from '../components/shared/ScrollReveal';
 import MediaCarousel from '../components/home/MediaCarousel';
 
-const OUTCOMES = [
+const FOCUS_ITEMS = [
   {
-    title: 'Fill Empty Seats',
-    desc: 'Targeted local ads that turn slow nights into busy ones. Built around your actual capacity and margins.',
+    title: 'Filling slower weekdays',
+    desc: 'Most venues are packed Saturdays and dead Tuesdays. We fix the Tuesdays.',
   },
   {
-    title: 'Build a Waitlist',
-    desc: "Make your venue the place people are trying to get into, not the place with availability tonight.",
+    title: 'Increasing repeat visits',
+    desc: 'Bringing first-time diners back. The cheapest customer is the one who already loved you.',
   },
   {
-    title: 'Turn Diners into Regulars',
-    desc: 'Email, retention, and loyalty systems that bring first-timers back.',
+    title: 'Launching new menus and events',
+    desc: 'Not just announcing — building campaigns that drive actual bookings on launch night.',
   },
   {
-    title: 'Drive Real Foot Traffic',
-    desc: 'Local awareness and paid social that fills your venue with paying customers, not Instagram tourists.',
+    title: 'Growing your customer database',
+    desc: 'Email, SMS, loyalty. The asset you own that doesn\'t depend on Meta\'s algorithm.',
+  },
+  {
+    title: 'Driving direct bookings',
+    desc: 'Less commission to platforms. More margin in your pocket.',
+  },
+  {
+    title: 'Building local brand awareness',
+    desc: 'Become the venue people in your area know, talk about, and recommend.',
   },
 ];
 
 const HOW_IT_WORKS = [
-  { step: '01', title: 'Audit', desc: "We go through your current marketing, accounts, and numbers. Honestly." },
-  { step: '02', title: 'Strategy', desc: "A clear plan. What to focus on, what to ignore, what to spend." },
-  { step: '03', title: 'Execute', desc: "We run the campaigns, make the content, ship the work." },
-  { step: '04', title: 'Optimize', desc: "We review what's working every week. Double down. Cut what's not." },
+  { step: '01', title: 'Audit', desc: "We look at your bookings, customer flow, ad performance, content, and retention. Find where the leaks are." },
+  { step: '02', title: 'Strategy', desc: "Build a plan around your capacity, margins, and what's actually filling tables vs. what's just looking busy." },
+  { step: '03', title: 'Execute', desc: "Run paid ads, produce content, manage social, build retention systems. All hands-on." },
+  { step: '04', title: 'Optimise', desc: "Weekly reporting, live adjustments, double down on what's filling tables." },
 ];
 
 const FAQS = [
@@ -41,15 +49,23 @@ const FAQS = [
     a: "We recommend a minimum of A$3,000/month in ad spend to get meaningful data and results. The management fee is separate.",
   },
   {
-    q: 'Do you work with single venues or chains?',
-    a: 'Both. Single venues get the same level of attention as multi-location groups. We cap our client roster intentionally so nothing gets deprioritized.',
+    q: 'Do we need a big following first?',
+    a: "No. Paid ads don't care about your follower count. We target the right people in your area regardless of your starting audience size.",
   },
   {
-    q: 'Do you handle photography and video too?',
-    a: 'We handle UGC production, creative direction, and content strategy. For in-person shoots, we can coordinate and brief — let us know what you need.',
+    q: 'Can you work with small or single venues?',
+    a: 'Yes. Single venues get the same attention as groups. We cap our roster intentionally so nothing gets deprioritised.',
   },
   {
-    q: 'Can you work with our booking platform (SevenRooms, OpenTable)?',
+    q: 'Do you create the content in-house?',
+    a: 'Yes. UGC production, social content, and creative direction — all handled in-house. We brief, produce, and manage it.',
+  },
+  {
+    q: 'Can you help with launches and events?',
+    a: "Absolutely. We build launch campaigns that drive actual bookings, not just awareness. We've done new menu drops, venue openings, and ongoing event promotion.",
+  },
+  {
+    q: 'Can you work with our booking platform (SevenRooms, OpenTable, ResDiary)?',
     a: "Yes. We've worked with SevenRooms, OpenTable, ResDiary, and custom booking flows. We'll integrate your tracking properly so we know what's actually converting.",
   },
 ];
@@ -98,7 +114,7 @@ export default function Hospitality() {
               every night.
             </h1>
             <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6 max-w-2xl">
-              We help restaurants, venues, and hotels go from quiet nights to waitlists. Paid ads that drive bookings. Content that makes people want to come in. Strategy that turns first-time visitors into regulars.
+              We help restaurants, venues, and hotels turn quiet nights into booked-out weekends — and finally fix slow Tuesdays. Paid ads, content, and retention systems that drive bookings, repeat visits, and revenue.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
               <Link
@@ -106,7 +122,7 @@ export default function Hospitality() {
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                 style={{ background: '#961621' }}
               >
-                Apply for a Free Strategy Call →
+                Book a Strategy Call →
               </Link>
               <Link
                 to="/pricing"
@@ -126,29 +142,32 @@ export default function Hospitality() {
         <div className="max-w-5xl mx-auto px-6 md:px-8">
           <ScrollReveal>
             <blockquote className="font-heading font-bold text-white text-2xl md:text-4xl lg:text-5xl leading-tight uppercase tracking-tight">
-              "Quiet nights. Empty Tuesdays. Marketing that looks busy but doesn't fill seats. Sound familiar?"
+              "A lot of venues post constantly and still have empty nights."
             </blockquote>
             <p className="font-body text-white/70 text-lg mt-8 max-w-2xl leading-relaxed">
-              Most hospitality marketing is either invisible or interruptive. Neither fills tables. We do something different.
+              Most hospitality marketing either looks good but doesn't convert, or burns money targeting the wrong people. We do something different.
             </p>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* What We Do — 4 outcomes */}
+      {/* What We Actually Focus On */}
       <section className="py-24 md:py-32 bg-background">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-black mb-14">
-              What We Do for Hospitality
+            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-black mb-4">
+              What We Actually Focus On.
             </h2>
+            <p className="font-body text-black/50 text-lg max-w-2xl mb-14">
+              The pain points every venue owner knows but most marketing ignores.
+            </p>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {OUTCOMES.map((item, i) => (
-              <ScrollReveal key={item.title} delay={i * 0.08}>
-                <div className="bg-white border border-black/8 rounded-2xl p-8 md:p-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {FOCUS_ITEMS.map((item, i) => (
+              <ScrollReveal key={item.title} delay={i * 0.07}>
+                <div className="bg-white border border-black/8 rounded-2xl p-8">
                   <div className="w-8 h-1 rounded-full mb-6" style={{ background: '#E9FF80' }} />
-                  <h3 className="font-heading font-bold text-xl md:text-2xl uppercase tracking-tight text-black">
+                  <h3 className="font-heading font-bold text-lg md:text-xl uppercase tracking-tight text-black">
                     {item.title}
                   </h3>
                   <p className="font-body text-black/60 text-base leading-relaxed mt-3">{item.desc}</p>
@@ -217,7 +236,7 @@ export default function Hospitality() {
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
                 style={{ background: '#E9FF80' }}
               >
-                Apply Now →
+                Book a Strategy Call →
               </Link>
               <Link
                 to="/pricing"

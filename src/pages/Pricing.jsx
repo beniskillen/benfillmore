@@ -9,48 +9,41 @@ const TIERS = [
     name: 'Starter',
     price: 'A$2,500',
     period: '/ month',
-    tagline: 'For brands ready to start shipping consistent marketing.',
+    tagline: 'Establish your baseline growth system.',
+    sub: 'For brands ready to start shipping consistent marketing.',
     popular: false,
-    includes: [
-      'Paid Ads (Meta or Google — pick one)',
-      'Up to A$10K/month ad spend managed',
-      '4 UGC videos / month',
-      'Monthly social content (12 posts)',
-      'Bi-weekly strategy calls',
-      'Weekly reporting',
+    groups: [
+      { label: 'Acquisition System', items: ['Paid Ads (Meta or Google — pick one)', 'Up to A$10K/month ad spend managed'] },
+      { label: 'Creative System', items: ['4 UGC videos / month', 'Monthly social content (12 posts)'] },
+      { label: 'Strategic Partnership', items: ['Bi-weekly strategy calls', 'Weekly reporting'] },
     ],
   },
   {
     name: 'Growth',
     price: 'A$4,000',
     period: '/ month',
-    tagline: 'For brands ready to scale across paid and content.',
+    tagline: 'The core growth system for scaling brands.',
+    sub: 'Built to lower CAC, increase LTV, and find scalable winners through weekly creative testing.',
     popular: true,
-    includes: [
-      'Paid Ads (Meta + Google)',
-      'Up to A$30K/month ad spend managed',
-      '8 UGC videos / month',
-      'Weekly social content (20 posts)',
-      'Weekly strategy calls',
-      'Custom dashboard reporting',
-      'Email/SMS retention strategy',
+    groups: [
+      { label: 'Acquisition System', items: ['Paid Ads (Meta + Google)', 'Up to A$30K/month ad spend managed'] },
+      { label: 'Creative System', items: ['8 UGC videos / month', 'Weekly creative testing', 'Weekly social content (20 posts)'] },
+      { label: 'Retention System', items: ['Email & SMS strategy', 'Repeat purchase optimisation'] },
+      { label: 'Strategic Partnership', items: ['Weekly strategy calls', 'Custom dashboard reporting', 'Direct access to Noam + Melina'] },
     ],
   },
   {
     name: 'Scale',
     price: 'A$7,500',
     period: '/ month',
-    tagline: "For brands scaling past A$50K/month in revenue.",
+    tagline: 'Full embedded growth partner.',
+    sub: "For brands scaling past A$50K/month in revenue. We act as your in-house marketing team.",
     popular: false,
-    includes: [
-      'Full paid media (Meta + Google + YouTube + retargeting)',
-      'Up to A$80K/month ad spend managed',
-      '12+ UGC videos / month',
-      'Full social management (30+ posts)',
-      'Daily Slack access',
-      'Bi-weekly strategy + monthly executive review',
-      'Email + SMS retention execution',
-      'Influencer/affiliate strategy',
+    groups: [
+      { label: 'Acquisition System', items: ['Full paid media (Meta + Google + YouTube + retargeting)', 'Up to A$80K/month ad spend managed'] },
+      { label: 'Creative System', items: ['12+ UGC videos / month', 'Continuous creative testing', 'Full social management (30+ posts)'] },
+      { label: 'Retention System', items: ['Email + SMS execution', 'Loyalty and retention systems', 'Influencer/affiliate strategy'] },
+      { label: 'Strategic Partnership', items: ['Daily Slack access', 'Bi-weekly strategy + monthly executive review', 'Direct access to Noam + Melina'] },
     ],
   },
 ];
@@ -58,19 +51,19 @@ const TIERS = [
 const ALWAYS_INCLUDED = [
   {
     title: 'Direct access to Noam + Melina',
-    desc: 'No account managers. No handoffs. The people doing the work are the people you talk to.',
+    desc: "No account managers. No handoffs. The people doing the work are the people you talk to. We don't outsource execution. We run it ourselves.",
   },
   {
     title: 'Real reporting, not vanity metrics',
-    desc: 'Weekly numbers that actually matter.',
+    desc: 'Weekly numbers that actually matter — bookings, purchases, leads, revenue. Not clicks and reach.',
   },
   {
     title: 'Hands-on creative',
-    desc: 'UGC produced by real creators, briefed and managed in-house.',
+    desc: "UGC produced by real creators, briefed and managed in-house. We don't outsource the work that drives results.",
   },
   {
     title: 'Strategy calls when you need them',
-    desc: "We're not on a quarterly review schedule.",
+    desc: "We're not on a quarterly review schedule. If something needs to be discussed, we discuss it.",
   },
 ];
 
@@ -78,6 +71,10 @@ const FAQS = [
   {
     q: 'Is there a contract?',
     a: "We work month-to-month. No 12-month lock-ins. If we're not delivering, you should be able to leave.",
+  },
+  {
+    q: 'Why no hidden fees or upsells?',
+    a: "Because we built Fillmore as the antidote to traditional agency culture. If a tier doesn't fit, we tell you. If you don't need a service, we cut it. The pricing reflects the work — not what we can squeeze out of a contract.",
   },
   {
     q: "What's not included?",
@@ -181,22 +178,32 @@ export default function Pricing() {
                         {tier.period}
                       </span>
                     </div>
-                    <p className={`font-body text-sm leading-relaxed mt-3 ${tier.popular ? 'text-white/60' : 'text-black/50'}`}>
+                    <p className={`font-heading font-bold text-base uppercase tracking-tight mt-3 ${tier.popular ? 'text-white' : 'text-black'}`}>
                       {tier.tagline}
+                    </p>
+                    <p className={`font-body text-sm leading-relaxed mt-1 ${tier.popular ? 'text-white/50' : 'text-black/40'}`}>
+                      {tier.sub}
                     </p>
                   </div>
 
-                  <div className="mt-8 flex-1">
-                    <ul className="space-y-3">
-                      {tier.includes.map((item) => (
-                        <li key={item} className="flex items-start gap-3">
-                          <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${tier.popular ? 'text-white/60' : 'text-black/40'}`} />
-                          <span className={`font-body text-sm leading-relaxed ${tier.popular ? 'text-white/80' : 'text-black/70'}`}>
-                            {item}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="mt-8 flex-1 space-y-6">
+                    {tier.groups.map((group) => (
+                      <div key={group.label}>
+                        <p className={`font-body text-xs font-semibold uppercase tracking-widest mb-2 ${tier.popular ? 'text-white/30' : 'text-black/30'}`}>
+                          {group.label}
+                        </p>
+                        <ul className="space-y-2">
+                          {group.items.map((item) => (
+                            <li key={item} className="flex items-start gap-3">
+                              <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${tier.popular ? 'text-white/60' : 'text-black/40'}`} />
+                              <span className={`font-body text-sm leading-relaxed ${tier.popular ? 'text-white/80' : 'text-black/70'}`}>
+                                {item}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
                   </div>
 
                   <div className="mt-10">

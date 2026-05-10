@@ -67,7 +67,7 @@ export default function Navbar() {
               to="/apply"
               className="bg-black text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 whitespace-nowrap flex-shrink-0"
             >
-              Apply Now
+              Book a Strategy Call
             </Link>
           </nav>
 
@@ -118,7 +118,7 @@ export default function Navbar() {
                   to="/apply"
                   className="bg-black text-white text-lg font-semibold px-8 py-3 rounded-full inline-block"
                 >
-                  Apply Now
+                  Book a Strategy Call
                 </Link>
               </motion.div>
             </nav>

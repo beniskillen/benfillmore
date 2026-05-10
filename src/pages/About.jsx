@@ -31,25 +31,34 @@ export default function About() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 md:pt-44 pb-20 md:pb-28 bg-background">
+      <section className="pt-32 md:pt-44 pb-20 md:pb-28 bg-black">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <ScrollReveal>
-            <h1 className="font-heading font-bold text-[clamp(2rem,5.5vw,4.5rem)] leading-[0.95] uppercase tracking-tight text-black max-w-5xl">
-              We started this because we'd seen how it really works.
+            <h1 className="font-heading font-bold text-[clamp(2rem,5.5vw,4.5rem)] leading-[0.95] uppercase tracking-tight text-white max-w-5xl">
+              We got tired of watching good businesses get bad marketing.
             </h1>
           </ScrollReveal>
         </div>
       </section>
 
       {/* Origin */}
-      <section className="pb-20 md:pb-28 bg-background">
+      <section className="py-20 md:py-28 bg-background">
         <div className="max-w-3xl mx-auto px-6 md:px-8">
           <ScrollReveal>
             <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed">
-              We worked at agencies. We saw how things really get done — businesses oversold, then handed off to people with no real connection to the work. Strategies that looked good on paper but didn't deliver. Everything overproduced and underwhelming where it actually counted.
+              We worked inside agencies and saw the gap between what was sold and what actually got delivered.
             </p>
             <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6">
-              We didn't like it. We didn't think businesses deserved it. So we left and built something better.
+              Businesses oversold, then handed off. Strategies that looked good in presentations but didn't translate into performance. A lot of effort went into how things appeared, not whether they actually worked.
+            </p>
+            <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6">
+              We watched brands spend A$15K–A$30K a month on strategies nobody executed properly. Beautiful decks. Weak content. Junior staff running accounts they didn't understand.
+            </p>
+            <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6">
+              Meanwhile, the businesses actually growing were the ones moving fast, posting consistently, and adapting in real time.
+            </p>
+            <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6">
+              So we built Fillmore to stay closer to the work, focus on what actually drives growth, and cut everything that doesn't.
             </p>
           </ScrollReveal>
         </div>
@@ -125,6 +134,39 @@ export default function About() {
         </div>
       </section>
 
+      {/* What We Actually Optimise For */}
+      <section className="py-24 md:py-32 bg-background">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <ScrollReveal>
+            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-black mb-4">
+              What We Actually Optimise For.
+            </h2>
+            <p className="font-body text-black/50 text-lg max-w-2xl mb-14">
+              The numbers that decide whether marketing scaled the business or just looked busy.
+            </p>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { label: 'CAC', full: 'Customer Acquisition Cost', desc: 'Paying less for new customers.' },
+              { label: 'LTV', full: 'Lifetime Value', desc: 'Customers who come back and spend more.' },
+              { label: 'CVR', full: 'Conversion Rate', desc: 'Turning traffic into customers.' },
+              { label: 'Repeat Purchase Rate', full: null, desc: 'The cheapest customer is the one who already bought.' },
+              { label: 'Booking Volume', full: null, desc: 'Full nights, not just full weekends.' },
+              { label: 'Revenue Consistency', full: null, desc: 'Predictable growth, not spike-and-crash.' },
+              { label: 'Profit per Campaign', full: null, desc: 'Margin matters more than ROAS.' },
+            ].map((m, i) => (
+              <ScrollReveal key={m.label} delay={i * 0.06}>
+                <div className="bg-white border border-black/8 rounded-2xl p-7">
+                  <p className="font-heading font-bold text-lg uppercase tracking-tight text-black">{m.label}</p>
+                  {m.full && <p className="font-body text-xs text-black/40 mt-0.5">{m.full}</p>}
+                  <p className="font-body text-black/60 text-sm leading-relaxed mt-3">{m.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Approach */}
       <section className="pb-24 md:pb-32 bg-background">
         <div className="max-w-3xl mx-auto px-6 md:px-8">
@@ -147,11 +189,11 @@ export default function About() {
               Want to see if we're a fit?
             </h2>
             <p className="font-body text-white/60 text-lg md:text-xl mt-6 max-w-xl mx-auto">
-              30 minutes. Honest conversation. If we can help, we'll tell you. If we can't, we'll tell you that too.
+              30 minutes. Honest conversation. We'll show you where your current marketing is leaking revenue. If we can help, we'll tell you. If we can't, we'll tell you that too.
             </p>
             <div className="mt-10">
               <PillButton to="/apply" variant="primary-inverted">
-                Book a strategy call →
+                Book a Strategy Call →
               </PillButton>
             </div>
           </ScrollReveal>

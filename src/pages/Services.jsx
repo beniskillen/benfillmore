@@ -4,63 +4,70 @@ import SectionCTA from '../components/shared/SectionCTA';
 
 const SERVICE_SECTIONS = [
   {
-    title: 'Paid Advertising',
+    title: 'Paid Media',
     items: [
       {
         name: 'Meta Ads',
-        desc: 'Acquisition campaigns, retargeting, creative testing, audience strategy.',
+        desc: "Acquisition campaigns, retargeting flows, and creative testing systems built to lower CAC and find scalable winners.",
       },
       {
         name: 'Google Ads',
-        desc: "Search, Shopping, Performance Max, YouTube. Built to capture demand, not just spend budget.",
+        desc: "Search, Shopping, Performance Max, and YouTube. Built to capture high-intent customers already looking for what you sell.",
       },
       {
-        name: 'Reporting',
-        desc: "Real numbers, weekly. No vanity metrics. We tell you what's working and what's not.",
+        name: 'Reporting & Optimisation',
+        desc: "We track bookings, purchases, leads, and revenue — not just clicks and reach. Weekly numbers, weekly adjustments, no vanity metrics.",
       },
     ],
   },
   {
-    title: 'Content & UGC',
+    title: 'In-House Creative',
     items: [
       {
-        name: 'UGC Production',
-        desc: "Real creators making real content for your brand. Authentic, not staged.",
+        name: 'Photography & Videography',
+        desc: "In-house production designed for paid and organic performance. Not portfolio-pretty — conversion-built.",
       },
       {
-        name: 'Social Management',
-        desc: "Strategy, posting, community. Built to grow, not just to be present.",
+        name: 'UGC Production',
+        desc: "Real creators producing high-converting creative for your brand. Briefed, shot, and shipped in-house.",
       },
       {
         name: 'Creative Direction',
-        desc: "Big-picture creative thinking. What story your brand should tell, and how to tell it.",
+        desc: "Big-picture thinking on what story your brand should tell, what angles to test, and how to keep creative fresh as you scale.",
       },
     ],
   },
   {
-    title: 'Strategy',
+    title: 'Strategy & Systems',
     items: [
       {
         name: 'Growth Strategy',
-        desc: "Where the real opportunity is, what to bet on, what to ignore.",
+        desc: "Where the real opportunity is, what to bet on, what to ignore. We build the plan around your margins, AOV, and growth targets.",
       },
       {
         name: 'Brand Positioning',
-        desc: "Who you are, who you're for, why you're different.",
+        desc: "Position your brand clearly so customers instantly understand why they should choose you over competitors.",
       },
       {
         name: 'Hands-On Partnership',
-        desc: "We're in your Slack, your Loom, your strategy calls. Not on a quarterly review schedule.",
+        desc: "We're in your Slack, your Loom, your strategy calls. Launch campaigns, produce creative, analyse performance, and optimise weekly.",
       },
     ],
   },
 ];
 
 const PROCESS_STEPS = [
-  { step: '01', title: 'Discovery', desc: 'Understand the business, the goals, the real opportunity.' },
-  { step: '02', title: 'Strategy', desc: 'Build the plan. No 40-page deck. A simple, clear roadmap.' },
-  { step: '03', title: 'Execution', desc: 'Run the campaigns. Make the content. Ship the work.' },
-  { step: '04', title: 'Iteration', desc: "Review what's working. Double down. Cut what's not." },
+  { step: '01', title: 'Discovery', desc: "Understand your business, your margins, and where your real growth opportunities are." },
+  { step: '02', title: 'Strategy', desc: "Build a plan based on your AOV, capacity, and growth goals. No 40-page deck. A simple, clear roadmap." },
+  { step: '03', title: 'Execution', desc: "Launch campaigns, produce creative, ship the work. We don't outsource execution." },
+  { step: '04', title: 'Optimisation', desc: "Analyse performance weekly. Double down on what's working. Cut what's not." },
+];
+
+const CARE_ABOUT = [
+  { title: 'Lower customer acquisition cost', desc: "Paying less for every new customer you bring in. The metric that decides whether marketing scales or burns budget." },
+  { title: 'Higher repeat purchase rate', desc: "Turning one-time buyers into regulars. The most underrated lever in e-commerce and hospitality." },
+  { title: 'Booked-out weekends and weekdays', desc: "Not just one or the other. Most venues are packed Saturdays and dead Tuesdays. We fix the Tuesdays." },
+  { title: 'Stronger LTV and retention', desc: "Customers who come back, spend more, and tell their friends. That's where the real money is." },
 ];
 
 export default function Services() {
@@ -71,10 +78,10 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <ScrollReveal>
             <h1 className="font-heading font-bold text-[clamp(2.2rem,6vw,5rem)] leading-[0.95] uppercase tracking-tight text-black">
-              We do three things well.
+              Growth systems for brands that want to scale.
             </h1>
             <p className="font-body text-black/60 text-lg md:text-xl leading-relaxed mt-6 max-w-2xl">
-              Paid ads. Content. Strategy. All hands-on. All in-house. No outsourcing, no handoffs.
+              Paid media, in-house creative, and strategy — built to drive revenue, not just deliverables.
             </p>
           </ScrollReveal>
         </div>
@@ -124,6 +131,30 @@ export default function Services() {
         </section>
       ))}
 
+      {/* What We Actually Care About */}
+      <section className="py-24 md:py-32 bg-background">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <ScrollReveal>
+            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-black mb-4">
+              What We Actually Care About.
+            </h2>
+            <p className="font-body text-black/50 text-lg max-w-2xl mb-14">
+              Services exist to deliver outcomes. These are the outcomes we optimise for.
+            </p>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {CARE_ABOUT.map((item, i) => (
+              <ScrollReveal key={item.title} delay={i * 0.08}>
+                <div className="bg-black rounded-2xl p-8 md:p-10">
+                  <h3 className="font-heading font-bold text-xl md:text-2xl uppercase tracking-tight text-white">{item.title}</h3>
+                  <p className="font-body text-white/60 text-base leading-relaxed mt-3">{item.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Process */}
       <section className="py-24 md:py-32 bg-background">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
@@ -158,8 +189,8 @@ export default function Services() {
 
       <SectionCTA
         headline="Ready to start?"
-        sub="Apply for a free strategy call."
-        buttonText="Apply Now →"
+        sub="Free 30-min strategy call. We'll show you where your current marketing is leaking revenue."
+        buttonText="Book a Strategy Call →"
       />
     </>
   );

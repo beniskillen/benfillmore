@@ -7,12 +7,12 @@ const POINTS = [
     desc: 'The person you talk to is the person doing the work.',
   },
   {
-    title: 'No bloated decks.',
-    desc: 'We deliver outcomes, not 40-page PDFs.',
+    title: 'No vanity metrics.',
+    desc: 'We track bookings, purchases, leads, and revenue.',
   },
   {
     title: 'No templated strategies.',
-    desc: 'Every brand gets work built for it, not for someone else.',
+    desc: "Every brand gets work built around its margins and goals.",
   },
 ];
 

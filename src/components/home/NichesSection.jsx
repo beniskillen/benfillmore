@@ -32,7 +32,7 @@ export default function NichesSection() {
                   Hospitality
                 </h3>
                 <p className="font-body text-white/60 text-base mt-4 max-w-sm">
-                  Fill every table. From quiet nights to waitlists.
+                  Fill every table. Fix the Tuesdays. Turn diners into regulars.
                 </p>
                 <div className="mt-6 flex items-center gap-2 text-white/50 group-hover:text-white transition-colors">
                   <span className="font-body text-sm font-medium">See how we do it</span>

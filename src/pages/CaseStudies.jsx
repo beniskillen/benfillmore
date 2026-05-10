@@ -117,7 +117,7 @@ function CaseStudyDetail({ study, onClose }) {
 
         <div className="mt-14 pt-8 border-t border-black/5">
           <PillButton to="/apply">
-            Apply for a free strategy call →
+            Book a strategy call →
           </PillButton>
         </div>
       </motion.div>
@@ -125,13 +125,13 @@ function CaseStudyDetail({ study, onClose }) {
   );
 }
 
-const FILTER_TABS = ['All', 'Hospitality', 'E-Commerce', 'Lead Gen'];
+const FILTER_TABS = ['All', 'Real Results', 'E-Commerce', 'Lead Gen', 'Hospitality'];
 
 export default function CaseStudies() {
   const [selectedStudy, setSelectedStudy] = useState(null);
   const [activeFilter, setActiveFilter] = useState('All');
 
-  const filtered = activeFilter === 'All'
+  const filtered = activeFilter === 'All' || activeFilter === 'Real Results'
     ? CASE_STUDIES
     : CASE_STUDIES.filter(s => s.industry.toLowerCase().includes(activeFilter.toLowerCase()));
 
@@ -142,10 +142,10 @@ export default function CaseStudies() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <ScrollReveal>
             <h1 className="font-heading font-bold text-[clamp(2.2rem,6vw,5rem)] leading-[0.95] uppercase tracking-tight text-black">
-              Real work. Real numbers.
+              Real work. Strategic thinking.
             </h1>
             <p className="font-body text-black/60 text-lg md:text-xl leading-relaxed mt-6 max-w-2xl">
-              No screenshots from one good week. No cherry-picked metrics. Here's what we've actually done.
+              Some of these are clients we've worked with. Some are brands we'd love to work with — broken down to show how we think and how we'd grow them. Either way: real strategy, no fluff.
             </p>
           </ScrollReveal>
         </div>
@@ -178,6 +178,21 @@ export default function CaseStudies() {
               </ScrollReveal>
             ))}
           </div>
+
+          {/* Strategic examples placeholder */}
+          <ScrollReveal>
+            <div className="mt-10 bg-black rounded-2xl p-10 text-center">
+              <span className="font-body text-xs font-medium px-3 py-1 rounded-full bg-white/10 text-white/60 uppercase tracking-widest">
+                Coming Soon
+              </span>
+              <h3 className="font-heading font-bold text-2xl md:text-3xl uppercase tracking-tight text-white mt-6">
+                Strategic Example Breakdowns
+              </h3>
+              <p className="font-body text-white/60 text-base leading-relaxed mt-3 max-w-xl mx-auto">
+                4 in-depth breakdowns showing exactly how we'd grow real brands — 2 hospitality, 2 e-commerce. Real strategy, no fluff.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -205,7 +220,7 @@ function SectionCTABottom() {
           </p>
           <div className="mt-10">
             <PillButton to="/apply" variant="primary-inverted">
-              Apply Now →
+              Book a Strategy Call →
             </PillButton>
           </div>
         </ScrollReveal>

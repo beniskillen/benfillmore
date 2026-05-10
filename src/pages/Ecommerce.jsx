@@ -9,33 +9,43 @@ import { CASE_STUDIES } from '../lib/caseStudiesData';
 const OUTCOMES = [
   {
     title: 'Profitable ROAS at Scale',
-    desc: "Not just 5x on $5k/month. 3-4x on $50k+. Built to scale without breaking.",
+    desc: "Not just 5x on A$5K/month. 3-4x MER on A$50K+/month. Built to scale without breaking margins.",
   },
   {
     title: 'Creative That Converts',
-    desc: "UGC, hooks, and ad creative built for performance. We test, iterate, ship.",
+    desc: "UGC, hooks, and ad creative built for performance. We test angles weekly, beat creative fatigue, and find scalable winners.",
   },
   {
     title: 'LTV That Compounds',
-    desc: "Email flows, SMS, retention. The revenue that doesn't show up in Meta's ROAS column but pays the bills.",
+    desc: "Email flows, SMS, retention systems. The revenue that doesn't show up in Meta's ROAS column but pays the bills.",
   },
   {
     title: 'A System, Not Campaigns',
-    desc: "Most agencies run campaigns. We build a marketing system that keeps working when you scale.",
+    desc: "Most agencies run campaigns. We build a marketing system that keeps working when you scale — not one that breaks at A$50K/month spend.",
   },
 ];
 
+const BREAKS_FIRST = [
+  { title: 'Creative fatigue.', desc: "Your winning ad stops working at 2-3x your usual spend. Frequency climbs. CTR drops." },
+  { title: 'Rising CACs.', desc: "What used to cost A$30 to acquire now costs A$60. Margins compress." },
+  { title: 'Weak retention.', desc: "All your revenue depends on new acquisition. Repeat purchase rate is below 20%." },
+  { title: 'Scaling too fast.', desc: "You doubled spend overnight. ROAS halved. Now you don't know if it's the algorithm, the creative, or the audience." },
+  { title: 'Poor attribution.', desc: "Meta says 4x ROAS. Shopify says 2x. You don't know who to trust." },
+  { title: 'Low repeat purchase rate.', desc: "Your AOV is fine. Your first-purchase margin is fine. But customers don't come back." },
+  { title: 'Relying on one winning ad.', desc: "When that ad dies (and it will), you're back to zero. No creative pipeline behind it." },
+];
+
 const HOW_IT_WORKS = [
-  { step: '01', title: 'Audit', desc: "Full account review. We tell you what's wasting money and where the real opportunity is." },
-  { step: '02', title: 'Strategy', desc: "A focused growth plan. Channel mix, creative direction, budget allocation." },
-  { step: '03', title: 'Execute', desc: "Campaigns live. Creative shipped. Email flows built." },
-  { step: '04', title: 'Scale', desc: "Double down on what's working. Incrementally scale. Never bet it all in one week." },
+  { step: '01', title: 'Audit', desc: "We look at your account, funnel, creative library, and customer data. Find the bottlenecks." },
+  { step: '02', title: 'Strategy', desc: "Build a plan around your margins, AOV, LTV, and growth targets." },
+  { step: '03', title: 'Execute', desc: "Run paid ads, produce UGC, ship creative tests weekly, build retention flows." },
+  { step: '04', title: 'Optimise', desc: "Weekly reporting, live adjustments, scale what's profitable." },
 ];
 
 const FAQS = [
   {
     q: "What's the minimum monthly ad spend?",
-    a: "We recommend A$5,000/month minimum to get meaningful data across Meta and Google. Below that, the sample sizes are too small to optimize properly.",
+    a: "We recommend A$5,000/month minimum to get meaningful data across Meta and Google. Below that, the sample sizes are too small to optimise properly.",
   },
   {
     q: 'Do you produce UGC in-house?',
@@ -52,6 +62,10 @@ const FAQS = [
   {
     q: 'Do you handle email and SMS too, or just paid ads?',
     a: "Both, at Growth tier and above. Email flows, SMS campaigns, segmentation, list health — it's all part of the system.",
+  },
+  {
+    q: 'How do you handle attribution?',
+    a: "We set up proper UTM tracking and cross-reference platform data with Shopify revenue. We'll be upfront about the discrepancy between Meta-reported ROAS and blended MER — and we optimise for both.",
   },
 ];
 
@@ -101,7 +115,7 @@ export default function Ecommerce() {
               to checkout.
             </h1>
             <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6 max-w-2xl">
-              We help DTC brands turn ad spend into revenue. UGC that stops the scroll. Paid ads that scale profitably. Email and retention that compound LTV.
+              We help DTC brands turn ad spend into revenue. Lower CAC. Higher LTV. Creative that converts. The systems that scale e-commerce profitably.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
               <Link
@@ -109,7 +123,7 @@ export default function Ecommerce() {
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                 style={{ background: '#EF6A3F' }}
               >
-                Apply for a Free Strategy Call →
+                Book a Strategy Call →
               </Link>
               <Link
                 to="/pricing"
@@ -132,7 +146,7 @@ export default function Ecommerce() {
               "Your ads are running. Your revenue isn't growing. Sound familiar?"
             </blockquote>
             <p className="font-body text-white/80 text-lg mt-8 max-w-2xl leading-relaxed">
-              Most e-commerce brands burn ad spend on creative that doesn't convert and campaigns that were never built to scale. We fix that.
+              Most e-commerce brands burn ad spend on creative that doesn't convert and campaigns that were never built to scale. Rising CPMs. Creative fatigue. Weak retention. We fix that.
             </p>
           </ScrollReveal>
         </div>
@@ -155,6 +169,30 @@ export default function Ecommerce() {
                     {item.title}
                   </h3>
                   <p className="font-body text-black/60 text-base leading-relaxed mt-3">{item.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What Usually Breaks First */}
+      <section className="py-24 md:py-32 bg-black text-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <ScrollReveal>
+            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight mb-4">
+              What Usually Breaks First When Brands Scale.
+            </h2>
+            <p className="font-body text-white/50 text-lg max-w-2xl mb-14">
+              We've seen these patterns across 20+ accounts. If any of them sound familiar, we should talk.
+            </p>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {BREAKS_FIRST.map((item, i) => (
+              <ScrollReveal key={item.title} delay={i * 0.06}>
+                <div className="border border-white/10 rounded-2xl p-7">
+                  <h3 className="font-heading font-bold text-lg uppercase tracking-tight text-white">{item.title}</h3>
+                  <p className="font-body text-white/60 text-base leading-relaxed mt-2">{item.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -240,7 +278,7 @@ export default function Ecommerce() {
               Ready to scale profitably?
             </h2>
             <p className="font-body text-white/80 text-lg md:text-xl mt-6 max-w-xl mx-auto">
-              Free 30-min strategy call. We'll audit your account and tell you what we'd change.
+              Free 30-min strategy call. We'll show you where your account is leaking revenue, what's limiting scale, and what we'd fix first.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
@@ -248,7 +286,7 @@ export default function Ecommerce() {
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
                 style={{ background: '#D9F855' }}
               >
-                Apply Now →
+                Book a Strategy Call →
               </Link>
               <Link
                 to="/pricing"
