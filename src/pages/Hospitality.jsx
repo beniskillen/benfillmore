@@ -101,50 +101,49 @@ function FAQ({ q, a }) {
 export default function Hospitality() {
   return (
     <>
-      {/* Hero — cream background */}
-      <section className="pt-32 md:pt-44 pb-20 md:pb-28 min-h-[80vh] flex items-center" style={{ background: '#FAF0DA' }}>
+      {/* Hero — deep red background */}
+      <section className="pt-32 md:pt-44 pb-20 md:pb-28 min-h-[80vh] flex items-center" style={{ background: '#961621' }}>
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <ScrollReveal>
-            <span className="font-heading font-bold text-xs uppercase tracking-widest" style={{ color: '#961621' }}>
+            <span className="font-heading font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full" style={{ background: '#E9FF80', color: '#000' }}>
               Hospitality
             </span>
-            <h1 className="font-heading font-bold text-[clamp(2.5rem,8vw,7rem)] leading-[0.9] uppercase tracking-tight text-black mt-4">
+            <h1 className="font-heading font-bold text-[clamp(2.5rem,8vw,7rem)] leading-[0.9] uppercase tracking-tight text-white mt-6">
               Fill every table,
               <br />
               every night.
             </h1>
-            <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6 max-w-2xl">
+            <p className="font-body text-lg md:text-xl leading-relaxed mt-6 max-w-2xl" style={{ color: 'rgba(255,255,255,0.85)' }}>
               We help restaurants, venues, and hotels turn quiet nights into booked-out weekends — and finally fix slow Tuesdays. Paid ads, content, and retention systems that drive bookings, repeat visits, and revenue.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
               <Link
                 to="/apply"
-                className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
-                style={{ background: '#961621' }}
+                className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+                style={{ background: '#E9FF80' }}
               >
                 Book a Strategy Call →
               </Link>
               <Link
                 to="/pricing"
-                className="inline-flex items-center font-body font-medium text-base py-3.5 relative group"
-                style={{ color: '#961621' }}
+                className="inline-flex items-center font-body font-medium text-base py-3.5 text-white relative group"
               >
                 See pricing
-                <span className="absolute bottom-2 left-0 w-0 h-[1.5px] transition-all duration-300 group-hover:w-full" style={{ background: '#961621' }} />
+                <span className="absolute bottom-2 left-0 w-0 h-[1.5px] bg-white transition-all duration-300 group-hover:w-full" />
               </Link>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Problem — deep red */}
-      <section className="py-20 md:py-28" style={{ background: '#961621' }}>
+      {/* Problem — cream */}
+      <section className="py-20 md:py-28" style={{ background: '#FAF0DA' }}>
         <div className="max-w-5xl mx-auto px-6 md:px-8">
           <ScrollReveal>
-            <blockquote className="font-heading font-bold text-white text-2xl md:text-4xl lg:text-5xl leading-tight uppercase tracking-tight">
+            <blockquote className="font-heading font-bold text-2xl md:text-4xl lg:text-5xl leading-tight uppercase tracking-tight" style={{ color: '#961621' }}>
               "A lot of venues post constantly and still have empty nights."
             </blockquote>
-            <p className="font-body text-white/70 text-lg mt-8 max-w-2xl leading-relaxed">
+            <p className="font-body text-lg mt-8 max-w-2xl leading-relaxed" style={{ color: 'rgba(150,22,33,0.75)' }}>
               Most hospitality marketing either looks good but doesn't convert, or burns money targeting the wrong people. We do something different.
             </p>
           </ScrollReveal>

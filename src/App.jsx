@@ -15,6 +15,9 @@ import CaseStudies from './pages/CaseStudies';
 import Pricing from './pages/Pricing';
 import About from './pages/About';
 import Apply from './pages/Apply';
+import Industries from './pages/Industries';
+import Trades from './pages/Trades';
+import Automotive from './pages/Automotive';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -49,6 +52,9 @@ const AuthenticatedApp = () => {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/about" element={<About />} />
         <Route path="/apply" element={<Apply />} />
+        <Route path="/industries" element={<Industries />} />
+        <Route path="/trades" element={<Trades />} />
+        <Route path="/automotive" element={<Automotive />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>

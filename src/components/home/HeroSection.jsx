@@ -33,7 +33,7 @@ export default function HeroSection() {
               className="mt-6 max-w-xl"
             >
               <p className="font-body text-black/60 text-lg md:text-xl leading-relaxed">
-                We're growth operators for hospitality and e-commerce brands. We don't just run marketing — we build the systems that turn ad spend into revenue, content into bookings, and traffic into repeat customers.
+                We're growth operators for hospitality, e-commerce, trades, and automotive brands. We don't just run marketing — we build the systems that turn ad spend into revenue, content into bookings, and traffic into qualified leads.
               </p>
             </motion.div>
 

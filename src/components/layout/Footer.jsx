@@ -12,6 +12,8 @@ const FOOTER_NAV = [
 const NICHE_NAV = [
   { label: 'Hospitality', path: '/hospitality' },
   { label: 'E-Commerce', path: '/e-commerce' },
+  { label: 'Trades & Services', path: '/trades' },
+  { label: 'Automotive', path: '/automotive' },
 ];
 
 const CONNECT = [
@@ -31,7 +33,7 @@ export default function Footer() {
               FILLMORE
             </Link>
             <p className="text-white/40 text-sm mt-4 font-body">
-              Hands-on growth marketing for hospitality and e-commerce.
+              Growth operators for hospitality, e-commerce, trades, and automotive.
             </p>
           </div>
 
@@ -50,7 +52,7 @@ export default function Footer() {
 
           <div>
             <h4 className="font-heading font-bold text-xs uppercase tracking-widest text-white/50 mb-4">
-              Niches
+              Industries
             </h4>
             <nav className="flex flex-col gap-3">
               {NICHE_NAV.map((item) => (

@@ -5,10 +5,17 @@ import ScrollReveal from '../components/shared/ScrollReveal';
 import PillButton from '../components/shared/PillButton';
 import { CASE_STUDIES } from '../lib/caseStudiesData';
 
+function getIndustryColor(industry) {
+  const i = industry.toLowerCase();
+  if (i.includes('e-commerce')) return 'bg-[#EF6A3F]/10 text-[#EF6A3F]';
+  if (i.includes('trades')) return 'bg-[#1E3A5F]/10 text-[#1E3A5F]';
+  if (i.includes('automotive')) return 'bg-[#8B0000]/10 text-[#8B0000]';
+  if (i.includes('hospitality')) return 'bg-[#961621]/10 text-[#961621]';
+  return 'bg-black/5 text-black/70';
+}
+
 function CaseStudyCard({ study, onClick }) {
-  const industryColor = study.industry.toLowerCase().includes('e-commerce')
-    ? 'bg-[#EF6A3F]/10 text-[#EF6A3F]'
-    : 'bg-black/5 text-black/70';
+  const industryColor = getIndustryColor(study.industry);
 
   return (
     <div
@@ -125,13 +132,13 @@ function CaseStudyDetail({ study, onClose }) {
   );
 }
 
-const FILTER_TABS = ['All', 'Real Results', 'E-Commerce', 'Lead Gen', 'Hospitality'];
+const FILTER_TABS = ['All', 'E-Commerce', 'Trades & Services', 'Hospitality', 'Automotive', 'Strategic Examples'];
 
 export default function CaseStudies() {
   const [selectedStudy, setSelectedStudy] = useState(null);
   const [activeFilter, setActiveFilter] = useState('All');
 
-  const filtered = activeFilter === 'All' || activeFilter === 'Real Results'
+  const filtered = activeFilter === 'All' || activeFilter === 'Strategic Examples'
     ? CASE_STUDIES
     : CASE_STUDIES.filter(s => s.industry.toLowerCase().includes(activeFilter.toLowerCase()));
 

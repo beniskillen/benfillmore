@@ -18,7 +18,7 @@ export const CASE_STUDIES = [
   {
     id: 'garage-door-repairs',
     client: 'Garage Door Repairs 24/7',
-    industry: 'Lead Gen',
+    industry: 'Trades & Services',
     headline: '41,900 Clicks',
     supporting: 'Expanded Brisbane → Melbourne → Sydney',
     blurb: 'Built a paid search engine that turned a one-city operator into a national service.',
@@ -34,7 +34,7 @@ export const CASE_STUDIES = [
   {
     id: 'pressure-washing-guy',
     client: 'Pressure Washing Guy',
-    industry: 'Lead Gen / Service',
+    industry: 'Trades & Services',
     headline: '1,165 Leads',
     supporting: '$80.60 avg CPL across 24 months',
     blurb: 'Two years of consistent lead flow at sub-$100 CPL — no spike, no drop.',
