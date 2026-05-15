@@ -51,7 +51,7 @@ const TIERS = [
 const ALWAYS_INCLUDED = [
   {
     title: 'Direct access to Noam + Melina',
-    desc: "No account managers. No handoffs. The people doing the work are the people you talk to. We don't outsource execution. We run it ourselves.",
+    desc: "No account managers. No handoffs. The people doing the work are the people you talk to. We don't outsource execution.",
   },
   {
     title: 'Real reporting, not vanity metrics',
@@ -74,7 +74,7 @@ const FAQS = [
   },
   {
     q: 'Why no hidden fees or upsells?',
-    a: "Because we built Fillmore as the antidote to traditional agency culture. If a tier doesn't fit, we tell you. If you don't need a service, we cut it. The pricing reflects the work — not what we can squeeze out of a contract.",
+    a: "Because we built Fillmore as the antidote to traditional agency culture. If a tier doesn't fit, we tell you. If you don't need a service, we cut it. The pricing reflects the work, not what we can squeeze out of a contract.",
   },
   {
     q: "What's not included?",
@@ -139,7 +139,7 @@ export default function Pricing() {
               No "book a call" games.
             </h1>
             <p className="font-body text-black/60 text-lg md:text-xl leading-relaxed mt-6 max-w-2xl">
-              Three packages. Pick what fits. Or talk to us about something custom. Either way — straight answers, no theatre.
+              Three packages. Pick what fits. Or talk to us about something custom. Straight answers, no theatre.
             </p>
           </ScrollReveal>
         </div>

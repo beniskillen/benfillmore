@@ -6,7 +6,7 @@ const BELIEFS = [
   'Doing over talking.',
   'Substance over show.',
   'Hands on, never handed off.',
-  "Honest about what works — and what doesn't.",
+  "Honest about what works. And what doesn't.",
   'Built to move the needle, not the deck.',
 ];
 
@@ -49,7 +49,7 @@ export default function About() {
               We worked inside agencies and saw the gap between what was sold and what actually got delivered.
             </p>
             <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6">
-              Businesses oversold, then handed off. Strategies that looked good in presentations but didn't translate into performance. A lot of effort went into how things appeared, not whether they actually worked.
+              Businesses oversold, then handed off. Strategies that looked good in presentations but didn't translate into performance. Too much effort on how things appeared, not enough on whether they worked.
             </p>
             <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6">
               We watched brands spend A$15K–A$30K a month on strategies nobody executed properly. Beautiful decks. Weak content. Junior staff running accounts they didn't understand.
@@ -58,7 +58,7 @@ export default function About() {
               Meanwhile, the businesses actually growing were the ones moving fast, posting consistently, and adapting in real time.
             </p>
             <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6">
-              So we built Fillmore to stay closer to the work, focus on what actually drives growth, and cut everything that doesn't.
+              So we built Fillmore to stay closer to the work. Focus on what actually drives growth. Cut everything that doesn't.
             </p>
           </ScrollReveal>
         </div>
@@ -189,7 +189,7 @@ export default function About() {
               Want to see if we're a fit?
             </h2>
             <p className="font-body text-white/60 text-lg md:text-xl mt-6 max-w-xl mx-auto">
-              30 minutes. Honest conversation. We'll show you where your current marketing is leaking revenue. If we can help, we'll tell you. If we can't, we'll tell you that too.
+              30 minutes. Honest conversation. We'll show you where your current marketing is leaking revenue. If we can help, we'll say so. If we can't, we'll say that too.
             </p>
             <div className="mt-10">
               <PillButton to="/apply" variant="primary-inverted">

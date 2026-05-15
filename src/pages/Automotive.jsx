@@ -64,7 +64,7 @@ export default function Automotive() {
               to test drive.
             </h1>
             <p className="font-body text-lg md:text-xl leading-relaxed mt-6 max-w-2xl" style={{ color: 'rgba(255,255,255,0.85)' }}>
-              We help dealerships, used car lots, mechanics, and automotive businesses generate qualified leads, move inventory, and fill service bays — with marketing built around the way people actually buy cars in 2026.
+              We help dealerships, used car lots, mechanics, and automotive businesses generate qualified leads, move inventory, and fill service bays. Marketing built around the way people actually buy cars in 2026.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
               <Link
@@ -91,7 +91,7 @@ export default function Automotive() {
               "Foot traffic is down. Lead quality is worse. And every dealer is running the same ads."
             </blockquote>
             <p className="font-body text-black/60 text-lg mt-8 max-w-2xl leading-relaxed">
-              Automotive buyers research for weeks online before they ever walk into a showroom. Most automotive marketing still acts like it's 2015 — running price ads and hoping someone walks in. We build campaigns around the way people actually buy cars now.
+              Automotive buyers research for weeks online before they ever walk into a showroom. Most automotive marketing still acts like it's 2015, running price ads and hoping someone walks in. We build campaigns around the way people actually buy cars now.
             </p>
           </ScrollReveal>
         </div>

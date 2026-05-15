@@ -16,7 +16,7 @@ const FOCUS_ITEMS = [
   },
   {
     title: 'Launching new menus and events',
-    desc: 'Not just announcing — building campaigns that drive actual bookings on launch night.',
+    desc: 'Not just announcing. Building campaigns that drive actual bookings on launch night.',
   },
   {
     title: 'Growing your customer database',
@@ -34,7 +34,7 @@ const FOCUS_ITEMS = [
 
 const HOW_IT_WORKS = [
   { step: '01', title: 'Audit', desc: "We look at your bookings, customer flow, ad performance, content, and retention. Find where the leaks are." },
-  { step: '02', title: 'Strategy', desc: "Build a plan around your capacity, margins, and what's actually filling tables vs. what's just looking busy." },
+  { step: '02', title: 'Strategy', desc: "Build a plan around your capacity, margins, and what's actually filling tables. Cut what's just looking busy." },
   { step: '03', title: 'Execute', desc: "Run paid ads, produce content, manage social, build retention systems. All hands-on." },
   { step: '04', title: 'Optimise', desc: "Weekly reporting, live adjustments, double down on what's filling tables." },
 ];
@@ -58,7 +58,7 @@ const FAQS = [
   },
   {
     q: 'Do you create the content in-house?',
-    a: 'Yes. UGC production, social content, and creative direction — all handled in-house. We brief, produce, and manage it.',
+    a: 'Yes. UGC production, social content, and creative direction. All handled in-house. We brief, produce, and manage it.',
   },
   {
     q: 'Can you help with launches and events?',
@@ -114,7 +114,7 @@ export default function Hospitality() {
               every night.
             </h1>
             <p className="font-body text-lg md:text-xl leading-relaxed mt-6 max-w-2xl" style={{ color: 'rgba(255,255,255,0.85)' }}>
-              We help restaurants, venues, and hotels turn quiet nights into booked-out weekends — and finally fix slow Tuesdays. Paid ads, content, and retention systems that drive bookings, repeat visits, and revenue.
+              We help restaurants, venues, and hotels turn quiet nights into booked-out weekends. We fix slow Tuesdays. Paid ads, content, and retention systems that drive bookings, repeat visits, and revenue.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
               <Link
@@ -144,7 +144,7 @@ export default function Hospitality() {
               "A lot of venues post constantly and still have empty nights."
             </blockquote>
             <p className="font-body text-lg mt-8 max-w-2xl leading-relaxed" style={{ color: 'rgba(150,22,33,0.75)' }}>
-              Most hospitality marketing either looks good but doesn't convert, or burns money targeting the wrong people. We do something different.
+              Most hospitality marketing either looks good but doesn't convert, or burns money on the wrong people. We do something different.
             </p>
           </ScrollReveal>
         </div>

@@ -16,9 +16,6 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
             >
-              <div className="inline-flex items-center gap-2 font-body text-sm text-black/50 mb-5 px-4 py-1.5 rounded-full border border-black/10 bg-white/70">
-                Trusted by 20+ brands · A$5M+ ad spend managed
-              </div>
               <h1 className="font-heading font-bold text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.95] uppercase tracking-tight text-black">
                 Fill every table,
                 <br />
@@ -33,7 +30,7 @@ export default function HeroSection() {
               className="mt-6 max-w-xl"
             >
               <p className="font-body text-black/60 text-lg md:text-xl leading-relaxed">
-                We're growth operators for hospitality, e-commerce, trades, and automotive brands. We don't just run marketing — we build the systems that turn ad spend into revenue, content into bookings, and traffic into qualified leads.
+                We're growth operators for hospitality and e-commerce brands. We don't just run marketing. We build the systems that turn ad spend into revenue, content into bookings, and traffic into repeat customers.
               </p>
             </motion.div>
 

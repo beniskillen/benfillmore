@@ -50,7 +50,7 @@ const SERVICE_SECTIONS = [
       },
       {
         name: 'Hands-On Partnership',
-        desc: "We're in your Slack, your Loom, your strategy calls. Launch campaigns, produce creative, analyse performance, and optimise weekly.",
+        desc: "We're in your Slack, your Loom, your strategy calls. Launch campaigns, produce creative, analyse performance, optimise weekly.",
       },
     ],
   },
@@ -58,7 +58,7 @@ const SERVICE_SECTIONS = [
 
 const PROCESS_STEPS = [
   { step: '01', title: 'Discovery', desc: "Understand your business, your margins, and where your real growth opportunities are." },
-  { step: '02', title: 'Strategy', desc: "Build a plan based on your AOV, capacity, and growth goals. No 40-page deck. A simple, clear roadmap." },
+  { step: '02', title: 'Strategy', desc: "Build a plan based on your AOV, capacity, and growth goals. No 40-page deck. Simple, clear, actionable." },
   { step: '03', title: 'Execution', desc: "Launch campaigns, produce creative, ship the work. We don't outsource execution." },
   { step: '04', title: 'Optimisation', desc: "Analyse performance weekly. Double down on what's working. Cut what's not." },
 ];
@@ -81,7 +81,7 @@ export default function Services() {
               Growth systems for brands that want to scale.
             </h1>
             <p className="font-body text-black/60 text-lg md:text-xl leading-relaxed mt-6 max-w-2xl">
-              Paid media, in-house creative, and strategy — built to drive revenue, not just deliverables.
+              Paid media, in-house creative, and strategy. Built to drive revenue, not just deliverables.
             </p>
           </ScrollReveal>
         </div>

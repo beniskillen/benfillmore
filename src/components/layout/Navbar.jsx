@@ -6,7 +6,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 const NAV_ITEMS = [
   { label: 'Home', path: '/' },
   { label: 'Services', path: '/services' },
-  { label: 'Industries', path: '/industries' },
+  { label: 'Hospitality', path: '/hospitality' },
+  { label: 'E-Commerce', path: '/e-commerce' },
   { label: 'Case Studies', path: '/case-studies' },
   { label: 'Pricing', path: '/pricing' },
   { label: 'About', path: '/about' },
@@ -32,17 +33,29 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
 
+  const [darkPage, setDarkPage] = useState(false);
+
+  useEffect(() => {
+    // Pages with dark/colored heroes where nav text would be invisible
+    const darkHeroRoutes = ['/about', '/hospitality', '/trades', '/automotive'];
+    setDarkPage(darkHeroRoutes.includes(location.pathname));
+  }, [location.pathname]);
+
+  const isLight = scrolled || !darkPage;
+
   return (
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
             ? 'bg-white/95 backdrop-blur-md border-b border-black/5 py-4'
-            : 'bg-transparent py-6'
+            : darkPage
+              ? 'bg-black/40 backdrop-blur-md py-6'
+              : 'bg-transparent py-6'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-8 flex items-center justify-between">
-          <Link to="/" className="font-heading font-bold text-2xl tracking-tight text-black flex-shrink-0">
+          <Link to="/" className={`font-heading font-bold text-2xl tracking-tight flex-shrink-0 transition-colors duration-300 ${isLight ? 'text-black' : 'text-white'}`}>
             FILLMORE
           </Link>
 
@@ -53,18 +66,22 @@ export default function Navbar() {
                 key={item.path}
                 to={item.path}
                 className={`text-sm font-medium transition-colors relative group whitespace-nowrap ${
-                  location.pathname === item.path ? 'text-black' : 'text-black/60 hover:text-black'
+                  isLight
+                    ? location.pathname === item.path ? 'text-black' : 'text-black/60 hover:text-black'
+                    : location.pathname === item.path ? 'text-white' : 'text-white/70 hover:text-white'
                 }`}
               >
                 {item.label}
-                <span className={`absolute -bottom-1 left-0 h-[1.5px] bg-black transition-all duration-300 ${
-                  location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'
-                }`} />
+                <span className={`absolute -bottom-1 left-0 h-[1.5px] transition-all duration-300 ${
+                  isLight ? 'bg-black' : 'bg-white'
+                } ${location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'}`} />
               </Link>
             ))}
             <Link
               to="/apply"
-              className="bg-black text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 whitespace-nowrap flex-shrink-0"
+              className={`text-sm font-semibold px-5 py-2.5 rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 whitespace-nowrap flex-shrink-0 ${
+                isLight ? 'bg-black text-white' : 'bg-white text-black'
+              }`}
             >
               Book a Strategy Call
             </Link>
@@ -73,7 +90,7 @@ export default function Navbar() {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 text-black"
+            className={`lg:hidden p-2 transition-colors duration-300 ${isLight ? 'text-black' : 'text-white'}`}
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

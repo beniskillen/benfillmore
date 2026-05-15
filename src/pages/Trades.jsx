@@ -70,7 +70,7 @@ export default function Trades() {
               with qualified jobs.
             </h1>
             <p className="font-body text-lg md:text-xl leading-relaxed mt-6 max-w-2xl" style={{ color: 'rgba(255,255,255,0.85)' }}>
-              We help service businesses — electricians, plumbers, builders, landscapers, cleaners, and trades — generate consistent local leads and convert them into booked jobs.
+              We help service businesses: electricians, plumbers, builders, landscapers, cleaners, and trades. Consistent local leads. Booked jobs.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
               <Link
@@ -97,7 +97,7 @@ export default function Trades() {
               "Inconsistent leads. Empty days. Then three jobs at once you can't service."
             </blockquote>
             <p className="font-body text-lg mt-8 max-w-2xl leading-relaxed" style={{ color: 'rgba(30,58,95,0.7)' }}>
-              Most trade businesses ride waves of feast-and-famine. Word-of-mouth is great when it's flowing, but it's not predictable. We build lead systems that fill your calendar consistently — not just when your last customer happens to refer you.
+              Most trade businesses ride waves of feast-and-famine. Word-of-mouth is great when it's flowing, but it's not predictable. We build lead systems that fill your calendar consistently. Not just when your last customer happens to refer you.
             </p>
           </ScrollReveal>
         </div>

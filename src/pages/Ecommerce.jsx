@@ -17,11 +17,11 @@ const OUTCOMES = [
   },
   {
     title: 'LTV That Compounds',
-    desc: "Email flows, SMS, retention systems. The revenue that doesn't show up in Meta's ROAS column but pays the bills.",
+    desc: "Email flows, SMS, retention systems. The revenue that doesn't show up in Meta's ROAS column, but pays the bills.",
   },
   {
     title: 'A System, Not Campaigns',
-    desc: "Most agencies run campaigns. We build a marketing system that keeps working when you scale — not one that breaks at A$50K/month spend.",
+    desc: "Most agencies run campaigns. We build a marketing system that keeps working when you scale. Not one that breaks at A$50K/month spend.",
   },
 ];
 
@@ -57,15 +57,15 @@ const FAQS = [
   },
   {
     q: 'How quickly will I see results?',
-    a: "Paid ads typically show directional results in 2-4 weeks. Email takes a month or two to build and compound. UGC content performance depends on the creative — some pieces are instant, some take time.",
+    a: "Paid ads typically show directional results in 2-4 weeks. Email takes a month or two to build and compound. UGC content performance depends on the creative: some pieces are instant, some take time.",
   },
   {
     q: 'Do you handle email and SMS too, or just paid ads?',
-    a: "Both, at Growth tier and above. Email flows, SMS campaigns, segmentation, list health — it's all part of the system.",
+    a: "Both, at Growth tier and above. Email flows, SMS campaigns, segmentation, list health. It's all part of the system.",
   },
   {
     q: 'How do you handle attribution?',
-    a: "We set up proper UTM tracking and cross-reference platform data with Shopify revenue. We'll be upfront about the discrepancy between Meta-reported ROAS and blended MER — and we optimise for both.",
+    a: "We set up proper UTM tracking and cross-reference platform data with Shopify revenue. We'll be upfront about the discrepancy between Meta-reported ROAS and blended MER, and we optimise for both.",
   },
 ];
 
@@ -115,7 +115,7 @@ export default function Ecommerce() {
               to checkout.
             </h1>
             <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6 max-w-2xl">
-              We help DTC brands turn ad spend into revenue. Lower CAC. Higher LTV. Creative that converts. The systems that scale e-commerce profitably.
+              We help DTC brands turn ad spend into revenue. Lower CAC. Higher LTV. Creative that converts. Systems that scale e-commerce profitably.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
               <Link
