@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const FOOTER_NAV = [
   { label: 'Home', path: '/' },
   { label: 'Services', path: '/services' },
+  { label: 'Work', path: '/work' },
   { label: 'Case Studies', path: '/case-studies' },
   { label: 'Pricing', path: '/pricing' },
   { label: 'About', path: '/about' },

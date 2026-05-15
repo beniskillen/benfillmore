@@ -1,12 +1,12 @@
 import React from 'react';
 
 const METRICS = [
-  { value: 'A$5M+ Ad Spend Managed', client: 'Across our portfolio' },
-  { value: '4.16x ROAS', client: 'The Sockery' },
-  { value: '+309% Purchases', client: 'The Sockery' },
-  { value: '1,165 Leads at A$80 CPL', client: 'Pressure Washing Guy' },
-  { value: '41,900 Clicks', client: 'Garage Door Repairs 24/7' },
-  { value: '2.64x ROAS', client: '5 Hounds' },
+  { value: 'A$2M+ Ad Spend Managed', client: 'Across our portfolio' },
+  { value: '4.16x ROAS', client: 'E-Commerce' },
+  { value: '+309% Purchases', client: 'E-Commerce' },
+  { value: '1,165 Leads at A$80 CPL', client: 'Service Business' },
+  { value: '41,900 Clicks', client: 'Service Business' },
+  { value: '2.64x ROAS', client: 'E-Commerce' },
 ];
 
 function MetricItem({ value, client }) {

@@ -59,15 +59,7 @@ export default function HeroSection() {
               transition={{ duration: 0.5, delay: 0.7 }}
               className="mt-10 pt-8 border-t border-black/8"
             >
-              <p className="font-body text-black/40 text-xs uppercase tracking-widest mb-4">Trusted by growing brands</p>
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
-                {['The Sockery', 'Garage Door 24/7', 'Pressure Washing Guy', '5 Hounds'].map((name) => (
-                  <span key={name} className="font-heading font-bold text-xs uppercase tracking-wide text-black/30">
-                    {name}
-                  </span>
-                ))}
-              </div>
-              <p className="font-body text-black/40 text-sm mt-5">
+              <p className="font-body text-black/40 text-sm">
                 Month-to-month. No lock-ins. No handoffs.
               </p>
             </motion.div>

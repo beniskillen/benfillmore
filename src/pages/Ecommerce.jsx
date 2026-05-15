@@ -184,7 +184,7 @@ export default function Ecommerce() {
               What Usually Breaks First When Brands Scale.
             </h2>
             <p className="font-body text-white/50 text-lg max-w-2xl mb-14">
-              We've seen these patterns across 20+ accounts. If any of them sound familiar, we should talk.
+              We've seen these patterns across the accounts we've grown. If any of them sound familiar, we should talk.
             </p>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
