@@ -1,0 +1,43 @@
+{
+  "name": "Resource",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the resource or article"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short summary of the resource"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "paid-media",
+        "creative",
+        "hospitality",
+        "ecommerce",
+        "strategy"
+      ],
+      "description": "Topic category"
+    },
+    "content": {
+      "type": "string",
+      "description": "Full body content of the resource"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-friendly identifier"
+    },
+    "published": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the resource is publicly visible"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "category"
+  ]
+}
