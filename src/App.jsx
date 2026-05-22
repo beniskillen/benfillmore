@@ -14,6 +14,7 @@ import Ecommerce from './pages/Ecommerce';
 import CaseStudies from './pages/CaseStudies';
 import Pricing from './pages/Pricing';
 import About from './pages/About';
+import Contact from './pages/Contact';
 import Apply from './pages/Apply';
 import Industries from './pages/Industries';
 import Trades from './pages/Trades';
@@ -53,6 +54,7 @@ const AuthenticatedApp = () => {
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/apply" element={<Apply />} />
         <Route path="/industries" element={<Industries />} />
         <Route path="/work" element={<Work />} />

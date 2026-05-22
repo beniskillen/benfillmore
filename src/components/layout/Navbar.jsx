@@ -12,6 +12,7 @@ const NAV_ITEMS = [
   { label: 'Case Studies', path: '/case-studies' },
   { label: 'Pricing', path: '/pricing' },
   { label: 'About', path: '/about' },
+  { label: 'Contact', path: '/contact' },
 ];
 
 export default function Navbar() {
@@ -38,7 +39,7 @@ export default function Navbar() {
 
   useEffect(() => {
     // Pages with dark/colored heroes where nav text would be invisible
-    const darkHeroRoutes = ['/about', '/hospitality', '/trades', '/automotive'];
+    const darkHeroRoutes = ['/about', '/contact', '/hospitality', '/trades', '/automotive'];
     setDarkPage(darkHeroRoutes.includes(location.pathname));
   }, [location.pathname]);
 
