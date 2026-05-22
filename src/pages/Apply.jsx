@@ -39,6 +39,10 @@ export default function Apply() {
     e.preventDefault();
     setSubmitting(true);
     await base44.entities.StrategyApplication.create(form);
+    // Also write to Google Sheet
+    try {
+      await base44.functions.invoke('appendToSheet', form);
+    } catch (_) {}
     setSubmitting(false);
     setSubmitted(true);
   };
