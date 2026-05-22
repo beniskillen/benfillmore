@@ -19,6 +19,7 @@ import Industries from './pages/Industries';
 import Trades from './pages/Trades';
 import Automotive from './pages/Automotive';
 import Work from './pages/Work';
+import Admin from './pages/Admin';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -57,6 +58,7 @@ const AuthenticatedApp = () => {
         <Route path="/work" element={<Work />} />
         <Route path="/trades" element={<Trades />} />
         <Route path="/automotive" element={<Automotive />} />
+        <Route path="/admin" element={<Admin />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
