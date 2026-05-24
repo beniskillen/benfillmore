@@ -42,6 +42,11 @@
       "type": "string",
       "description": "Contact email address"
     },
+    "description": {
+      "type": "string",
+      "maxLength": 1000,
+      "description": "Brief description of the business or application context"
+    },
     "status": {
       "type": "string",
       "enum": [
