@@ -40,28 +40,16 @@ export default function HeroSection() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="mt-8 flex flex-col sm:flex-row items-start gap-4"
             >
-              <PillButton to="/apply">
+              <PillButton to="/apply" variant="primary">
                 Book a Strategy Call →
               </PillButton>
               <Link
                 to="/case-studies"
-                className="font-body text-black/60 font-medium text-base relative group inline-flex items-center gap-1 py-3.5"
+                className="font-body text-black/60 font-medium text-base relative group inline-flex items-center gap-1 py-3.5 hover:text-black transition-colors"
               >
                 See how we'd grow your brand →
                 <span className="absolute bottom-2 left-0 w-0 h-[1px] bg-black transition-all duration-300 group-hover:w-full" />
               </Link>
-            </motion.div>
-
-            {/* Social proof */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.7 }}
-              className="mt-10 pt-8 border-t border-black/8"
-            >
-              <p className="font-body text-black/40 text-sm">
-                Month-to-month. No lock-ins. No handoffs.
-              </p>
             </motion.div>
           </div>
 
