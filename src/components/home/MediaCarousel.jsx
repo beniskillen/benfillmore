@@ -103,9 +103,7 @@ export default function MediaCarousel({ title = "REAL WORK. REAL RESULTS.", subt
               />
 
               {/* Label */}
-              <div className="absolute bottom-4 left-4 right-4">
-                <p className="font-body text-white/70 text-xs">{slide.type}</p>
-              </div>
+
             </div>
           </SwiperSlide>
         ))}

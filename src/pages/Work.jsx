@@ -179,11 +179,7 @@ function WorkTile({ item, onClick }) {
       </div>
 
       {/* Hover overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 md:p-5">
-        <span className="font-body text-xs font-semibold uppercase tracking-widest text-white/50 mb-1">{item.label}</span>
-        <p className="font-heading font-bold text-white text-base uppercase tracking-tight">{item.project}</p>
-        <p className="font-body text-white/60 text-xs mt-1">{item.kind}</p>
-      </div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     </div>
   );
 }
