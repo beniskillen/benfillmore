@@ -65,7 +65,7 @@ const PROCESS_STEPS = [
 
 const CARE_ABOUT = [
   { title: 'Lower customer acquisition cost', desc: "Paying less for every new customer you bring in. The metric that decides whether marketing scales or burns budget." },
-  { title: 'Higher repeat purchase rate', desc: "Turning one-time buyers into regulars. The most underrated lever in e-commerce and hospitality." },
+  { title: 'Higher repeat visit rate', desc: "Turning one-time diners into regulars. The most underrated lever in hospitality." },
   { title: 'Booked-out weekends and weekdays', desc: "Not just one or the other. Most venues are packed Saturdays and dead Tuesdays. We fix the Tuesdays." },
   { title: 'Stronger LTV and retention', desc: "Customers who come back, spend more, and tell their friends. That's where the real money is." },
 ];

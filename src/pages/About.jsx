@@ -14,7 +14,7 @@ const TEAM = [
   {
     name: 'Noam Shabat',
     role: 'Performance & Strategy',
-    bio: "I run paid acquisition for ecommerce and lead gen brands. 8 years in performance marketing across Meta, Google, and analytics. Built campaigns that scaled brands from $50k to $5M+ in revenue.",
+    bio: "I run paid acquisition for hospitality brands. 8 years in performance marketing across Meta, Google, and analytics. Built campaigns that scaled venues from empty midweeks to fully booked.",
     focus: ['Paid Media', 'Strategy', 'Analytics'],
     linkedin: '#',
   },
@@ -92,7 +92,7 @@ export default function About() {
               How We Got Here.
             </h2>
             <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed">
-              Noam started running paid ads in 2018, working with e-commerce and lead gen brands across Australia. Eight years and millions in ad spend later, he built systems that scaled brands from A$50K to A$2M+ in revenue. Along the way he saw the same pattern over and over: businesses paying agencies thousands a month and getting back PDFs instead of performance.
+              Noam started running paid ads in 2018, working with hospitality brands across Australia. Eight years and millions in ad spend later, he built systems that turned quiet venues into fully booked operations. Along the way he saw the same pattern over and over: businesses paying agencies thousands a month and getting back PDFs instead of performance.
             </p>
             <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6">
               Melina came from the creative side, leading content and UGC production for hospitality and DTC brands. She watched founders pour budget into beautiful content that didn't drive a single booking or sale, because no one was thinking about how content connects to actual revenue.
@@ -119,7 +119,7 @@ export default function About() {
             {[
               {
                 title: 'We Run Two Disciplines, Not Ten.',
-                desc: "We don't do SEO, podcasts, billboards, or brand consulting. We do paid media and creative for hospitality and e-commerce. That's it. The narrower the focus, the deeper the work.",
+                desc: "We don't do SEO, podcasts, billboards, or brand consulting. We do paid media and creative for hospitality. That's it. The narrower the focus, the deeper the work.",
               },
               {
                 title: 'We Produce Creative In-House.',

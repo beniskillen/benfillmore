@@ -7,7 +7,6 @@ const NAV_ITEMS = [
   { label: 'Home', path: '/' },
   { label: 'Services', path: '/services' },
   { label: 'Hospitality', path: '/hospitality' },
-  { label: 'E-Commerce', path: '/e-commerce' },
   { label: 'Work', path: '/work' },
   { label: 'Case Studies', path: '/case-studies' },
   { label: 'Pricing', path: '/pricing' },

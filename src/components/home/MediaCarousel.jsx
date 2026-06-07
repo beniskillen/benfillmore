@@ -7,52 +7,34 @@ import ScrollReveal from '../shared/ScrollReveal';
 
 const SLIDES = [
   {
-    client: 'The Sockery',
-    type: 'Meta Ad',
-    bg: '#1a1a2e',
-    video: 'https://videos.pexels.com/video-files/3571264/3571264-uhd_1440_2732_25fps.mp4',
-  },
-  {
-    client: '5 Hounds',
-    type: 'UGC Ad',
-    bg: '#2d1b00',
-    video: 'https://videos.pexels.com/video-files/3776817/3776817-hd_1080_1920_25fps.mp4',
-  },
-  {
-    client: 'Garage Door 24/7',
-    type: 'Google Display',
-    bg: '#0d1b2a',
-    video: 'https://videos.pexels.com/video-files/4125027/4125027-uhd_1440_2560_24fps.mp4',
-  },
-  {
-    client: 'Pressure Washing',
-    type: 'Lead Gen Ad',
-    bg: '#1b2d1b',
-    video: 'https://videos.pexels.com/video-files/4491852/4491852-uhd_1440_2560_24fps.mp4',
-  },
-  {
-    client: 'The Sockery',
-    type: 'UGC Creative',
-    bg: '#2d0d1a',
-    video: 'https://videos.pexels.com/video-files/5698735/5698735-hd_1080_1920_30fps.mp4',
-  },
-  {
-    client: '5 Hounds',
-    type: 'Product Ad',
-    bg: '#1a2d1a',
-    video: 'https://videos.pexels.com/video-files/3195394/3195394-hd_1080_1920_25fps.mp4',
-  },
-  {
-    client: 'Restaurant Client',
     type: 'Content Reel',
-    bg: '#2d1a00',
-    video: 'https://videos.pexels.com/video-files/3764958/3764958-uhd_1440_2560_24fps.mp4',
+    bg: '#0d0d0d',
+    video: 'https://media.base44.com/videos/public/69fac9355f793a9829c2542e/f4e48bb23_Reel4.mp4',
   },
   {
-    client: 'E-Com Brand',
-    type: 'Conversion Ad',
-    bg: '#1a001a',
-    video: 'https://videos.pexels.com/video-files/4325446/4325446-hd_1080_1920_25fps.mp4',
+    type: 'Promo Video',
+    bg: '#1a0a00',
+    video: 'https://media.base44.com/videos/public/69fac9355f793a9829c2542e/bb1795bd4_Reel5.mov',
+  },
+  {
+    type: 'Teaser',
+    bg: '#0d1a0d',
+    video: 'https://media.base44.com/videos/public/69fac9355f793a9829c2542e/6aa7f289b_Teaser1.mp4',
+  },
+  {
+    type: 'Meta Ad',
+    bg: '#1a0d0d',
+    video: 'https://media.base44.com/videos/public/69fac9355f793a9829c2542e/121cff92d_Teaser2.mp4',
+  },
+  {
+    type: 'UGC',
+    bg: '#0d0d1a',
+    video: 'https://media.base44.com/videos/public/69fac9355f793a9829c2542e/f4e48bb23_Reel4.mp4',
+  },
+  {
+    type: 'Brand Reel',
+    bg: '#1a1a0d',
+    video: 'https://media.base44.com/videos/public/69fac9355f793a9829c2542e/6aa7f289b_Teaser1.mp4',
   },
 ];
 
@@ -122,8 +104,7 @@ export default function MediaCarousel({ title = "REAL WORK. REAL RESULTS.", subt
 
               {/* Label */}
               <div className="absolute bottom-4 left-4 right-4">
-                <p className="font-body font-semibold text-white text-sm">{slide.client}</p>
-                <p className="font-body text-white/70 text-xs mt-0.5">{slide.type}</p>
+                <p className="font-body text-white/70 text-xs">{slide.type}</p>
               </div>
             </div>
           </SwiperSlide>

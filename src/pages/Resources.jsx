@@ -39,12 +39,12 @@ export default function Resources() {
               Performance Marketing Insights
             </p>
             <h1 className="font-heading font-bold text-[clamp(2rem,5.5vw,4.5rem)] leading-[0.95] uppercase tracking-tight text-white max-w-5xl">
-              What we know about growing brands with paid media and content.
+              What we know about growing hospitality brands with paid media and content.
             </h1>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <p className="text-white/60 text-lg md:text-xl mt-8 max-w-3xl leading-relaxed">
-              These are the frameworks, observations, and strategies we apply every day across hospitality and e-commerce accounts. Not theory -- patterns we have seen work at scale, across hundreds of campaigns and millions in managed spend.
+              These are the frameworks, observations, and strategies we apply every day across hospitality accounts. Not theory -- patterns we have seen work at scale, across hundreds of campaigns and millions in managed spend.
             </p>
           </ScrollReveal>
         </div>
@@ -55,7 +55,7 @@ export default function Resources() {
         <div className="max-w-3xl mx-auto px-6 md:px-8">
           <ScrollReveal>
             <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed">
-              Performance marketing for hospitality and e-commerce businesses operates on different rules than most agencies acknowledge. A restaurant group scaling across three suburbs has completely different attribution needs than a DTC skincare brand targeting women aged 28-45. The platforms are the same -- Meta, Google, TikTok -- but the strategy, creative format, audience architecture, and measurement frameworks need to be rebuilt from the ground up for each vertical.
+              Performance marketing for hospitality businesses operates on different rules than most agencies acknowledge. A restaurant group scaling across three suburbs has completely different attribution needs than a hotel or venue brand. The platforms are the same -- Meta, Google, TikTok -- but the strategy, creative format, audience architecture, and measurement frameworks need to be rebuilt from the ground up for this vertical.
             </p>
             <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6">
               At Fillmore, our paid media work is always paired with in-house creative production. This matters because the biggest variable in any paid campaign is not the targeting -- it is the creative. The businesses that consistently grow are the ones testing more assets, moving faster, and treating creative as a performance lever, not a branding exercise.

@@ -132,7 +132,7 @@ function CaseStudyDetail({ study, onClose }) {
   );
 }
 
-const FILTER_TABS = ['All', 'E-Commerce', 'Trades & Services', 'Hospitality', 'Automotive', 'Strategic Examples'];
+const FILTER_TABS = ['All', 'Hospitality'];
 
 export default function CaseStudies() {
   const [selectedStudy, setSelectedStudy] = useState(null);
@@ -196,7 +196,7 @@ export default function CaseStudies() {
                 Strategic Example Breakdowns
               </h3>
               <p className="font-body text-white/60 text-base leading-relaxed mt-3 max-w-xl mx-auto">
-                4 in-depth breakdowns showing exactly how we'd grow real brands — 2 hospitality, 2 e-commerce. Real strategy, no fluff.
+                In-depth breakdowns showing exactly how we'd grow real hospitality brands. Real strategy, no fluff.
               </p>
             </div>
           </ScrollReveal>

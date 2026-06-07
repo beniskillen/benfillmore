@@ -23,7 +23,7 @@ const CARE_ABOUT = [
   },
   {
     title: 'Higher repeat purchase rate',
-    desc: "Turning one-time buyers into regulars. The most underrated lever in e-commerce and hospitality.",
+    desc: "Turning one-time diners into regulars. The most underrated lever in hospitality.",
   },
   {
     title: 'Booked-out weekends and weekdays',
