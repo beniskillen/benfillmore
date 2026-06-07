@@ -15,7 +15,7 @@ function MetricItem({ value, client }) {
       <span className="font-heading font-bold text-2xl md:text-4xl uppercase tracking-tight text-black whitespace-nowrap">
         {value}
       </span>
-      <span className="font-body text-sm text-black/40 mt-2">{client}</span>
+
     </div>
   );
 }
