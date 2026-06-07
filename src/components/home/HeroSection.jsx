@@ -78,16 +78,13 @@ export default function HeroSection() {
                 className="w-full h-full object-cover"
                 onError={(e) => { e.target.style.display = 'none'; }}
               >
-                <source src="https://videos.pexels.com/video-files/3776817/3776817-hd_1080_1920_25fps.mp4" type="video/mp4" />
+                <source src="https://media.base44.com/videos/public/69fac9355f793a9829c2542e/6aa7f289b_Teaser1.mp4" type="video/mp4" />
               </video>
               <div
                 className="absolute inset-0"
                 style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 60%)' }}
               />
-              <div className="absolute bottom-4 left-4 right-4">
-                <p className="font-body font-semibold text-white text-xs">UGC Content</p>
-                <p className="font-body text-white/60 text-xs mt-0.5">Fillmore Creative</p>
-              </div>
+
             </div>
           </motion.div>
 
