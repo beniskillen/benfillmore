@@ -6,28 +6,27 @@ Deno.serve(async (req) => {
     const body = await req.json();
 
     const { data } = body;
-    const email = data?.email;
     const name = data?.name;
-
-    if (!email) {
-      return Response.json({ error: 'No email found' }, { status: 400 });
-    }
+    const email = data?.email;
+    const businessName = data?.business_name;
+    const niche = data?.niche;
+    const adSpend = data?.monthly_ad_spend;
+    const challenge = data?.biggest_challenge;
+    const website = data?.website;
 
     await base44.asServiceRole.integrations.Core.SendEmail({
-      to: email,
+      to: 'hello@fillmoremedia.com.au',
       from_name: 'Fillmore Media',
-      subject: "We've received your application — speak soon.",
-      body: `Hi ${name || 'there'},
+      subject: `New lead: ${name || 'Unknown'} — ${businessName || ''}`,
+      body: `New application received from the website.
 
-Thanks for reaching out to Fillmore Media.
-
-We've received your details and one of our team will be in touch with you shortly to discuss next steps.
-
-In the meantime, if you have any questions feel free to reply to this email.
-
-Talk soon,
-The Fillmore Team
-fillmoremedia.com.au`,
+Name: ${name || '—'}
+Business: ${businessName || '—'}
+Email: ${email || '—'}
+Website: ${website || '—'}
+Niche: ${niche || '—'}
+Monthly Ad Spend: ${adSpend || '—'}
+Biggest Challenge: ${challenge || '—'}`,
     });
 
     return Response.json({ success: true });
