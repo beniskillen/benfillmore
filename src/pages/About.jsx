@@ -16,7 +16,6 @@ const TEAM = [
     role: 'Performance & Strategy',
     bio: "I run paid acquisition for hospitality brands. 8 years in performance marketing across Meta, Google, and analytics. Built campaigns that scaled venues from empty midweeks to fully booked.",
     focus: ['Paid Media', 'Strategy', 'Analytics'],
-    linkedin: '#',
     image: 'https://media.base44.com/images/public/69fac9355f793a9829c2542e/5d0751678_WhatsAppImage2026-06-05at061528.jpg',
   },
   {
@@ -24,7 +23,6 @@ const TEAM = [
     role: 'Content & Creative',
     bio: "I lead content and creative for our clients. UGC, social, brand storytelling. Built creative engines for hospitality and DTC brands across Australia.",
     focus: ['Content', 'UGC', 'Social', 'Creative Direction'],
-    linkedin: '#',
     image: 'https://media.base44.com/images/public/69fac9355f793a9829c2542e/e7faf47b2_WhatsAppImage2026-06-11at072301.jpg',
   },
 ];
@@ -212,14 +210,7 @@ export default function About() {
                       ))}
                     </div>
                   </div>
-                  <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block mt-6 font-body text-sm text-black/40 hover:text-black transition-colors underline underline-offset-4"
-                  >
-                    LinkedIn →
-                  </a>
+                  
                 </div>
               </ScrollReveal>
             ))}

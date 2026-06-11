@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center bg-background pt-24 pb-16 md:pt-32 md:pb-24">
+    <section className="min-h-screen flex items-center pt-24 pb-16 md:pt-32 md:pb-24" style={{ background: '#961621' }}>
       <div className="max-w-7xl mx-auto px-6 md:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
 
@@ -15,7 +15,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
             >
-              <h1 className="font-heading font-bold text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.95] uppercase tracking-tight text-black">
+              <h1 className="font-heading font-bold text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.95] uppercase tracking-tight text-white">
                 Fill every table,
                 <br />
                 cart and pipeline.
@@ -28,7 +28,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
               className="mt-6 max-w-xl"
             >
-              <p className="font-body text-black/60 text-lg md:text-xl leading-relaxed">
+              <p className="font-body text-white/70 text-lg md:text-xl leading-relaxed">
                 We're growth operators for hospitality brands. We don't just run marketing. We build the systems that turn ad spend into revenue, content into bookings, and seats into regulars.
               </p>
             </motion.div>
@@ -41,17 +41,17 @@ export default function HeroSection() {
             >
               <Link
                 to="/apply"
-                className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
-                style={{ background: '#E9FF80' }}
+                className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+                style={{ background: '#E9FF80', color: '#961621' }}
               >
                 Book a Strategy Call →
               </Link>
               <Link
                 to="/work"
-                className="font-body text-black/60 font-medium text-base relative group inline-flex items-center gap-1 py-3.5 hover:text-black transition-colors"
+                className="font-body text-white/60 font-medium text-base relative group inline-flex items-center gap-1 py-3.5 hover:text-white transition-colors"
               >
                 See how we'd grow your brand →
-                <span className="absolute bottom-2 left-0 w-0 h-[1px] bg-black transition-all duration-300 group-hover:w-full" />
+                <span className="absolute bottom-2 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full" />
               </Link>
             </motion.div>
           </div>

@@ -17,8 +17,7 @@ const NICHE_NAV = [
 ];
 
 const CONNECT = [
-  { label: 'Instagram', href: '#' },
-  { label: 'LinkedIn', href: '#' },
+  { label: 'Instagram', href: 'https://www.instagram.com/fillmore.media/' },
   { label: 'hello@fillmoremedia.com.au', href: 'mailto:hello@fillmoremedia.com.au' },
   { label: 'Sydney, Australia', href: '#' },
 ];
