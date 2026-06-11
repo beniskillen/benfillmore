@@ -2,7 +2,7 @@ import { createClientFromRequest } from 'npm:@base44/sdk@0.8.25';
 
 // Replace this with your Google Sheet ID (must be a native Google Sheet, not Office file)
 const SPREADSHEET_ID = Deno.env.get('GOOGLE_SHEET_ID') || '12S4KCIKPIoVh4OvawEZboMEvnczIGTWM';
-const SHEET_NAME = 'Sheet1';
+const SHEET_NAME = 'Lead Tracker';
 
 Deno.serve(async (req) => {
   try {
