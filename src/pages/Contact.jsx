@@ -1,12 +1,12 @@
 import { Mail, MessageCircle, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import ScrollReveal from '../components/shared/ScrollReveal';
-import PillButton from '../components/shared/PillButton';
 
 export default function Contact() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 md:pt-44 pb-20 md:pb-28 bg-black">
+      <section className="pt-32 md:pt-44 pb-20 md:pb-28" style={{ background: '#961621' }}>
         <div className="max-w-4xl mx-auto px-6 md:px-8">
           <ScrollReveal>
             <h1 className="font-heading font-bold text-[clamp(2rem,5.5vw,4.5rem)] leading-[0.95] uppercase tracking-tight text-white max-w-4xl">
@@ -96,14 +96,14 @@ export default function Contact() {
       </section>
 
       {/* Response Time */}
-      <section className="py-20 md:py-28 bg-black text-white">
+      <section className="py-20 md:py-28" style={{ background: '#FAF0DA' }}>
         <div className="max-w-3xl mx-auto px-6 md:px-8">
           <ScrollReveal>
             <div className="text-center">
-              <h2 className="font-heading font-bold text-2xl md:text-3xl uppercase tracking-tight mb-4">
+              <h2 className="font-heading font-bold text-2xl md:text-3xl uppercase tracking-tight mb-4" style={{ color: '#961621' }}>
                 What happens next?
               </h2>
-              <p className="text-white/60 text-lg leading-relaxed">
+              <p className="text-lg leading-relaxed" style={{ color: 'rgba(150,22,33,0.7)' }}>
                 We usually respond within 24 hours. If you're reaching out about a strategy session, we'll send over some availability for a 30-minute call where we can understand your business, see where your marketing is leaking revenue, and talk about whether we're a fit.
               </p>
             </div>
@@ -121,9 +121,13 @@ export default function Contact() {
             <p className="text-black/60 text-lg mb-10 max-w-xl mx-auto">
               Hit us up any time. We're always open to talking about growth.
             </p>
-            <PillButton to="/apply" variant="primary">
+            <Link
+              to="/apply"
+              className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+              style={{ background: '#E9FF80' }}
+            >
               Schedule a Call →
-            </PillButton>
+            </Link>
           </ScrollReveal>
         </div>
       </section>

@@ -55,7 +55,7 @@ export default function Apply() {
           animate={{ opacity: 1, scale: 1 }}
           className="max-w-lg mx-auto px-6 text-center"
         >
-          <div className="w-16 h-16 rounded-full bg-black flex items-center justify-center mx-auto mb-6">
+          <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ background: '#961621' }}>
             <CheckCircle className="w-8 h-8 text-white" />
           </div>
           <h2 className="font-heading font-bold text-3xl md:text-4xl uppercase tracking-tight text-black">
@@ -145,7 +145,8 @@ export default function Apply() {
             <button
               type="submit"
               disabled={submitting}
-              className="w-full bg-black text-white font-semibold text-base px-8 py-4 rounded-full hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full font-semibold text-base px-8 py-4 rounded-full text-black hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+              style={{ background: '#E9FF80' }}
             >
               {submitting ? 'Submitting...' : 'Submit Application →'}
             </button>

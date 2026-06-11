@@ -3,7 +3,7 @@ import ScrollReveal from '../shared/ScrollReveal';
 
 export default function AntidoteSection() {
   return (
-    <section className="bg-black py-24 md:py-32">
+    <section className="py-24 md:py-32" style={{ background: '#961621' }}>
       <div className="max-w-5xl mx-auto px-6 md:px-8">
         <ScrollReveal>
           <blockquote className="font-heading font-bold text-white text-2xl md:text-4xl lg:text-5xl leading-tight uppercase tracking-tight">

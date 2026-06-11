@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import PillButton from '../shared/PillButton';
 
 export default function HeroSection() {
   return (
@@ -40,11 +39,15 @@ export default function HeroSection() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="mt-8 flex flex-col sm:flex-row items-start gap-4"
             >
-              <PillButton to="/apply" variant="primary">
-                Book a Strategy Call →
-              </PillButton>
               <Link
-                to="/case-studies"
+                to="/apply"
+                className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+                style={{ background: '#E9FF80' }}
+              >
+                Book a Strategy Call →
+              </Link>
+              <Link
+                to="/work"
                 className="font-body text-black/60 font-medium text-base relative group inline-flex items-center gap-1 py-3.5 hover:text-black transition-colors"
               >
                 See how we'd grow your brand →

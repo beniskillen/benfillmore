@@ -209,11 +209,8 @@ export default function Pricing() {
                   <div className="mt-10">
                     <Link
                       to="/apply"
-                      className={`block w-full text-center font-semibold text-base px-6 py-3.5 rounded-full transition-all duration-200 hover:-translate-y-0.5 ${
-                        tier.popular
-                          ? 'bg-white text-black hover:shadow-xl'
-                          : 'bg-black text-white hover:shadow-lg'
-                      }`}
+                      className={`block w-full text-center font-semibold text-base px-6 py-3.5 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl text-black`}
+                      style={{ background: '#E9FF80' }}
                     >
                       Get Started →
                     </Link>
@@ -226,7 +223,7 @@ export default function Pricing() {
       </section>
 
       {/* Custom CTA */}
-      <section className="py-20 md:py-28 bg-black text-white">
+      <section className="py-20 md:py-28" style={{ background: '#961621' }}>
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight">
@@ -238,7 +235,8 @@ export default function Pricing() {
             <div className="mt-10">
               <Link
                 to="/apply"
-                className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full bg-white text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
+                className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
+                style={{ background: '#E9FF80' }}
               >
                 Talk to Us →
               </Link>
@@ -297,7 +295,8 @@ export default function Pricing() {
             <div className="mt-10">
               <Link
                 to="/apply"
-                className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full bg-black text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
+                className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
+                style={{ background: '#E9FF80' }}
               >
                 Book a Call →
               </Link>

@@ -1,6 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ScrollReveal from '../components/shared/ScrollReveal';
-import PillButton from '../components/shared/PillButton';
 
 const BELIEFS = [
   'Doing over talking.',
@@ -31,7 +31,7 @@ export default function About() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 md:pt-44 pb-20 md:pb-28 bg-black">
+      <section className="pt-32 md:pt-44 pb-20 md:pb-28" style={{ background: '#961621' }}>
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <ScrollReveal>
             <h1 className="font-heading font-bold text-[clamp(2rem,5.5vw,4.5rem)] leading-[0.95] uppercase tracking-tight text-white max-w-5xl">
@@ -65,17 +65,17 @@ export default function About() {
       </section>
 
       {/* Beliefs */}
-      <section className="bg-black text-white py-24 md:py-32">
+      <section className="py-24 md:py-32" style={{ background: '#FAF0DA' }}>
         <div className="max-w-5xl mx-auto px-6 md:px-8">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-sm uppercase tracking-widest text-white/30 mb-12">
+            <h2 className="font-heading font-bold text-sm uppercase tracking-widest mb-12" style={{ color: 'rgba(150,22,33,0.5)' }}>
               What We Believe
             </h2>
           </ScrollReveal>
           <div className="space-y-6 md:space-y-8">
             {BELIEFS.map((b, i) => (
               <ScrollReveal key={b} delay={i * 0.08}>
-                <p className="font-heading font-bold text-2xl md:text-4xl lg:text-5xl uppercase tracking-tight text-white">
+                <p className="font-heading font-bold text-2xl md:text-4xl lg:text-5xl uppercase tracking-tight" style={{ color: '#961621' }}>
                   {b}
                 </p>
               </ScrollReveal>
@@ -105,13 +105,13 @@ export default function About() {
       </section>
 
       {/* What Makes Us Different */}
-      <section className="py-24 md:py-32 bg-black text-white">
+      <section className="py-24 md:py-32" style={{ background: '#961621' }}>
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight mb-3">
+            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-white mb-3">
               What Makes Us Different.
             </h2>
-            <p className="font-body text-white/50 text-lg mb-16 max-w-2xl">
+            <p className="font-body text-white/70 text-lg mb-16 max-w-2xl">
               It's not a list of services. It's how we actually operate.
             </p>
           </ScrollReveal>
@@ -131,9 +131,9 @@ export default function About() {
               },
             ].map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 0.1}>
-                <div className="border border-white/10 rounded-2xl p-8">
+                <div className="rounded-2xl p-8" style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)' }}>
                   <h3 className="font-heading font-bold text-xl uppercase tracking-tight text-white">{item.title}</h3>
-                  <p className="font-body text-white/60 text-base leading-relaxed mt-4">{item.desc}</p>
+                  <p className="font-body text-white/70 text-base leading-relaxed mt-4">{item.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -269,19 +269,23 @@ export default function About() {
       </section>
 
       {/* Anti-pitch CTA */}
-      <section className="bg-black text-white py-24 md:py-32">
+      <section className="py-24 md:py-32" style={{ background: '#961621' }}>
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-4xl md:text-6xl uppercase tracking-tight">
+            <h2 className="font-heading font-bold text-4xl md:text-6xl uppercase tracking-tight text-white">
               Want to see if we're a fit?
             </h2>
-            <p className="font-body text-white/60 text-lg md:text-xl mt-6 max-w-xl mx-auto">
+            <p className="font-body text-white/70 text-lg md:text-xl mt-6 max-w-xl mx-auto">
               30 minutes. Honest conversation. We'll show you where your current marketing is leaking revenue. If we can help, we'll say so. If we can't, we'll say that too.
             </p>
             <div className="mt-10">
-              <PillButton to="/apply" variant="primary-inverted">
+              <Link
+                to="/apply"
+                className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+                style={{ background: '#E9FF80' }}
+              >
                 Book a Strategy Call →
-              </PillButton>
+              </Link>
             </div>
           </ScrollReveal>
         </div>

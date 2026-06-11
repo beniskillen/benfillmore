@@ -91,7 +91,8 @@ export default function Services() {
       {SERVICE_SECTIONS.map((section, si) => (
         <section
           key={section.title}
-          className={`py-20 md:py-28 ${si % 2 === 0 ? 'bg-black text-white' : 'bg-background text-black'}`}
+          className={`py-20 md:py-28 ${si % 2 === 0 ? 'text-white' : 'bg-background text-black'}`}
+          style={si % 2 === 0 ? { background: '#961621' } : {}}
         >
           <div className="max-w-7xl mx-auto px-6 md:px-8">
             <ScrollReveal>
@@ -103,11 +104,10 @@ export default function Services() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {section.items.map((item, ii) => (
                 <ScrollReveal key={item.name} delay={ii * 0.1}>
-                  <div className={`rounded-2xl p-8 md:p-10 h-full ${
-                    si % 2 === 0
-                      ? 'bg-white/5 border border-white/10'
-                      : 'bg-white border border-black/8'
-                  }`}>
+                  <div
+                    className={`rounded-2xl p-8 md:p-10 h-full ${si % 2 !== 0 ? 'bg-white border border-black/8' : ''}`}
+                    style={si % 2 === 0 ? { background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)' } : {}}
+                  >
                     <h3 className="font-heading font-bold text-lg md:text-xl uppercase tracking-tight">
                       {item.name}
                     </h3>
@@ -145,9 +145,9 @@ export default function Services() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {CARE_ABOUT.map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 0.08}>
-                <div className="bg-black rounded-2xl p-8 md:p-10">
+                <div className="rounded-2xl p-8 md:p-10" style={{ background: '#961621' }}>
                   <h3 className="font-heading font-bold text-xl md:text-2xl uppercase tracking-tight text-white">{item.title}</h3>
-                  <p className="font-body text-white/60 text-base leading-relaxed mt-3">{item.desc}</p>
+                  <p className="font-body text-white/70 text-base leading-relaxed mt-3">{item.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
