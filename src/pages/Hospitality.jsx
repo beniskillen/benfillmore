@@ -184,7 +184,7 @@ export default function Hospitality() {
       />
 
       {/* How It Works */}
-      <section className="py-24 md:py-32 bg-black text-white">
+      <section className="py-24 md:py-32 text-white" style={{ background: '#961621' }}>
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight mb-16">
