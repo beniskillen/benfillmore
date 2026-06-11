@@ -42,22 +42,22 @@ export default function About() {
       </section>
 
       {/* Origin */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-20 md:py-28" style={{ background: '#FAF0DA' }}>
         <div className="max-w-3xl mx-auto px-6 md:px-8">
           <ScrollReveal>
-            <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed">
+            <p className="font-body text-lg md:text-xl leading-relaxed" style={{ color: 'rgba(150,22,33,0.75)' }}>
               We worked inside agencies and saw the gap between what was sold and what actually got delivered.
             </p>
-            <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6">
+            <p className="font-body text-lg md:text-xl leading-relaxed mt-6" style={{ color: 'rgba(150,22,33,0.75)' }}>
               Businesses oversold, then handed off. Strategies that looked good in presentations but didn't translate into performance. Too much effort on how things appeared, not enough on whether they worked.
             </p>
-            <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6">
+            <p className="font-body text-lg md:text-xl leading-relaxed mt-6" style={{ color: 'rgba(150,22,33,0.75)' }}>
               We watched brands spend A$15K–A$30K a month on strategies nobody executed properly. Beautiful decks. Weak content. Junior staff running accounts they didn't understand.
             </p>
-            <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6">
+            <p className="font-body text-lg md:text-xl leading-relaxed mt-6" style={{ color: 'rgba(150,22,33,0.75)' }}>
               Meanwhile, the businesses actually growing were the ones moving fast, posting consistently, and adapting in real time.
             </p>
-            <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6">
+            <p className="font-body text-lg md:text-xl leading-relaxed mt-6" style={{ color: 'rgba(150,22,33,0.75)' }}>
               So we built Fillmore to stay closer to the work. Focus on what actually drives growth. Cut everything that doesn't.
             </p>
           </ScrollReveal>

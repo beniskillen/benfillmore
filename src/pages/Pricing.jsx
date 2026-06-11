@@ -246,21 +246,21 @@ export default function Pricing() {
       </section>
 
       {/* Always Included */}
-      <section className="py-24 md:py-32 bg-background">
+      <section className="py-24 md:py-32" style={{ background: '#FAF0DA' }}>
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-black mb-14">
-              Always Included
+            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight mb-14" style={{ color: '#961621' }}>
+            Always Included
             </h2>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {ALWAYS_INCLUDED.map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 0.08}>
-                <div className="bg-white border border-black/8 rounded-2xl p-8">
-                  <h3 className="font-heading font-bold text-lg md:text-xl uppercase tracking-tight text-black">
+                <div className="bg-white rounded-2xl p-8" style={{ border: '1px solid rgba(150,22,33,0.15)' }}>
+                  <h3 className="font-heading font-bold text-lg md:text-xl uppercase tracking-tight" style={{ color: '#961621' }}>
                     {item.title}
                   </h3>
-                  <p className="font-body text-black/60 text-base leading-relaxed mt-3">{item.desc}</p>
+                  <p className="font-body text-base leading-relaxed mt-3" style={{ color: 'rgba(150,22,33,0.7)' }}>{item.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
