@@ -25,6 +25,7 @@ const TEAM = [
     bio: "I lead content and creative for our clients. UGC, social, brand storytelling. Built creative engines for hospitality and DTC brands across Australia.",
     focus: ['Content', 'UGC', 'Social', 'Creative Direction'],
     linkedin: '#',
+    image: 'https://media.base44.com/images/public/69fac9355f793a9829c2542e/e7faf47b2_WhatsAppImage2026-06-11at072301.jpg',
   },
 ];
 
