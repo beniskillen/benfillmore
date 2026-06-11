@@ -17,6 +17,7 @@ const TEAM = [
     bio: "I run paid acquisition for hospitality brands. 8 years in performance marketing across Meta, Google, and analytics. Built campaigns that scaled venues from empty midweeks to fully booked.",
     focus: ['Paid Media', 'Strategy', 'Analytics'],
     linkedin: '#',
+    image: 'https://media.base44.com/images/public/69fac9355f793a9829c2542e/5d0751678_WhatsAppImage2026-06-05at061528.jpg',
   },
   {
     name: 'Melina',
@@ -184,11 +185,15 @@ export default function About() {
             {TEAM.map((member, i) => (
               <ScrollReveal key={member.name} delay={i * 0.1}>
                 <div className="bg-white border border-black/8 rounded-2xl p-8 md:p-10">
-                  <div className="w-20 h-20 rounded-xl bg-black/5 flex items-center justify-center mb-6">
-                    <span className="font-heading font-bold text-2xl text-black/30">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
+                  {member.image ? (
+                    <img src={member.image} alt={member.name} className="w-full h-60 object-cover rounded-lg mb-6" />
+                  ) : (
+                    <div className="w-20 h-20 rounded-xl bg-black/5 flex items-center justify-center mb-6">
+                      <span className="font-heading font-bold text-2xl text-black/30">
+                        {member.name.split(' ').map(n => n[0]).join('')}
+                      </span>
+                    </div>
+                  )}
                   <h3 className="font-heading font-bold text-xl md:text-2xl uppercase tracking-tight text-black">
                     {member.name}
                   </h3>
