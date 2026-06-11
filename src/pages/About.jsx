@@ -187,7 +187,7 @@ export default function About() {
               <ScrollReveal key={member.name} delay={i * 0.1}>
                 <div className="bg-white border border-black/8 rounded-2xl p-8 md:p-10">
                   {member.image ? (
-                    <img src={member.image} alt={member.name} className="w-full h-72 object-cover object-top rounded-lg mb-6" />
+                    <img src={member.image} alt={member.name} className="w-full rounded-lg mb-6" style={{ height: '500px', objectFit: 'cover', objectPosition: 'top' }} />
                   ) : (
                     <div className="w-20 h-20 rounded-xl bg-black/5 flex items-center justify-center mb-6">
                       <span className="font-heading font-bold text-2xl text-black/30">
