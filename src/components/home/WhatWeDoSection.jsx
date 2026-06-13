@@ -78,7 +78,7 @@ export default function WhatWeDoSection() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {CARE_ABOUT.map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 0.08}>
-                <div className="rounded-2xl p-8 md:p-10" style={{ background: '#961621' }}>
+                <div className="rounded-2xl p-8 md:p-10" style={{ background: '#000000' }}>
                   <h3 className="font-heading font-bold text-xl md:text-2xl uppercase tracking-tight text-white">
                     {item.title}
                   </h3>

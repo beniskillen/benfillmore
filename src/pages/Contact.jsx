@@ -1,4 +1,4 @@
-import { Mail, MessageCircle, Linkedin } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ScrollReveal from '../components/shared/ScrollReveal';
 
@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 md:pt-44 pb-20 md:pb-28" style={{ background: '#961621' }}>
+      <section className="pt-32 md:pt-44 pb-20 md:pb-28" style={{ background: '#b40425' }}>
         <div className="max-w-4xl mx-auto px-6 md:px-8">
           <ScrollReveal>
             <h1 className="font-heading font-bold text-[clamp(2rem,5.5vw,4.5rem)] leading-[0.95] uppercase tracking-tight text-white max-w-4xl">
@@ -24,7 +24,7 @@ export default function Contact() {
       {/* Contact Methods */}
       <section className="py-24 md:py-32 bg-background">
         <div className="max-w-5xl mx-auto px-6 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-sm mx-auto">
             {/* Email */}
             <ScrollReveal>
               <div className="bg-white border border-black/8 rounded-2xl p-8 text-center">
@@ -42,52 +42,6 @@ export default function Contact() {
                   className="inline-block text-black hover:text-black/70 transition-colors font-medium underline underline-offset-4"
                 >
                   hello@fillmoremedia.com.au
-                </a>
-              </div>
-            </ScrollReveal>
-
-            {/* WhatsApp */}
-            <ScrollReveal delay={0.1}>
-              <div className="bg-white border border-black/8 rounded-2xl p-8 text-center">
-                <div className="w-14 h-14 rounded-xl bg-black/5 flex items-center justify-center mx-auto mb-6">
-                  <MessageCircle className="w-7 h-7 text-black" />
-                </div>
-                <h3 className="font-heading font-bold text-lg uppercase tracking-tight text-black mb-2">
-                  WhatsApp
-                </h3>
-                <p className="text-black/60 text-sm mb-6">
-                  Quick chat on WhatsApp for faster response.
-                </p>
-                <a
-                  href="https://wa.me/61412345678"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block text-black hover:text-black/70 transition-colors font-medium underline underline-offset-4"
-                >
-                  Message us
-                </a>
-              </div>
-            </ScrollReveal>
-
-            {/* LinkedIn */}
-            <ScrollReveal delay={0.2}>
-              <div className="bg-white border border-black/8 rounded-2xl p-8 text-center">
-                <div className="w-14 h-14 rounded-xl bg-black/5 flex items-center justify-center mx-auto mb-6">
-                  <Linkedin className="w-7 h-7 text-black" />
-                </div>
-                <h3 className="font-heading font-bold text-lg uppercase tracking-tight text-black mb-2">
-                  LinkedIn
-                </h3>
-                <p className="text-black/60 text-sm mb-6">
-                  Connect with us on LinkedIn to stay updated.
-                </p>
-                <a
-                  href="https://linkedin.com/company/fillmore-media"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block text-black hover:text-black/70 transition-colors font-medium underline underline-offset-4"
-                >
-                  Visit page
                 </a>
               </div>
             </ScrollReveal>

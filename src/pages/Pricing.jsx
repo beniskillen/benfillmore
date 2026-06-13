@@ -210,7 +210,7 @@ export default function Pricing() {
                     <Link
                       to="/apply"
                       className={`block w-full text-center font-semibold text-base px-6 py-3.5 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl text-black`}
-                      style={{ background: '#E9FF80' }}
+                      style={{ background: '#faf0da' }}
                     >
                       Get Started →
                     </Link>
@@ -223,10 +223,10 @@ export default function Pricing() {
       </section>
 
       {/* Custom CTA */}
-      <section className="py-20 md:py-28" style={{ background: '#961621' }}>
+      <section className="py-20 md:py-28" style={{ background: '#000000' }}>
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight">
+            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-white">
               Need something custom?
             </h2>
             <p className="font-body text-white/60 text-lg mt-6 max-w-xl mx-auto">
@@ -236,7 +236,7 @@ export default function Pricing() {
               <Link
                 to="/apply"
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
-                style={{ background: '#E9FF80' }}
+                style={{ background: '#faf0da' }}
               >
                 Talk to Us →
               </Link>
@@ -246,21 +246,21 @@ export default function Pricing() {
       </section>
 
       {/* Always Included */}
-      <section className="py-24 md:py-32" style={{ background: '#FAF0DA' }}>
+      <section className="py-24 md:py-32 bg-background">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight mb-14" style={{ color: '#961621' }}>
+            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight mb-14 text-black">
             Always Included
             </h2>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {ALWAYS_INCLUDED.map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 0.08}>
-                <div className="bg-white rounded-2xl p-8" style={{ border: '1px solid rgba(150,22,33,0.15)' }}>
-                  <h3 className="font-heading font-bold text-lg md:text-xl uppercase tracking-tight" style={{ color: '#961621' }}>
+                <div className="bg-white rounded-2xl p-8 border border-black/8">
+                  <h3 className="font-heading font-bold text-lg md:text-xl uppercase tracking-tight text-black">
                     {item.title}
                   </h3>
-                  <p className="font-body text-base leading-relaxed mt-3" style={{ color: 'rgba(150,22,33,0.7)' }}>{item.desc}</p>
+                  <p className="font-body text-base leading-relaxed mt-3 text-black/60">{item.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -296,7 +296,7 @@ export default function Pricing() {
               <Link
                 to="/apply"
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
-                style={{ background: '#E9FF80' }}
+                style={{ background: '#faf0da' }}
               >
                 Book a Call →
               </Link>

@@ -12,8 +12,6 @@ const FOOTER_NAV = [
 
 const NICHE_NAV = [
   { label: 'Hospitality', path: '/hospitality' },
-  { label: 'E-Commerce', path: '/e-commerce' },
-  { label: 'Other Industries', path: '/industries' },
 ];
 
 const CONNECT = [

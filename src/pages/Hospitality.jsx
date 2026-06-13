@@ -102,10 +102,10 @@ export default function Hospitality() {
   return (
     <>
       {/* Hero — deep red background */}
-      <section className="pt-32 md:pt-44 pb-20 md:pb-28 min-h-[80vh] flex items-center" style={{ background: '#961621' }}>
+      <section className="pt-32 md:pt-44 pb-20 md:pb-28 min-h-[80vh] flex items-center" style={{ background: '#b40425' }}>
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <ScrollReveal>
-            <span className="font-heading font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full" style={{ background: '#E9FF80', color: '#000' }}>
+            <span className="font-heading font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full" style={{ background: '#faf0da', color: '#000' }}>
               Hospitality
             </span>
             <h1 className="font-heading font-bold text-[clamp(2.5rem,8vw,7rem)] leading-[0.9] uppercase tracking-tight text-white mt-6">
@@ -120,7 +120,7 @@ export default function Hospitality() {
               <Link
                 to="/apply"
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
-                style={{ background: '#E9FF80' }}
+                style={{ background: '#faf0da' }}
               >
                 Book a Strategy Call →
               </Link>
@@ -165,7 +165,7 @@ export default function Hospitality() {
             {FOCUS_ITEMS.map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 0.07}>
                 <div className="bg-white border border-black/8 rounded-2xl p-8">
-                  <div className="w-8 h-1 rounded-full mb-6" style={{ background: '#E9FF80' }} />
+                  <div className="w-8 h-1 rounded-full mb-6 bg-black/10" />
                   <h3 className="font-heading font-bold text-lg md:text-xl uppercase tracking-tight text-black">
                     {item.title}
                   </h3>
@@ -184,7 +184,7 @@ export default function Hospitality() {
       />
 
       {/* How It Works */}
-      <section className="py-24 md:py-32 text-white" style={{ background: '#961621' }}>
+      <section className="py-24 md:py-32 text-white" style={{ background: '#b40425' }}>
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight mb-16">
@@ -195,7 +195,7 @@ export default function Hospitality() {
             {HOW_IT_WORKS.map((s, i) => (
               <ScrollReveal key={s.step} delay={i * 0.1}>
                 <div>
-                  <span className="font-heading font-bold text-6xl" style={{ color: '#E9FF80' }}>{s.step}</span>
+                  <span className="font-heading font-bold text-6xl text-white/30">{s.step}</span>
                   <h3 className="font-heading font-bold text-xl uppercase tracking-tight text-white mt-3">{s.title}</h3>
                   <p className="font-body text-white/60 text-base leading-relaxed mt-2">{s.desc}</p>
                 </div>
@@ -206,7 +206,7 @@ export default function Hospitality() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 md:py-32" style={{ background: '#961621' }}>
+      <section className="py-24 md:py-32" style={{ background: '#b40425' }}>
         <div className="max-w-3xl mx-auto px-6 md:px-8">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-white mb-12">
@@ -220,7 +220,7 @@ export default function Hospitality() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 md:py-32" style={{ background: '#961621' }}>
+      <section className="py-24 md:py-32" style={{ background: '#000000' }}>
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-4xl md:text-6xl uppercase tracking-tight text-white">
@@ -233,7 +233,7 @@ export default function Hospitality() {
               <Link
                 to="/apply"
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
-                style={{ background: '#E9FF80' }}
+                style={{ background: '#faf0da' }}
               >
                 Book a Strategy Call →
               </Link>

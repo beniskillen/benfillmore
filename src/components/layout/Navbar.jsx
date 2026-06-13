@@ -41,21 +41,11 @@ export default function Navbar() {
     setDarkPage(darkHeroRoutes.includes(location.pathname));
   }, [location.pathname]);
 
-  const isLight = scrolled || !darkPage;
-
   return (
     <>
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? 'bg-white/95 backdrop-blur-md border-b border-black/5 py-4'
-            : darkPage
-              ? 'bg-black/40 backdrop-blur-md py-6'
-              : 'bg-transparent py-6'
-        }`}
-      >
+      <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4" style={{ background: '#b40425' }}>
         <div className="max-w-7xl mx-auto px-6 md:px-8 flex items-center justify-between">
-          <Link to="/" className={`font-heading font-bold text-2xl tracking-tight flex-shrink-0 transition-colors duration-300 ${isLight ? 'text-black' : 'text-white'}`}>
+          <Link to="/" className="font-heading font-bold text-2xl tracking-tight flex-shrink-0 text-white">
             FILLMORE
           </Link>
 
@@ -65,23 +55,16 @@ export default function Navbar() {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-sm font-medium transition-colors relative group whitespace-nowrap ${
-                  isLight
-                    ? location.pathname === item.path ? 'text-black' : 'text-black/60 hover:text-black'
-                    : location.pathname === item.path ? 'text-white' : 'text-white/70 hover:text-white'
-                }`}
+                className="text-sm font-medium transition-colors relative group whitespace-nowrap text-white/80 hover:text-white"
               >
                 {item.label}
-                <span className={`absolute -bottom-1 left-0 h-[1.5px] transition-all duration-300 ${
-                  isLight ? 'bg-black' : 'bg-white'
-                } ${location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                <span className={`absolute -bottom-1 left-0 h-[1.5px] bg-white transition-all duration-300 ${location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'}`} />
               </Link>
             ))}
             <Link
               to="/apply"
-              className={`text-sm font-semibold px-5 py-2.5 rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 whitespace-nowrap flex-shrink-0 ${
-                isLight ? 'bg-black text-white' : 'bg-white text-black'
-              }`}
+              className="text-sm font-semibold px-5 py-2.5 rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 whitespace-nowrap flex-shrink-0 text-black"
+              style={{ background: '#faf0da' }}
             >
               Book a Strategy Call
             </Link>
@@ -90,7 +73,7 @@ export default function Navbar() {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className={`lg:hidden p-2 transition-colors duration-300 ${isLight ? 'text-black' : 'text-white'}`}
+            className="lg:hidden p-2 text-white"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

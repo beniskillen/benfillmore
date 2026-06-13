@@ -92,7 +92,7 @@ export default function Services() {
         <section
           key={section.title}
           className={`py-20 md:py-28 ${si % 2 === 0 ? 'text-white' : 'bg-background text-black'}`}
-          style={si % 2 === 0 ? { background: '#961621' } : {}}
+          style={si % 2 === 0 ? { background: '#000000' } : {}}
         >
           <div className="max-w-7xl mx-auto px-6 md:px-8">
             <ScrollReveal>
@@ -132,22 +132,22 @@ export default function Services() {
       ))}
 
       {/* What We Actually Care About */}
-      <section className="py-24 md:py-32" style={{ background: '#FAF0DA' }}>
+      <section className="py-24 md:py-32 bg-background">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight mb-4" style={{ color: '#961621' }}>
+            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight mb-4 text-black">
             What We Actually Care About.
             </h2>
-            <p className="font-body text-lg max-w-2xl mb-14" style={{ color: 'rgba(150,22,33,0.7)' }}>
+            <p className="font-body text-lg max-w-2xl mb-14 text-black/60">
             Services exist to deliver outcomes. These are the outcomes we optimise for.
             </p>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {CARE_ABOUT.map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 0.08}>
-                <div className="bg-white rounded-2xl p-8 md:p-10" style={{ border: '1px solid rgba(150,22,33,0.15)' }}>
-                  <h3 className="font-heading font-bold text-xl md:text-2xl uppercase tracking-tight" style={{ color: '#961621' }}>{item.title}</h3>
-                  <p className="font-body text-base leading-relaxed mt-3" style={{ color: 'rgba(150,22,33,0.7)' }}>{item.desc}</p>
+                <div className="bg-white rounded-2xl p-8 md:p-10 border border-black/8">
+                  <h3 className="font-heading font-bold text-xl md:text-2xl uppercase tracking-tight text-black">{item.title}</h3>
+                  <p className="font-body text-base leading-relaxed mt-3 text-black/60">{item.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
