@@ -25,7 +25,7 @@ import {
 // canvas #0D0C0A · surface #151310 · card #1D1A16 · paper #F6F3EE
 // copper #C98443 · copper-hi #E2A868 · text #F4F0E8 · muted #A79E8F
 
-const Kicker = ({ children, light = false }: { children: React.ReactNode; light?: boolean }) => (
+const Kicker = ({ children, light = false }) => (
   <span
     className={`inline-flex items-center gap-2.5 text-xs font-bold uppercase tracking-[0.22em] ${
       light ? "text-[#A5651F]" : "text-[#C98443]"
@@ -41,11 +41,6 @@ const SectionHead = ({
   title,
   lede,
   light = false,
-}: {
-  kicker: string;
-  title: string;
-  lede?: string;
-  light?: boolean;
 }) => (
   <div className="mb-14 grid items-end gap-10 md:grid-cols-[1.1fr_0.9fr]">
     <div>
