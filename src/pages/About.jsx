@@ -1,292 +1,527 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import ScrollReveal from '../components/shared/ScrollReveal';
+// src/pages/About.tsx
+// About Fillmore — team-led growth positioning page.
+// Install: save as src/pages/About.tsx, then register the route:
+//   <Route path="/about" element={<About />} />
+// Deps: tailwindcss, lucide-react, react-router-dom. No image assets required.
+// Design system matches FullHouse.tsx (Fillmore dark editorial standard).
 
-const BELIEFS = [
-  'Doing over talking.',
-  'Substance over show.',
-  'Hands on, never handed off.',
-  "Honest about what works. And what doesn't.",
-  'Built to move the needle, not the deck.',
+import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  Compass,
+  BarChart3,
+  Camera,
+  Target,
+  Activity,
+  Layers,
+  TrendingUp,
+  Check,
+  X,
+} from "lucide-react";
+
+/* ------------------------------------------------------------------ */
+/* Design tokens (Fillmore dark editorial system)                      */
+/* ------------------------------------------------------------------ */
+// canvas #0D0C0A · surface #151310 · card #1D1A16 · paper #F6F3EE
+// copper #C98443 · copper-hi #E2A868 · text #F4F0E8 · muted #A79E8F
+
+const Kicker = ({ children, light = false }: { children: React.ReactNode; light?: boolean }) => (
+  <span
+    className={`inline-flex items-center gap-2.5 text-xs font-bold uppercase tracking-[0.22em] ${
+      light ? "text-[#A5651F]" : "text-[#C98443]"
+    }`}
+  >
+    <span className={`h-px w-6 ${light ? "bg-[#A5651F]" : "bg-[#C98443]"}`} />
+    {children}
+  </span>
+);
+
+const SectionHead = ({
+  kicker,
+  title,
+  lede,
+  light = false,
+}: {
+  kicker: string;
+  title: string;
+  lede?: string;
+  light?: boolean;
+}) => (
+  <div className="mb-14 grid items-end gap-10 md:grid-cols-[1.1fr_0.9fr]">
+    <div>
+      <Kicker light={light}>{kicker}</Kicker>
+      <h2 className="mt-4 max-w-[22ch] text-4xl font-extrabold leading-[1.08] tracking-[-0.035em] md:text-5xl">
+        {title}
+      </h2>
+    </div>
+    {lede && (
+      <p className={`max-w-[56ch] text-lg leading-relaxed md:justify-self-end ${light ? "text-[#6E675B]" : "text-[#A79E8F]"}`}>
+        {lede}
+      </p>
+    )}
+  </div>
+);
+
+/* ------------------------------------------------------------------ */
+/* Data                                                                */
+/* ------------------------------------------------------------------ */
+
+const standard = [
+  "Does it create demand?",
+  "Does it improve conversion?",
+  "Does it bring customers back?",
+  "Does it give the owner a clearer number to manage?",
+  "Does it compound after the campaign ends?",
 ];
 
-const TEAM = [
+const team = [
   {
-    name: 'Noam Shabat',
-    role: 'Performance & Strategy',
-    bio: "I run paid acquisition for hospitality brands. 8 years in performance marketing across Meta, Google, and analytics. Built campaigns that scaled venues from empty midweeks to fully booked.",
-    focus: ['Paid Media', 'Strategy', 'Analytics'],
-    image: 'https://media.base44.com/images/public/69fac9355f793a9829c2542e/5d0751678_WhatsAppImage2026-06-05at061528.jpg',
+    icon: Compass,
+    name: "Ben Killen",
+    role: "Growth strategy & business development",
+    body: "Ben brings 10 years of business development, growth hacking and market-facing strategy. His role is to understand the commercial gap, shape the offer, build the sales logic and make sure the work is tied to the number that matters.",
+    line: "Vanity can open the door — real market knowledge is what creates value.",
   },
   {
-    name: 'Melina Bilotta',
-    role: 'Content & Creative',
-    bio: "I lead content and creative for our clients. UGC, social, brand storytelling. Built creative engines for hospitality and DTC brands across Australia.",
-    focus: ['Content', 'UGC', 'Social', 'Creative Direction'],
-    image: 'https://media.base44.com/images/public/69fac9355f793a9829c2542e/e7faf47b2_WhatsAppImage2026-06-11at072301.jpg',
+    icon: BarChart3,
+    name: "Noam Shabat",
+    role: "Performance marketing & attribution",
+    body: "Noam brings the paid acquisition engine: Meta, Google, campaign optimisation, tracking, GA4, reporting and performance discipline.",
+    line: "Media spend is judged by outcomes — leads, bookings, conversions, revenue and return.",
+  },
+  {
+    icon: Camera,
+    name: "Melina Bilota",
+    role: "Creative direction & content",
+    body: "Melina brings the creative layer: content, campaign assets, brand feel, venue-facing proof and the visual standard that makes the work worth paying attention to.",
+    line: "Make the brand look premium and trusted — then give the performance engine assets that convert.",
   },
 ];
+
+const outcomes = [
+  "More direct bookings",
+  "Better-quality leads",
+  "Higher-value enquiries",
+  "Stronger repeat customer revenue",
+  "Cleaner tracking and attribution",
+  "A clearer offer and customer journey",
+];
+
+const systemLines = [
+  ["Creative without performance", "becomes decoration."],
+  ["Media without strategy", "becomes spend."],
+  ["Data without action", "becomes reporting theatre."],
+  ["Brand without market knowledge", "becomes guesswork."],
+];
+
+const principles = [
+  {
+    n: "01",
+    icon: Target,
+    title: "Start with the market",
+    body: "We look at the customer, the offer, the competitive context and the commercial gap before building the campaign.",
+  },
+  {
+    n: "02",
+    icon: Activity,
+    title: "Build for the real KPI",
+    body: "For hospitality, that may be bookings and covers. For e-commerce, profitable revenue. For service businesses, qualified leads. The main number must matter commercially.",
+  },
+  {
+    n: "03",
+    icon: Camera,
+    title: "Make creative accountable",
+    body: "Creative should do more than look good. It should make the business easier to trust, remember and buy from.",
+  },
+  {
+    n: "04",
+    icon: Layers,
+    title: "Track before scaling",
+    body: "Media spend needs a scoreboard. Attribution, reporting and clean conversion events come before serious scale.",
+  },
+  {
+    n: "05",
+    icon: TrendingUp,
+    title: "Compound the work",
+    body: "One campaign can create a spike. A system creates learnings, assets, audiences and data that get stronger over time.",
+  },
+];
+
+const bestFit = [
+  "Hospitality venues with proven demand and quiet-night upside",
+  "E-commerce brands with strong products but inconsistent acquisition",
+  "Trades and service businesses that need better-quality leads",
+  "Founder-led businesses that need strategy, creative and performance working together",
+  "Teams that care about brand quality but still judge work by numbers",
+];
+
+const poorFit = [
+  "Businesses chasing followers without a commercial plan",
+  "Teams that want content volume without strategy",
+  "Operators who will not share access to the numbers",
+  "Brands looking for a cheap supplier instead of a growth partner",
+];
+
+const vanityTruths = [
+  ["Likes", "are not revenue."],
+  ["Reach", "is not trust."],
+  ["Content volume", "is not strategy."],
+  ["A beautiful campaign", "is not automatically a commercial asset."],
+];
+
+/* ------------------------------------------------------------------ */
+/* Page                                                                */
+/* ------------------------------------------------------------------ */
 
 export default function About() {
   return (
-    <>
-      {/* Hero */}
-      <section className="pt-32 md:pt-44 pb-20 md:pb-28" style={{ background: '#b40425' }}>
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <ScrollReveal>
-            <h1 className="font-heading font-bold text-[clamp(2rem,5.5vw,4.5rem)] leading-[0.95] uppercase tracking-tight text-white max-w-5xl">
-              We got tired of watching good businesses get bad marketing.
+    <div className="bg-[#0D0C0A] font-sans text-[#F4F0E8] antialiased">
+      {/* NAV */}
+      <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#0D0C0A]/80 backdrop-blur-xl">
+        <div className="mx-auto flex h-[72px] w-full max-w-[1140px] items-center justify-between px-6">
+          <Link to="/" className="text-[17px] font-extrabold uppercase tracking-[0.3em]">
+            Fillmore<span className="text-[#C98443]">.</span>
+          </Link>
+          <div className="hidden gap-8 text-sm font-medium text-[#A79E8F] md:flex">
+            <a href="#team" className="hover:text-[#F4F0E8]">The Team</a>
+            <a href="#what-we-do" className="hover:text-[#F4F0E8]">What We Do</a>
+            <a href="#how-we-work" className="hover:text-[#F4F0E8]">How We Work</a>
+            <a href="#fit" className="hover:text-[#F4F0E8]">Fit</a>
+          </div>
+          <Link
+            to="/apply"
+            className="rounded-lg bg-[#C98443] px-5 py-2.5 text-[13.5px] font-bold text-[#120C05] transition hover:opacity-90"
+          >
+            See if you qualify
+          </Link>
+        </div>
+      </nav>
+
+      {/* HERO */}
+      <header className="relative overflow-hidden py-24">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_60%_at_78%_8%,rgba(201,132,67,0.10),transparent_60%)]" />
+        <div className="relative mx-auto w-full max-w-[1140px] px-6">
+          <div className="max-w-[820px]">
+            <Kicker>About Fillmore</Kicker>
+            <h1 className="mt-6 text-5xl font-extrabold leading-[1.02] tracking-[-0.045em] md:text-7xl">
+              We build growth systems that{" "}
+              <span className="text-[#E2A868]">make attention pay.</span>
             </h1>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Origin */}
-      <section className="py-20 md:py-28" style={{ background: '#FAF0DA' }}>
-        <div className="max-w-3xl mx-auto px-6 md:px-8">
-          <ScrollReveal>
-            <p className="font-body text-lg md:text-xl leading-relaxed" style={{ color: 'rgba(150,22,33,0.75)' }}>
-              We worked inside agencies and saw the gap between what was sold and what actually got delivered.
+            <p className="mt-7 max-w-[58ch] text-lg leading-relaxed text-[#A79E8F]">
+              Fillmore combines growth strategy, performance marketing and premium creative to
+              help businesses turn attention into bookings, leads, revenue and repeat customers.
             </p>
-            <p className="font-body text-lg md:text-xl leading-relaxed mt-6" style={{ color: 'rgba(150,22,33,0.75)' }}>
-              Businesses oversold, then handed off. Strategies that looked good in presentations but didn't translate into performance. Too much effort on how things appeared, not enough on whether they worked.
+            <p className="mt-5 max-w-[58ch] text-lg leading-relaxed text-[#A79E8F]">
+              A sharp brand matters. Strong visuals matter. Attention matters. But vanity is not
+              the scoreboard. Fillmore was built around a simple belief: the best marketing looks
+              premium, understands the market and proves its value in the numbers.
             </p>
-            <p className="font-body text-lg md:text-xl leading-relaxed mt-6" style={{ color: 'rgba(150,22,33,0.75)' }}>
-              We watched brands spend A$15K–A$30K a month on strategies nobody executed properly. Beautiful decks. Weak content. Junior staff running accounts they didn't understand.
-            </p>
-            <p className="font-body text-lg md:text-xl leading-relaxed mt-6" style={{ color: 'rgba(150,22,33,0.75)' }}>
-              Meanwhile, the businesses actually growing were the ones moving fast, posting consistently, and adapting in real time.
-            </p>
-            <p className="font-body text-lg md:text-xl leading-relaxed mt-6" style={{ color: 'rgba(150,22,33,0.75)' }}>
-              So we built Fillmore to stay closer to the work. Focus on what actually drives growth. Cut everything that doesn't.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Beliefs */}
-      <section className="py-24 md:py-32" style={{ background: '#FAF0DA' }}>
-        <div className="max-w-5xl mx-auto px-6 md:px-8">
-          <ScrollReveal>
-            <h2 className="font-heading font-bold text-sm uppercase tracking-widest mb-12" style={{ color: 'rgba(150,22,33,0.5)' }}>
-              What We Believe
-            </h2>
-          </ScrollReveal>
-          <div className="space-y-6 md:space-y-8">
-            {BELIEFS.map((b, i) => (
-              <ScrollReveal key={b} delay={i * 0.08}>
-                <p className="font-heading font-bold text-2xl md:text-4xl lg:text-5xl uppercase tracking-tight" style={{ color: '#961621' }}>
-                  {b}
-                </p>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How We Got Here */}
-      <section className="py-24 md:py-32 bg-background">
-        <div className="max-w-3xl mx-auto px-6 md:px-8">
-          <ScrollReveal>
-            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-black mb-8">
-              How We Got Here.
-            </h2>
-            <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed">
-              Noam started running paid ads in 2018, working with hospitality brands across Australia. Eight years and millions in ad spend later, he built systems that turned quiet venues into fully booked operations. Along the way he saw the same pattern over and over: businesses paying agencies thousands a month and getting back PDFs instead of performance.
-            </p>
-            <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6">
-              Melina came from the creative side, leading content and UGC production for hospitality and DTC brands. She watched founders pour budget into beautiful content that didn't drive a single booking or sale, because no one was thinking about how content connects to actual revenue.
-            </p>
-            <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6">
-              We met, compared notes, and realised the same gap existed everywhere: creative without performance thinking, performance without creative thinking. So we built Fillmore to close that gap.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* What Makes Us Different */}
-      <section className="py-24 md:py-32" style={{ background: '#b40425' }}>
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <ScrollReveal>
-            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-white mb-3">
-              What Makes Us Different.
-            </h2>
-            <p className="font-body text-white/70 text-lg mb-16 max-w-2xl">
-              It's not a list of services. It's how we actually operate.
-            </p>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'We Run Two Disciplines, Not Ten.',
-                desc: "We don't do SEO, podcasts, billboards, or brand consulting. We do paid media and creative for hospitality. That's it. The narrower the focus, the deeper the work.",
-              },
-              {
-                title: 'We Produce Creative In-House.',
-                desc: "No outsourcing to freelancers we've never met. No briefs sent off and forgotten. The person directing the UGC, the person editing the ads, and the person running the campaigns are all in the same room.",
-              },
-              {
-                title: 'We Show You the Real Numbers.',
-                desc: "Weekly reporting on bookings, purchases, leads, and revenue. Not just clicks and impressions. If a campaign isn't working, we tell you. If a strategy needs to change, we change it.",
-              },
-            ].map((item, i) => (
-              <ScrollReveal key={item.title} delay={i * 0.1}>
-                <div className="rounded-2xl p-8" style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)' }}>
-                  <h3 className="font-heading font-bold text-xl uppercase tracking-tight text-white">{item.title}</h3>
-                  <p className="font-body text-white/70 text-base leading-relaxed mt-4">{item.desc}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How We Work With Clients */}
-      <section className="py-24 md:py-32 bg-background">
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <ScrollReveal>
-            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-black mb-3">
-              How We Work With Clients.
-            </h2>
-            <p className="font-body text-black/50 text-lg max-w-2xl mb-16">
-              Not a sales pitch. Just how the relationship actually goes.
-            </p>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { step: '01', title: 'We Start With Your Numbers.', desc: "Before we propose anything, we look at your current performance, your margins, and your real growth goals. No strategy makes sense without that context." },
-              { step: '02', title: 'We Build a Plan You Can Actually Read.', desc: "No 40-page deck. A simple, clear roadmap of what we'll do, what we won't, and what we expect." },
-              { step: '03', title: 'We Execute Hands-On.', desc: "We don't disappear after onboarding. The same people who pitched you are in your Slack, on your calls, and producing your campaigns every week." },
-              { step: '04', title: 'We Adjust as We Learn.', desc: "What works on day 30 isn't what works on day 90. We optimise weekly, and we tell you why we're shifting." },
-            ].map((s, i) => (
-              <ScrollReveal key={s.step} delay={i * 0.1}>
-                <div>
-                  <span className="font-heading font-bold text-6xl text-black/8">{s.step}</span>
-                  <h3 className="font-heading font-bold text-lg uppercase tracking-tight text-black mt-2">{s.title}</h3>
-                  <p className="font-body text-black/60 text-base leading-relaxed mt-3">{s.desc}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="py-24 md:py-32 bg-background">
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <ScrollReveal>
-            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-black mb-16">
-              The Team
-            </h2>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-            {TEAM.map((member, i) => (
-              <ScrollReveal key={member.name} delay={i * 0.1}>
-                <div className="bg-white border border-black/8 rounded-2xl p-8 md:p-10">
-                  {member.image ? (
-                    <img src={member.image} alt={member.name} className="w-full rounded-lg mb-6" style={{ height: '500px', objectFit: 'cover', objectPosition: 'top' }} />
-                  ) : (
-                    <div className="w-20 h-20 rounded-xl bg-black/5 flex items-center justify-center mb-6">
-                      <span className="font-heading font-bold text-2xl text-black/30">
-                        {member.name.split(' ').map(n => n[0]).join('')}
-                      </span>
-                    </div>
-                  )}
-                  <h3 className="font-heading font-bold text-xl md:text-2xl uppercase tracking-tight text-black">
-                    {member.name}
-                  </h3>
-                  <p className="font-body text-black/40 text-sm font-medium mt-1">{member.role}</p>
-                  <p className="font-body text-black/70 text-base leading-relaxed mt-4">{member.bio}</p>
-                  <div className="mt-6">
-                    <p className="font-body text-black/40 text-xs uppercase tracking-wider font-medium mb-2">
-                      What I focus on:
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {member.focus.map((f) => (
-                        <span key={f} className="font-body text-xs px-3 py-1 rounded-full bg-black/5 text-black/60">
-                          {f}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* What We Actually Optimise For */}
-      <section className="py-24 md:py-32 bg-background">
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <ScrollReveal>
-            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-black mb-4">
-              What We Actually Optimise For.
-            </h2>
-            <p className="font-body text-black/50 text-lg max-w-2xl mb-14">
-              The numbers that decide whether marketing scaled the business or just looked busy.
-            </p>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {[
-              { label: 'CAC', full: 'Customer Acquisition Cost', desc: 'Paying less for new customers.' },
-              { label: 'LTV', full: 'Lifetime Value', desc: 'Customers who come back and spend more.' },
-              { label: 'CVR', full: 'Conversion Rate', desc: 'Turning traffic into customers.' },
-              { label: 'Repeat Purchase Rate', full: null, desc: 'The cheapest customer is the one who already bought.' },
-              { label: 'Booking Volume', full: null, desc: 'Full nights, not just full weekends.' },
-              { label: 'Revenue Consistency', full: null, desc: 'Predictable growth, not spike-and-crash.' },
-              { label: 'Profit per Campaign', full: null, desc: 'Margin matters more than ROAS.' },
-            ].map((m, i) => (
-              <ScrollReveal key={m.label} delay={i * 0.06}>
-                <div className="bg-white border border-black/8 rounded-2xl p-7">
-                  <p className="font-heading font-bold text-lg uppercase tracking-tight text-black">{m.label}</p>
-                  {m.full && <p className="font-body text-xs text-black/40 mt-0.5">{m.full}</p>}
-                  <p className="font-body text-black/60 text-sm leading-relaxed mt-3">{m.desc}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Approach */}
-      <section className="pb-24 md:pb-32 bg-background">
-        <div className="max-w-3xl mx-auto px-6 md:px-8">
-          <ScrollReveal>
-            <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-black mb-8">
-              Our Approach
-            </h2>
-            <p className="font-body text-black/70 text-lg leading-relaxed">
-              We don't pitch. We don't oversell. We don't have a sales team that hands you off to an account manager. The person you talk to is the person doing the work. That's it. That's the whole model.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Anti-pitch CTA */}
-      <section className="py-24 md:py-32" style={{ background: '#000000' }}>
-        <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
-          <ScrollReveal>
-            <h2 className="font-heading font-bold text-4xl md:text-6xl uppercase tracking-tight text-white">
-              Want to see if we're a fit?
-            </h2>
-            <p className="font-body text-white/70 text-lg md:text-xl mt-6 max-w-xl mx-auto">
-              30 minutes. Honest conversation. We'll show you where your current marketing is leaking revenue. If we can help, we'll say so. If we can't, we'll say that too.
-            </p>
-            <div className="mt-10">
+            <div className="mt-9 flex flex-wrap gap-3.5">
               <Link
                 to="/apply"
-                className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
-                style={{ background: '#faf0da' }}
+                className="inline-flex items-center gap-2.5 rounded-lg bg-[#C98443] px-7 py-4 text-[15px] font-bold text-[#120C05] transition hover:opacity-90"
               >
-                Book a Strategy Call →
+                See if we are the right fit <ArrowRight size={18} strokeWidth={2.5} />
+              </Link>
+              <Link
+                to="/full-house"
+                className="inline-flex items-center rounded-lg border border-white/10 px-7 py-4 text-[15px] font-bold transition hover:bg-white/5"
+              >
+                View the work
               </Link>
             </div>
-          </ScrollReveal>
+          </div>
+        </div>
+      </header>
+
+      {/* DISCIPLINE STRIP */}
+      <div className="border-y border-white/10 bg-[#151310] py-5">
+        <div className="mx-auto flex w-full max-w-[1140px] flex-wrap items-center justify-between gap-4 px-6">
+          {["Growth strategy", "Paid media", "Creative & content", "Tracking & attribution", "CRM & reactivation", "Commercial reporting"].map(
+            (c, i, arr) => (
+              <span key={c} className="flex items-center gap-6 text-[12.5px] font-bold uppercase tracking-[0.18em] text-[#A79E8F]">
+                {c}
+                {i < arr.length - 1 && <span className="text-[#C98443]">·</span>}
+              </span>
+            ),
+          )}
+        </div>
+      </div>
+
+      {/* POSITION (light) */}
+      <section className="bg-[#F6F3EE] py-[104px] text-[#17140F]">
+        <div className="mx-auto w-full max-w-[1140px] px-6">
+          <SectionHead
+            light
+            kicker="Our point of view"
+            title="Creative gets attention. Performance proves value."
+            lede="Most businesses do not need more random content. They need a sharper commercial system."
+          />
+          <div className="grid items-start gap-12 lg:grid-cols-2">
+            <div className="space-y-5 text-[17px] leading-relaxed text-[#6E675B]">
+              <p>
+                A campaign can look good and still fail to move the business. A brand can get
+                attention and still have no clear path to bookings, leads or revenue. A venue can
+                look busy online while its quieter nights stay empty.
+              </p>
+              <p className="font-bold text-[#17140F]">Fillmore closes that gap.</p>
+              <p>
+                We care about how the work looks because perception matters. But we care more
+                about what the work does.
+              </p>
+            </div>
+            <div className="rounded-xl border border-[#E3DCD0] bg-white p-8">
+              <div className="mb-4 text-[13px] font-extrabold uppercase tracking-[0.18em] text-[#A5651F]">
+                The standard
+              </div>
+              <ul>
+                {standard.map((q) => (
+                  <li key={q} className="flex gap-3 border-b border-[#EFE9DF] py-3 text-[15.5px] font-semibold last:border-b-0">
+                    <Check size={18} className="mt-0.5 flex-none text-[#A5651F]" strokeWidth={2.5} />
+                    {q}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
-    </>
+
+      {/* TEAM */}
+      <section id="team" className="py-[104px]">
+        <div className="mx-auto w-full max-w-[1140px] px-6">
+          <SectionHead
+            kicker="The team behind the work"
+            title="Strategy, performance and creative — built to work together."
+            lede="Fillmore is not built around one discipline. It brings together the three layers most businesses need, but rarely get in one operating system: commercial strategy, performance media and creative execution."
+          />
+          <div className="grid gap-5 lg:grid-cols-3">
+            {team.map((m) => (
+              <article key={m.name} className="flex flex-col rounded-xl border border-white/10 bg-[#151310] p-8">
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-[10px] bg-[#C98443]/15">
+                  <m.icon size={24} className="text-[#C98443]" strokeWidth={1.8} />
+                </div>
+                <h3 className="text-[22px] font-bold tracking-[-0.03em]">{m.name}</h3>
+                <div className="mb-4 mt-1 text-[13px] font-bold uppercase tracking-[0.16em] text-[#C98443]">
+                  {m.role}
+                </div>
+                <p className="text-[14.5px] leading-relaxed text-[#A79E8F]">{m.body}</p>
+                <blockquote className="mt-auto border-l-2 border-[#C98443] pl-4 pt-5 text-[14px] font-semibold leading-relaxed text-[#F4F0E8]">
+                  “{m.line}”
+                </blockquote>
+              </article>
+            ))}
+          </div>
+          <div className="mt-8 rounded-xl border border-[#C98443]/25 bg-[#C98443]/10 p-7 text-center">
+            <p className="text-lg font-bold tracking-[-0.02em]">
+              Together, Fillmore connects the message, the market and the media into one growth system.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT WE DO */}
+      <section id="what-we-do" className="bg-[#151310] py-[104px]">
+        <div className="mx-auto w-full max-w-[1140px] px-6">
+          <SectionHead
+            kicker="What we do"
+            title="We turn brand attention into measurable growth."
+            lede="The work can include strategy, paid media, content, landing pages, CRM, reactivation, tracking and reporting. But the service list is not the point. The point is the system."
+          />
+          <div className="grid items-start gap-12 lg:grid-cols-2">
+            <div>
+              <div className="mb-4 text-[13px] font-extrabold uppercase tracking-[0.18em] text-[#C98443]">
+                What that can mean for the client
+              </div>
+              <ul>
+                {outcomes.map((o) => (
+                  <li key={o} className="flex gap-3 border-b border-white/10 py-3.5 text-[15.5px] text-[#A79E8F] last:border-b-0">
+                    <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[#C98443]" />
+                    {o}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-xl border border-white/10 bg-[#1D1A16] p-9">
+              {systemLines.map(([a, b]) => (
+                <p key={a} className="border-b border-white/10 py-4 text-[17px] leading-snug last:border-b-0">
+                  <span className="font-bold">{a}</span>{" "}
+                  <span className="text-[#A79E8F]">{b}</span>
+                </p>
+              ))}
+              <p className="pt-6 text-[15px] leading-relaxed text-[#A79E8F]">
+                Fillmore brings those layers together so the business knows what is working, what
+                is leaking and what to scale next.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* BELIEF (light) */}
+      <section className="bg-[#F6F3EE] py-[104px] text-[#17140F]">
+        <div className="mx-auto w-full max-w-[1140px] px-6">
+          <SectionHead
+            light
+            kicker="The belief"
+            title="Vanity is useful. Performance is the point."
+            lede="Presentation matters. Taste matters. Social proof matters. A premium brand can earn trust faster than an average one. But vanity becomes a problem when it is treated as the outcome."
+          />
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {vanityTruths.map(([a, b]) => (
+              <div key={a} className="rounded-xl border border-[#E3DCD0] bg-white p-7">
+                <div className="text-xl font-extrabold tracking-[-0.03em]">{a}</div>
+                <div className="mt-1 text-[15px] text-[#6E675B]">{b}</div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-12 max-w-[860px] border-l-2 border-[#A5651F] pl-8">
+            <p className="text-2xl font-bold leading-[1.25] tracking-[-0.025em] md:text-3xl">
+              Make it look sharp. Make it feel premium. Make it commercially grounded.{" "}
+              <span className="text-[#A5651F]">Then make it perform.</span>
+            </p>
+            <p className="mt-4 max-w-[62ch] text-[16px] text-[#6E675B]">
+              The value comes from connecting the surface layer to the business underneath — who
+              we are trying to reach, what offer will move them, what channel can reach them, what
+              happens after the click, and how we know if it worked.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW WE WORK */}
+      <section id="how-we-work" className="py-[104px]">
+        <div className="mx-auto w-full max-w-[1140px] px-6">
+          <SectionHead kicker="Operating principles" title="A sharper way to build growth." />
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {principles.map((p) => (
+              <div key={p.n} className="rounded-xl border border-white/10 bg-[#151310] p-8">
+                <div className="mb-5 flex items-center justify-between">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-[10px] bg-[#C98443]/15">
+                    <p.icon size={22} className="text-[#C98443]" strokeWidth={1.8} />
+                  </div>
+                  <span className="text-[13px] font-extrabold tracking-[0.14em] text-[#C98443]">{p.n}</span>
+                </div>
+                <h3 className="mb-2.5 text-lg font-bold tracking-[-0.02em]">{p.title}</h3>
+                <p className="text-[14.5px] leading-relaxed text-[#A79E8F]">{p.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FIT */}
+      <section id="fit" className="bg-[#151310] py-[104px]">
+        <div className="mx-auto w-full max-w-[1140px] px-6">
+          <SectionHead
+            kicker="Fit"
+            title="We work best with businesses that have something real to amplify."
+            lede="Fillmore is best suited to founders, operators and teams with a strong product, venue, service or offer — but no clear system for turning attention into growth."
+          />
+          <div className="grid gap-5 lg:grid-cols-2">
+            <div className="rounded-xl border border-[#C98443]/40 bg-gradient-to-b from-[#C98443]/15 to-[#C98443]/5 p-9">
+              <h3 className="mb-5 text-xl font-bold tracking-[-0.025em]">Best fit</h3>
+              <ul>
+                {bestFit.map((f) => (
+                  <li key={f} className="flex gap-3 py-2.5 text-[15px]">
+                    <Check size={18} className="mt-0.5 flex-none text-[#E2A868]" strokeWidth={2.5} />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-xl border border-white/10 bg-[#1D1A16] p-9">
+              <h3 className="mb-5 text-xl font-bold tracking-[-0.025em]">Poor fit</h3>
+              <ul>
+                {poorFit.map((f) => (
+                  <li key={f} className="flex gap-3 py-2.5 text-[15px] text-[#A79E8F]">
+                    <X size={18} className="mt-0.5 flex-none text-[#A79E8F]" strokeWidth={2.5} />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="py-[104px]">
+        <div className="mx-auto w-full max-w-[1140px] px-6">
+          <div className="rounded-[14px] border border-[#C98443]/40 bg-gradient-to-br from-[#C98443]/15 to-[#C98443]/[0.02] p-12 md:p-16">
+            <Kicker>Work with Fillmore</Kicker>
+            <h2 className="mt-5 max-w-[22ch] text-4xl font-extrabold leading-[1.08] tracking-[-0.035em] md:text-5xl">
+              If your brand has attention, we’ll help turn it into growth.
+            </h2>
+            <p className="mt-6 max-w-[58ch] text-lg leading-relaxed text-[#A79E8F]">
+              If your business has something real to amplify, Fillmore can help sharpen the offer,
+              build the campaign and install the system around the number that matters. For
+              hospitality, that starts with finding where bookings, customer data and mid-week
+              demand are leaking.
+            </p>
+            <p className="mt-5 text-[15px] font-bold uppercase tracking-[0.16em] text-[#E2A868]">
+              Know the market · Build the system · Measure what matters · Scale what works
+            </p>
+            <div className="mt-9 flex flex-wrap gap-3.5">
+              <Link
+                to="/apply"
+                className="inline-flex items-center gap-2.5 rounded-lg bg-[#C98443] px-7 py-4 text-[15px] font-bold text-[#120C05] transition hover:opacity-90"
+              >
+                See if we are the right fit <ArrowRight size={18} strokeWidth={2.5} />
+              </Link>
+              <Link
+                to="/full-house"
+                className="inline-flex items-center rounded-lg border border-white/10 px-7 py-4 text-[15px] font-bold transition hover:bg-white/5"
+              >
+                Explore the Full House Campaign
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="border-t border-white/10 bg-[#0D0C0A] pb-10 pt-14">
+        <div className="mx-auto w-full max-w-[1140px] px-6">
+          <div className="flex flex-wrap justify-between gap-10">
+            <div>
+              <div className="text-xl font-extrabold uppercase tracking-[0.3em]">
+                Fillmore<span className="text-[#C98443]">.</span>
+              </div>
+              <p className="mt-3 max-w-[34ch] text-sm text-[#A79E8F]">
+                Growth operators for hospitality, e-commerce, trades, and automotive.
+              </p>
+            </div>
+            {[
+              { h: "Fillmore", links: ["Home", "Services", "Work", "Case Studies", "About"] },
+              { h: "Industries", links: ["Hospitality", "Ecommerce", "Trades", "Automotive"] },
+            ].map((col) => (
+              <div key={col.h}>
+                <h5 className="mb-3.5 text-xs font-extrabold uppercase tracking-[0.18em] text-[#A79E8F]">{col.h}</h5>
+                {col.links.map((l) => (
+                  <a key={l} href="#" className="block py-1 text-sm text-[#A79E8F] hover:text-[#F4F0E8]">
+                    {l}
+                  </a>
+                ))}
+              </div>
+            ))}
+            <div>
+              <h5 className="mb-3.5 text-xs font-extrabold uppercase tracking-[0.18em] text-[#A79E8F]">Connect</h5>
+              <a href="https://www.instagram.com/fillmore.media/" className="block py-1 text-sm text-[#A79E8F] hover:text-[#F4F0E8]">
+                Instagram
+              </a>
+              <a href="mailto:hello@fillmoremedia.com.au" className="block py-1 text-sm text-[#A79E8F] hover:text-[#F4F0E8]">
+                hello@fillmoremedia.com.au
+              </a>
+              <span className="block py-1 text-sm text-[#A79E8F]">Sydney, Australia</span>
+            </div>
+          </div>
+          <div className="mt-11 flex flex-wrap justify-between gap-4 border-t border-white/10 pt-6 text-[13px] text-[#A79E8F]">
+            <span>© Fillmore Media. All rights reserved.</span>
+            <span>Strategy · Performance · Creative — one growth system.</span>
+          </div>
+        </div>
+      </footer>
+    </div>
   );
 }
