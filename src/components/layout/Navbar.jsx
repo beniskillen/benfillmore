@@ -6,9 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const NAV_ITEMS = [
   { label: 'Home', path: '/' },
   { label: 'Services', path: '/services' },
-  { label: 'Hospitality', path: '/hospitality' },
   { label: 'Work', path: '/work' },
-  { label: 'Pricing', path: '/pricing' },
   { label: 'About', path: '/about' },
   { label: 'Contact', path: '/contact' },
 ];

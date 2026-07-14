@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' font-family='sans-serif' font-weight='bold'>F</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>Fillmore Media — Hands-On Growth Marketing</title>
+    <meta name="description" content="Fill every table, calendar and pipeline. Hands-on growth marketing agency for hospitality and e-commerce. Based in Sydney, Australia." />
+    <meta property="og:title" content="Fillmore Media — Hands-On Growth Marketing" />
+    <meta property="og:description" content="Fill every table, calendar and pipeline. No agency theatre. No handoffs. Just marketing that works." />
+    <meta property="og:type" content="website" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MW2WVHTC');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RF0PM75M6N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RF0PM75M6N');
+    </script>
+    <script type="module" crossorigin src="/assets/index-FxpDX1uS.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CEDJovYu.css">
+    <script type="module">
+if (window.self === window.top) {
+  let lastPath = "";
+  function getPageNameFromPath(path) {
+    const segments = path.split("/").filter(Boolean);
+    return segments[0] || null;
+  }
+  function trackPageView() {
+    const path = window.location.pathname;
+    if (path === lastPath) return;
+    lastPath = path;
+    const pageName = getPageNameFromPath(path) || "home";
+    const appId = "";
+    if (!appId) return;
+    fetch(`/api/app-logs/${appId}/log-user-in-app/${pageName}`, {
+      method: "POST",
+    }).catch(() => {});
+  }
+  const originalPushState = history.pushState.bind(history);
+  history.pushState = function (...args) {
+    originalPushState(...args);
+    trackPageView();
+  };
+  const originalReplaceState = history.replaceState.bind(history);
+  history.replaceState = function (...args) {
+    originalReplaceState(...args);
+    trackPageView();
+  };
+  window.addEventListener("popstate", trackPageView);
+  trackPageView();
+}
+</script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MW2WVHTC"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="root"></div>
+  </body>
+</html>
