@@ -16,9 +16,9 @@ export default function HeroSection() {
               transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
             >
               <h1 className="font-heading font-bold text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.95] uppercase tracking-tight text-white">
-                Fill every table,
+                More than vanity
                 <br />
-                cart and pipeline.
+                metrics.
               </h1>
             </motion.div>
 
@@ -29,7 +29,7 @@ export default function HeroSection() {
               className="mt-6 max-w-xl"
             >
               <p className="font-body text-white/70 text-lg md:text-xl leading-relaxed">
-                We're growth operators for hospitality brands. We don't just run marketing. We build the systems that turn ad spend into revenue, content into bookings, and seats into regulars.
+                We install the performance system hospitality businesses need to reliably produce growth — turning ad spend into bookings, customer data into repeat visits, and reporting into decisions.
               </p>
             </motion.div>
 

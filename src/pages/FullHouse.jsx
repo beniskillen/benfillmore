@@ -377,10 +377,10 @@ export default function FullHouse() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
             >
-              <Kicker tone="chartreuse">Hospitality Growth — Sydney</Kicker>
+              <Kicker tone="chartreuse">Performance Growth — Hospitality</Kicker>
               <h1 className="mt-6 font-heading font-bold uppercase tracking-tight text-white text-[clamp(2.5rem,6vw,4.75rem)] leading-[0.95]">
-                Your Saturdays are already full.{' '}
-                <span style={{ color: CHARTREUSE }}>We're here for Tuesday to Thursday.</span>
+                More than vanity metrics.{' '}
+                <span style={{ color: CHARTREUSE }}>A system for reliable growth.</span>
               </h1>
             </motion.div>
 
@@ -390,9 +390,9 @@ export default function FullHouse() {
               transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
               className="mt-7 max-w-[56ch] font-body text-lg leading-relaxed text-white/70 md:text-xl"
             >
-              Fillmore installs the complete direct-booking growth system for venues that already
-              have demand — reactivating the customers you own, wiring every dollar to covers, and
-              filling the nights that decide your margin.
+              Fillmore installs the performance system hospitality businesses need to reliably
+              produce growth — tracking every dollar to bookings and covers, reactivating the
+              customers you already own, and filling the nights that decide your margin.
             </motion.p>
 
             <motion.div
