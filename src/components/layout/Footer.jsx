@@ -6,12 +6,7 @@ const FOOTER_NAV = [
   { label: 'Services', path: '/services' },
   { label: 'Work', path: '/work' },
   { label: 'Case Studies', path: '/case-studies' },
-  { label: 'Pricing', path: '/pricing' },
   { label: 'About', path: '/about' },
-];
-
-const NICHE_NAV = [
-  { label: 'Hospitality', path: '/hospitality' },
 ];
 
 const CONNECT = [
@@ -40,19 +35,6 @@ export default function Footer() {
             </h4>
             <nav className="flex flex-col gap-3">
               {FOOTER_NAV.map((item) => (
-                <Link key={item.path} to={item.path} className="text-sm text-white/70 hover:text-white transition-colors font-body">
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-
-          <div>
-            <h4 className="font-heading font-bold text-xs uppercase tracking-widest text-white/50 mb-4">
-              Industries
-            </h4>
-            <nav className="flex flex-col gap-3">
-              {NICHE_NAV.map((item) => (
                 <Link key={item.path} to={item.path} className="text-sm text-white/70 hover:text-white transition-colors font-body">
                   {item.label}
                 </Link>
