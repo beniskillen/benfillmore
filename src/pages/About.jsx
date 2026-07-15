@@ -39,14 +39,6 @@ const standard = [
 
 const team = [
   {
-    icon: Compass,
-    name: 'Ben Killen',
-    role: 'Growth strategy and business development',
-    body: 'Ben brings 10 years of business development, growth hacking and market-facing strategy. His role is to understand the commercial gap, shape the offer, build the sales logic and keep the work tied to the number that matters.',
-    focus: ['Offer strategy', 'Sales logic', 'Market growth'],
-    image: benPortrait,
-  },
-  {
     icon: BarChart3,
     name: 'Noam Shabat',
     role: 'Performance marketing and attribution',
@@ -61,6 +53,14 @@ const team = [
     body: 'Melina brings the creative layer: content, campaign assets, brand feel, venue-facing proof and the visual standard that makes the work worth paying attention to.',
     focus: ['Content', 'UGC', 'Creative direction'],
     image: melinaPortrait,
+  },
+  {
+    icon: Compass,
+    name: 'Ben Killen',
+    role: 'Growth strategy and business development',
+    body: 'Ben brings 10 years of business development, growth hacking and market-facing strategy. His role is to understand the commercial gap, shape the offer, build the sales logic and keep the work tied to the number that matters.',
+    focus: ['Offer strategy', 'Sales logic', 'Market growth'],
+    image: benPortrait,
   },
 ];
 
