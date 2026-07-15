@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { GALLERY_BY_ID } from '../../lib/galleryImages';
+
+const HERO_IMAGE = GALLERY_BY_ID['table-manners-martini'];
 
 export default function HeroSection() {
   return (
@@ -56,7 +59,7 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Right — video tile */}
+          {/* Right media tile */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -73,21 +76,23 @@ export default function HeroSection() {
                 background: '#0d0d0d',
               }}
             >
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
+              <img
+                src={HERO_IMAGE.src}
+                alt={HERO_IMAGE.alt}
                 className="w-full h-full object-cover"
-                onError={(e) => { e.target.style.display = 'none'; }}
-              >
-                <source src="https://media.base44.com/videos/public/69fac9355f793a9829c2542e/6aa7f289b_Teaser1.mp4" type="video/mp4" />
-              </video>
+              />
               <div
                 className="absolute inset-0"
                 style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 60%)' }}
               />
-
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="font-heading font-bold text-white text-lg uppercase tracking-tight">
+                  {HERO_IMAGE.client}
+                </p>
+                <p className="font-body text-white/65 text-xs mt-1">
+                  {HERO_IMAGE.kind}
+                </p>
+              </div>
             </div>
           </motion.div>
 

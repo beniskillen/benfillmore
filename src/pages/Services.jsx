@@ -1,6 +1,7 @@
 import React from 'react';
 import ScrollReveal from '../components/shared/ScrollReveal';
 import SectionCTA from '../components/shared/SectionCTA';
+import { SERVICE_HIGHLIGHTS } from '../lib/galleryImages';
 
 const SERVICE_SECTIONS = [
   {
@@ -84,6 +85,40 @@ export default function Services() {
               Paid media, in-house creative, and strategy. Built to drive revenue, not just deliverables.
             </p>
           </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Service proof */}
+      <section className="pb-20 md:pb-28 bg-background">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {SERVICE_HIGHLIGHTS.map((item, i) => (
+              <ScrollReveal key={item.title} delay={i * 0.08}>
+                <article className="group h-full overflow-hidden rounded-2xl bg-white border border-black/8">
+                  <div className="relative aspect-[4/5] overflow-hidden bg-black md:aspect-[4/3]">
+                    <img
+                      src={item.image.src}
+                      alt={item.image.alt}
+                      loading={i === 0 ? 'eager' : 'lazy'}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
+                    <span className="absolute bottom-4 left-4 rounded-full bg-white/15 px-3 py-1.5 font-body text-[11px] font-semibold uppercase tracking-wide text-white backdrop-blur-sm">
+                      {item.tag}
+                    </span>
+                  </div>
+                  <div className="p-6 md:p-7">
+                    <h2 className="font-heading font-bold text-xl uppercase tracking-tight text-black">
+                      {item.title}
+                    </h2>
+                    <p className="font-body text-sm leading-relaxed text-black/60 mt-3">
+                      {item.body}
+                    </p>
+                  </div>
+                </article>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </section>
 

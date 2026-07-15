@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import ScrollReveal from '../components/shared/ScrollReveal';
 import PillButton from '../components/shared/PillButton';
+import { FULL_HOUSE_IMAGES } from '../lib/galleryImages';
 
 /* ------------------------------------------------------------------ */
 /* Design tokens — Fillmore brand system                               */
@@ -25,15 +26,7 @@ const RED_DEEP = '#b40425';
 const CREAM = '#faf0da';
 const CHARTREUSE = '#E9FF80';
 
-/* Hosted stand-ins for src/assets/full-house/*.jpg — replace with your
-   own shoot assets when ready. */
-const IMG = {
-  hero: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=80',
-  quiet: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1400&q=80',
-  data: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=1200&q=80',
-  service: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
-  exterior: 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1400&q=80',
-};
+const IMG = FULL_HOUSE_IMAGES;
 
 const Kicker = ({ children, tone = 'red' }) => {
   const color =
@@ -157,7 +150,7 @@ const steps = [
       "Owned audience — independent of Meta's algorithm",
     ],
     img: IMG.data,
-    alt: 'Operator reviewing venue analytics at the bar',
+    alt: 'Goodfields team behind the counter during service',
     flip: false,
   },
   {
@@ -183,7 +176,7 @@ const steps = [
       'Revenue from the database in the first 30 days',
     ],
     img: IMG.service,
-    alt: 'Packed dining room mid-service on a weeknight',
+    alt: 'Lotus guests dining together over shared dishes',
     flip: false,
   },
   {
@@ -442,7 +435,7 @@ export default function FullHouse() {
             >
               <img
                 src={IMG.hero}
-                alt="Premium Sydney dining room at night"
+                alt="Lotus dining room set for service with natural light"
                 className="h-[420px] w-full object-cover lg:h-[560px]"
               />
               <div
@@ -524,7 +517,7 @@ export default function FullHouse() {
             <div className="relative mt-5 overflow-hidden rounded-2xl">
               <img
                 src={IMG.quiet}
-                alt="Empty restaurant tables on a quiet weeknight"
+                alt="Private dining room set for service"
                 className="h-[340px] w-full object-cover"
               />
               <div className="absolute bottom-4 left-5 rounded-full bg-black/80 px-5 py-2.5 text-[13px] text-white backdrop-blur-sm">
@@ -867,7 +860,7 @@ export default function FullHouse() {
           <div className="relative h-80 lg:h-auto">
             <img
               src={IMG.exterior}
-              alt="Warmly lit venue on a Sydney laneway at night"
+              alt="Goodfields cafe frontage and entry"
               className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
