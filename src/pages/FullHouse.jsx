@@ -372,7 +372,7 @@ export default function FullHouse() {
             >
               <Kicker tone="chartreuse">Customer Acquisition — Hospitality</Kicker>
               <h1 className="mt-6 font-heading font-bold uppercase tracking-tight text-white text-[clamp(2.5rem,6vw,4.75rem)] leading-[0.95]">
-                Most venues have no idea how to acquire customers.{' '}
+                Not sure how to acquire customers?{' '}
                 <span style={{ color: CHARTREUSE }}>We build the system that provides clarity.</span>
               </h1>
             </motion.div>
