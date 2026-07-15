@@ -9,8 +9,8 @@ const TIERS = [
     name: 'Starter',
     price: 'A$2,500',
     period: '/ month',
-    tagline: 'Establish your baseline growth system.',
-    sub: 'For brands ready to start shipping consistent marketing.',
+    tagline: 'Start the demand system.',
+    sub: 'For venues ready to stop guessing and start tracking what brings customers in.',
     popular: false,
     groups: [
       { label: 'Acquisition System', items: ['Paid Ads (Meta or Google — pick one)', 'Up to A$10K/month ad spend managed'] },
@@ -22,8 +22,8 @@ const TIERS = [
     name: 'Growth',
     price: 'A$4,000',
     period: '/ month',
-    tagline: 'The core growth system for scaling brands.',
-    sub: 'Built to lower CAC, increase LTV, and find scalable winners through weekly creative testing.',
+    tagline: 'The core booking system.',
+    sub: 'Built to lower the cost of a new booking, improve repeat visits and test better creative every week.',
     popular: true,
     groups: [
       { label: 'Acquisition System', items: ['Paid Ads (Meta + Google)', 'Up to A$30K/month ad spend managed'] },
@@ -36,8 +36,8 @@ const TIERS = [
     name: 'Scale',
     price: 'A$7,500',
     period: '/ month',
-    tagline: 'Full embedded growth partner.',
-    sub: "For brands scaling past A$50K/month in revenue. We act as your in-house marketing team.",
+    tagline: 'Full demand partner.',
+    sub: "For operators who need media, creative, retention and reporting run close to the numbers.",
     popular: false,
     groups: [
       { label: 'Acquisition System', items: ['Full paid media (Meta + Google + YouTube + retargeting)', 'Up to A$80K/month ad spend managed'] },
@@ -51,19 +51,19 @@ const TIERS = [
 const ALWAYS_INCLUDED = [
   {
     title: 'Direct access to Noam + Melina',
-    desc: "No account managers. No handoffs. The people doing the work are the people you talk to. We don't outsource execution.",
+    desc: "No account managers. No handoffs. The people doing the work are the people you talk to.",
   },
   {
-    title: 'Real reporting, not vanity metrics',
-    desc: 'Weekly numbers that actually matter — bookings, purchases, leads, revenue. Not clicks and reach.',
+    title: 'Real reporting, not reach reports',
+    desc: 'Weekly numbers that actually matter: bookings, covers, revenue and return visits. Not clicks and reach.',
   },
   {
     title: 'Hands-on creative',
-    desc: "UGC produced by real creators, briefed and managed in-house. We don't outsource the work that drives results.",
+    desc: "Creative briefed and managed around the offer, the venue and the booking path.",
   },
   {
     title: 'Strategy calls when you need them',
-    desc: "We're not on a quarterly review schedule. If something needs to be discussed, we discuss it.",
+    desc: "If bookings are leaking, we talk about it. No waiting for a quarterly review.",
   },
 ];
 
@@ -134,12 +134,12 @@ export default function Pricing() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <ScrollReveal>
             <h1 className="font-heading font-bold text-[clamp(2rem,6vw,5rem)] leading-[0.95] uppercase tracking-tight text-black">
-              No hidden fees.
+              Clear pricing.
               <br />
-              No "book a call" games.
+              Clear demand work.
             </h1>
             <p className="font-body text-black/60 text-lg md:text-xl leading-relaxed mt-6 max-w-2xl">
-              Three packages. Pick what fits. Or talk to us about something custom. Straight answers, no theatre.
+              Three packages built around the same job: help your venue create demand, track what worked and bring people back.
             </p>
           </ScrollReveal>
         </div>

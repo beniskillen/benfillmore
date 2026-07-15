@@ -9,9 +9,9 @@ const PRIMARY_BLOCKS = [
     to: '/hospitality',
     num: 'PRIMARY FOCUS 01',
     title: 'HOSPITALITY',
-    tagline: 'Fill every table, every night.',
-    body: 'We help restaurants, venues, hotels, and bars turn quiet nights into booked-out weekends. Paid ads, content, and retention systems that drive bookings, repeat visits, and revenue.',
-    cta: 'See how we grow hospitality brands',
+    tagline: 'Find the right guests, then bring them back.',
+    body: 'We help restaurants, venues, hotels and bars replace guesswork with a connected system: offer, content, paid media, tracking and reactivation.',
+    cta: 'See the venue system',
     bg: '#961621',
     tag: '#E9FF80',
     tagText: '#000',
@@ -53,10 +53,10 @@ export default function Industries() {
           <ScrollReveal>
             <span className="font-body text-xs font-semibold uppercase tracking-widest text-black/40">Industries</span>
             <h1 className="font-heading font-bold text-[clamp(2.5rem,8vw,7rem)] leading-[0.9] uppercase tracking-tight text-black mt-4">
-              We focus.<br />So you grow.
+              We focus.<br />So demand gets clearer.
             </h1>
             <p className="font-body text-black/60 text-lg md:text-xl leading-relaxed mt-6 max-w-2xl">
-              We focus on two industries — hospitality and e-commerce — because depth beats breadth. We've also grown trades and automotive businesses along the way.
+              Hospitality is the core focus: venues that need a clearer way to find customers, book them and bring them back.
             </p>
           </ScrollReveal>
         </div>

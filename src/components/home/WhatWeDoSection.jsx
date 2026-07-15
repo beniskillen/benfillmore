@@ -4,34 +4,34 @@ import ScrollReveal from '../shared/ScrollReveal';
 const CARDS = [
   {
     title: 'Paid Acquisition',
-    desc: "Meta and Google ads built around your margins, your AOV, and your real growth goals. We don't optimise for clicks. We optimise for revenue.",
+    desc: "Meta and Google ads built around your offer, margin and booking path. We optimise for customers, not clicks.",
   },
   {
     title: 'In-House Creative',
-    desc: "Photography, videography, and UGC produced in-house — designed to convert, not just look good. We test creative angles weekly until we find what scales.",
+    desc: "Photography, video and UGC built to make the venue easy to choose and easy to book.",
   },
   {
     title: 'Strategy & Systems',
-    desc: "We build retention systems, optimise customer journeys, and bring an operator's eye to the entire funnel. Not just the ads.",
+    desc: "Offer, booking path, tracking and reactivation connected into one demand system.",
   },
 ];
 
 const CARE_ABOUT = [
   {
-    title: 'Lower customer acquisition cost',
-    desc: "Paying less for every new customer you bring in. The metric that decides whether marketing scales or burns budget.",
+    title: 'Lower cost to win a customer',
+    desc: "Pay less to bring in the next guest by fixing the offer, creative and channel mix.",
   },
   {
     title: 'Higher repeat purchase rate',
-    desc: "Turning one-time diners into regulars. The most underrated lever in hospitality.",
+    desc: "Turn one-time diners into regulars. The most underrated lever in hospitality.",
   },
   {
     title: 'Booked-out weekends and weekdays',
-    desc: "Not just one or the other. Most venues are packed Saturdays and dead Tuesdays. We fix the Tuesdays.",
+    desc: "Not just one or the other. Slow nights need their own plan.",
   },
   {
     title: 'Stronger LTV and retention',
-    desc: "Customers who come back, spend more, and tell their friends. That's where the real money is.",
+    desc: "Customers who come back, spend more and tell their friends. That is where the real money is.",
   },
 ];
 
@@ -71,7 +71,7 @@ export default function WhatWeDoSection() {
               What We Actually Care About.
             </h2>
             <p className="font-body text-black/50 text-lg max-w-2xl mb-14">
-              We're not chasing impressions or vanity metrics. These are the numbers that move your business.
+              The work has one job: bring in customers and make them worth more over time.
             </p>
           </ScrollReveal>
 

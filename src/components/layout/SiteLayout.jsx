@@ -2,6 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import CopyEditPreview from '../shared/CopyEditPreview';
 
 export default function SiteLayout() {
   return (
@@ -11,6 +12,7 @@ export default function SiteLayout() {
         <Outlet />
       </main>
       <Footer />
+      <CopyEditPreview />
     </div>
   );
 }

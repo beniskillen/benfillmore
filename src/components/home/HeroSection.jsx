@@ -19,9 +19,9 @@ export default function HeroSection() {
               transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
             >
               <h1 className="font-heading font-bold text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.95] uppercase tracking-tight text-white">
-                More than vanity
+                Most venues are guessing where new bookings
                 <br />
-                metrics.
+                come from.
               </h1>
             </motion.div>
 
@@ -32,7 +32,7 @@ export default function HeroSection() {
               className="mt-6 max-w-xl"
             >
               <p className="font-body text-white/70 text-lg md:text-xl leading-relaxed">
-                We install the performance system hospitality businesses need to reliably produce growth — turning ad spend into bookings, customer data into repeat visits, and reporting into decisions.
+                We install the system: offer, content, paid media, tracking and reactivation. So bookings stop depending on luck.
               </p>
             </motion.div>
 
@@ -47,13 +47,13 @@ export default function HeroSection() {
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                 style={{ background: '#E9FF80', color: '#961621' }}
               >
-                Book a Strategy Call →
+                See if your venue qualifies →
               </Link>
               <Link
                 to="/work"
                 className="font-body text-white/60 font-medium text-base relative group inline-flex items-center gap-1 py-3.5 hover:text-white transition-colors"
               >
-                See how we'd grow your brand →
+                See how the system works →
                 <span className="absolute bottom-2 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full" />
               </Link>
             </motion.div>

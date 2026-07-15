@@ -2,13 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import ScrollReveal from '../components/shared/ScrollReveal';
-import PillButton from '../components/shared/PillButton';
 
 const HOSPITALITY_OUTCOMES = [
-  'Fill empty seats with paying customers',
-  'Build a waitlist, not just a guest list',
+  'Build demand without guessing',
+  'Build direct bookings, not rented attention',
   'Turn one-time diners into repeat regulars',
-  'Local awareness that actually drives foot traffic',
+  'Track which campaigns actually filled seats',
 ];
 
 const ECOMMERCE_OUTCOMES = [
@@ -26,10 +25,10 @@ export default function Niches() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <ScrollReveal>
             <h1 className="font-heading font-bold text-[clamp(2.2rem,6vw,5rem)] leading-[0.95] uppercase tracking-tight text-black">
-              We focus. So you grow.
+              We focus on turning attention into bookings.
             </h1>
             <p className="font-body text-black/60 text-lg md:text-xl leading-relaxed mt-6 max-w-2xl">
-              We don't try to do everything for everyone. We do two things, deeply.
+              Hospitality is the core focus: venues that need a clearer way to find customers, book them and bring them back.
             </p>
           </ScrollReveal>
         </div>
@@ -45,10 +44,10 @@ export default function Niches() {
               Hospitality
             </h2>
             <p className="font-heading font-bold text-xl md:text-2xl text-[#ED2045] mt-4">
-              Fill every table, every night.
+              Find the right guests, then bring them back.
             </p>
             <p className="font-body text-white/70 text-lg leading-relaxed mt-6 max-w-2xl">
-              We help restaurants, venues, and hotels go from quiet nights to waitlists. Paid ads that drive bookings. Content that makes people want to come in. Strategy that turns first-time visitors into regulars.
+              We help restaurants, venues and hotels replace guesswork with a connected system: offer, content, paid media, tracking and reactivation.
             </p>
 
             <ul className="mt-10 space-y-4">

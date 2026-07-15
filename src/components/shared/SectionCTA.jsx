@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
 
 export default function SectionCTA({
-  headline = "Ready to fill yours?",
-  sub = "Free 30-min strategy call. We'll show you where your current marketing is leaking revenue and what we'd fix first.",
+  headline = "Ready to fill the gaps?",
+  sub = "Free 30-minute strategy call. We'll show you where customers are leaking and what we'd fix first.",
   buttonText = "Book a Strategy Call →",
   buttonTo = "/apply",
 }) {

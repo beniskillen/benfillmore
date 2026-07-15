@@ -27,8 +27,8 @@ const OUTCOMES = [
 
 const BREAKS_FIRST = [
   { title: 'Creative fatigue.', desc: "Your winning ad stops working at 2-3x your usual spend. Frequency climbs. CTR drops." },
-  { title: 'Rising CACs.', desc: "What used to cost A$30 to acquire now costs A$60. Margins compress." },
-  { title: 'Weak retention.', desc: "All your revenue depends on new acquisition. Repeat purchase rate is below 20%." },
+  { title: 'Rising CACs.', desc: "What used to cost A$30 to win now costs A$60. Margins compress." },
+  { title: 'Weak retention.', desc: "All your revenue depends on new buyers. Repeat purchase rate is below 20%." },
   { title: 'Scaling too fast.', desc: "You doubled spend overnight. ROAS halved. Now you don't know if it's the algorithm, the creative, or the audience." },
   { title: 'Poor attribution.', desc: "Meta says 4x ROAS. Shopify says 2x. You don't know who to trust." },
   { title: 'Low repeat purchase rate.', desc: "Your AOV is fine. Your first-purchase margin is fine. But customers don't come back." },

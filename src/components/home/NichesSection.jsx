@@ -32,7 +32,7 @@ export default function NichesSection() {
                   Hospitality
                 </h3>
                 <p className="font-body text-white/60 text-base mt-4 max-w-sm">
-                  Fill every table. From quiet nights to waitlists.
+                  Build the system that finds customers, books them and brings them back.
                 </p>
                 <div className="mt-6 flex items-center gap-2 text-white/50 group-hover:text-white transition-colors">
                   <span className="font-body text-sm font-medium">Learn more</span>

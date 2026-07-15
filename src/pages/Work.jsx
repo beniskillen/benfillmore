@@ -269,12 +269,12 @@ export default function Work() {
           <ScrollReveal>
             <span className="font-body text-xs font-semibold uppercase tracking-widest text-black/40">Work</span>
             <h1 className="font-heading font-bold text-[clamp(2.5rem,8vw,7rem)] leading-[0.9] uppercase tracking-tight text-black mt-4">
-              The work speaks
+              Creative built
               <br />
-              for itself.
+              to help venues book.
             </h1>
             <p className="font-body text-black/60 text-lg md:text-xl leading-relaxed mt-6 max-w-2xl">
-              Creative, UGC, photography, and content produced in-house for hospitality brands.
+              Food, room, people and proof. The assets are built to support an offer, not just fill a feed.
             </p>
           </ScrollReveal>
         </div>
@@ -326,10 +326,10 @@ export default function Work() {
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-black">
-              Want work like this for your brand?
+              Want work like this tied to bookings?
             </h2>
             <p className="font-body text-black/60 text-lg mt-6 max-w-xl mx-auto">
-              Book a strategy call. We'll show you the creative we'd produce for your business.
+              Book a strategy call. We'll show you how the creative, offer and booking path would work for your venue.
             </p>
             <div className="mt-10">
               <Link

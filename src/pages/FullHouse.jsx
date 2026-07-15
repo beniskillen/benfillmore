@@ -73,23 +73,23 @@ const SectionHead = ({ kicker, title, lede, dark = false, tone }) => (
 const problems = [
   {
     n: '01',
-    title: 'Customer data stays trapped',
-    body: 'POS, bookings, Wi-Fi and CRM data never become a usable reactivation engine. The most valuable asset the venue owns sits idle.',
+    title: 'No owned demand plan',
+    body: 'Bookings, POS, Wi-Fi and CRM data sit in separate tools. The venue has customers, but no clear way to bring them back.',
   },
   {
     n: '02',
-    title: 'Quiet nights stay quiet',
-    body: 'Weekends mask the gap, but Tuesday to Thursday utilisation is what actually determines margin — and nobody owns that number.',
+    title: 'Quiet nights are treated as normal',
+    body: 'A strong Saturday hides the real issue. Tuesday to Thursday needs its own offer, audience and campaign logic.',
   },
   {
     n: '03',
-    title: 'Agencies report activity',
-    body: "Owners get dashboards and buzzwords instead of direct-booking economics. Spend goes out; covers don't come back attributed.",
+    title: 'Marketing stops at activity',
+    body: "Most reports show reach, clicks and posts. They do not show which work brought people in, what they spent, or what to do next.",
   },
   {
     n: '04',
-    title: 'Nothing compounds',
-    body: 'Creative, paid media and retention live in separate silos. Momentum breaks every month and every campaign starts from zero.',
+    title: 'Every campaign starts again',
+    body: 'Creative, paid media and retention are run as separate jobs. Nothing learns. Nothing compounds. The venue keeps guessing.',
   },
 ];
 
@@ -97,7 +97,7 @@ const cases = [
   {
     tag: 'eCommerce · Meta + Google',
     name: '5 Hounds by Dr Will',
-    desc: 'Full-funnel acquisition system for a premium pet food subscription brand, scaled while driving acquisition costs down.',
+    desc: 'Full-funnel growth engine for a premium pet food subscription brand, scaled while reducing the cost to win each order.',
     big: '$1.57M',
     bigLabel: 'Revenue generated',
     rows: [
@@ -142,12 +142,12 @@ const proofBar = [
 const steps = [
   {
     num: 'STEP 01 — UNLOCK',
-    title: 'Turn trapped customer data into an audience you own',
-    body: 'Booking platform, POS, Wi-Fi and CRM data pulled into one clean, segmented audience in week one. For the first time, you can see exactly who your customers are and when they stopped coming back.',
+    title: 'Build the audience the venue already owns',
+    body: 'Booking platform, POS, Wi-Fi and CRM data pulled into one clean audience. Now you can see who came in, who spent, and who has gone quiet.',
     points: [
       'SevenRooms / OpenTable / ResDiary integration',
       'Single customer view, segmented by recency and spend',
-      "Owned audience — independent of Meta's algorithm",
+      "Owned audience, not rented attention",
     ],
     img: IMG.data,
     alt: 'Goodfields team behind the counter during service',
@@ -155,12 +155,12 @@ const steps = [
   },
   {
     num: 'STEP 02 — WIRE',
-    title: 'Install attribution before a dollar goes to media',
-    body: 'Direct-booking tracking, offer-level ROI and cover economics wired in first. Every channel is judged on one standard: did it put paying people in seats?',
+    title: 'Track the path from ad to booking',
+    body: 'Direct-booking tracking, offer ROI and cover economics wired in first. Every channel is judged on the same question: did it bring paying customers in?',
     points: [
       'Booking + revenue attribution, end to end',
-      'Offer-level reporting — not "reach"',
-      'A weekly number the owner can actually run the venue on',
+      'Offer-level reporting, not reach reports',
+      'One weekly number the owner can run the venue on',
     ],
     img: null, // rendered as attribution diagram card
     alt: '',
@@ -168,12 +168,12 @@ const steps = [
   },
   {
     num: 'STEP 03 — REACTIVATE',
-    title: 'Win back the diners you already paid to acquire',
-    body: 'Automated SMS, email, VIP and event sequences pointed at lapsed regulars and high-spend segments — the cheapest covers a venue will ever buy, live before cold acquisition starts.',
+    title: 'Bring back the customers you already paid for',
+    body: 'SMS, email, VIP and event sequences for lapsed regulars and high-spend guests. These are usually the cheapest covers a venue can win.',
     points: [
-      'Win-back, VIP and event sequences on autopilot',
-      'Mid-week offers with real campaign logic',
-      'Revenue from the database in the first 30 days',
+      'Win-back, VIP and event sequences',
+      'Mid-week offers built for specific guest groups',
+      'Revenue from the database before cold spend grows',
     ],
     img: IMG.service,
     alt: 'Lotus guests dining together over shared dishes',
@@ -181,12 +181,12 @@ const steps = [
   },
   {
     num: 'STEP 04 — AMPLIFY',
-    title: 'Scale with a campaign big enough to move revenue',
-    body: 'Only after the base is activated: a hero campaign with a real big idea, a content shoot that earns attention, and paid traffic pushed into direct-booking journeys that compound week on week.',
+    title: 'Acquire new customers with a real campaign',
+    body: 'Once the base is working, we launch the bigger demand push: offer, content shoot, Meta, Google and direct-booking journeys working together.',
     points: [
       'Hero campaign + professional content shoot',
       'Meta + Google traffic into owned booking journeys',
-      'Weekly optimisation against cover economics',
+      'Weekly optimisation against bookings, covers and spend',
     ],
     img: null, // rendered as compounding covers chart card
     alt: '',
@@ -197,60 +197,60 @@ const steps = [
 const deliverables = [
   {
     icon: BarChart3,
-    title: 'Cover-level dashboard',
-    body: 'Bookings, covers, revenue and offer ROI in one live view — updated daily, owned by the venue.',
+    title: 'Booking dashboard',
+    body: 'Bookings, covers, revenue and offer ROI in one view. Clear enough to make decisions from.',
   },
   {
     icon: Lightbulb,
-    title: 'Hero campaign + big idea',
-    body: 'A flagship creative concept built around your venue\'s story — not another "content calendar".',
+    title: 'Offer and campaign angle',
+    body: 'A clear reason for people to book, built around the venue and the nights that need demand.',
   },
   {
     icon: Camera,
     title: 'Professional content shoot',
-    body: 'Food, room and people shot to a standard that holds up in paid placements and on the pass.',
+    body: 'Food, room and people shot to sell the experience, not just fill the feed.',
   },
   {
     icon: Activity,
     title: 'Tracking & attribution',
-    body: 'Direct-booking tracking installed before spend. Every dollar answers to covers, not clicks.',
+    body: 'Direct-booking tracking installed before spend. Every dollar answers to customers, not clicks.',
   },
   {
     icon: MessageSquare,
     title: 'CRM reactivation engine',
-    body: 'SMS, email, VIP and event sequences that bring lapsed regulars back on the nights you choose.',
+    body: 'SMS, email, VIP and event sequences that bring past guests back on the nights you choose.',
   },
   {
     icon: UserRound,
     title: 'An operator, not an account manager',
-    body: 'Weekly working sessions on your numbers with the person actually running the system.',
+    body: 'Weekly working sessions with the person running the system, looking at the numbers that matter.',
   },
 ];
 
 const faqs = [
   {
     q: 'Is this only for venues that are already busy?',
-    a: "No — but it works best where there's real product-market pull, a decent offer, and a clear mid-week gap to fix. The system multiplies demand that exists; it doesn't invent demand for a venue nobody wants.",
+    a: "No, but there needs to be something real to work with: a good venue, a clear offer, and enough existing demand to prove the system can scale.",
   },
   {
     q: 'Why is there no pricing on this page?',
-    a: 'Because the page sells the outcome and the qualification standard first. Price without fit commoditises the offer and weakens the guarantee. Investment is discussed on the qualification call, once fit is established.',
+    a: 'Because the guarantee only makes sense for the right venues. We talk price after we understand the venue, the economics and the booking gap.',
   },
   {
     q: "What if my venue doesn't qualify?",
-    a: "You'll be told directly, and routed to a lighter path — a Growth Score, data and tracking setup, or a smaller experiment. The flagship promise is reserved for venues where the numbers support it.",
+    a: "We will tell you directly. Some venues need a lighter starting point first: tracking, data cleanup, a sharper offer, or a smaller campaign test.",
   },
   {
     q: 'Why is the proof from outside hospitality?',
-    a: 'Because the acquisition, measurement and conversion system already has live, audited performance evidence across categories. Venue-specific lighthouse case studies are in build — the engine is proven; the vertical is next.',
+    a: 'Because the core mechanics are demand, tracking and conversion. The system has already produced measured results across categories; venue-specific proof is being built now.',
   },
   {
     q: 'How fast do we see movement?',
-    a: 'Reactivation revenue typically lands inside the first 30 days because it starts with the database you already own. Paid amplification compounds over the remaining 60 as attribution matures.',
+    a: 'Reactivation can move inside the first 30 days because it starts with people who already know the venue. Cold demand compounds after the tracking and offer are working.',
   },
   {
     q: 'Who actually does the work?',
-    a: 'The operator you meet on the qualification call. Strategy, media, creative direction and reporting stay with one accountable person — no handoff to a junior pod after signing.',
+    a: 'The people you meet stay close to the work. Strategy, media, creative direction and reporting are run by one accountable team.',
   },
 ];
 
@@ -370,10 +370,10 @@ export default function FullHouse() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
             >
-              <Kicker tone="chartreuse">Performance Growth — Hospitality</Kicker>
+              <Kicker tone="chartreuse">Customer Acquisition — Hospitality</Kicker>
               <h1 className="mt-6 font-heading font-bold uppercase tracking-tight text-white text-[clamp(2.5rem,6vw,4.75rem)] leading-[0.95]">
-                More than vanity metrics.{' '}
-                <span style={{ color: CHARTREUSE }}>A system for reliable growth.</span>
+                Most venues have no idea how to acquire customers.{' '}
+                <span style={{ color: CHARTREUSE }}>We build the system.</span>
               </h1>
             </motion.div>
 
@@ -383,9 +383,9 @@ export default function FullHouse() {
               transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
               className="mt-7 max-w-[56ch] font-body text-lg leading-relaxed text-white/70 md:text-xl"
             >
-              Fillmore installs the performance system hospitality businesses need to reliably
-              produce growth — tracking every dollar to bookings and covers, reactivating the
-              customers you already own, and filling the nights that decide your margin.
+              Not more random content. Not another ad account. We connect the offer, content,
+              paid media, tracking and reactivation so your venue knows where customers come from
+              and how to bring them back.
             </motion.p>
 
             <motion.div
@@ -416,9 +416,9 @@ export default function FullHouse() {
               transition={{ duration: 0.5, delay: 0.55 }}
               className="mt-6 max-w-[52ch] text-[13.5px] text-white/60"
             >
-              <strong className="text-white">Qualification only.</strong> A maximum of 3 Full House
-              Campaigns run per quarter. The 3X ROI guarantee is offered only where the venue,
-              economics and offer fit the brief.
+              <strong className="text-white">Qualification only.</strong> Boutique by design. We shape
+              the service around the venue and only offer the guarantee when the offer, data and
+              economics are a clear fit.
             </motion.p>
           </div>
 
@@ -475,7 +475,7 @@ export default function FullHouse() {
       <div className="overflow-hidden border-y border-black/5 py-5" style={{ background: CREAM }}>
         <div className="animate-marquee flex items-center" style={{ width: 'max-content' }}>
           {[...Array(2)].flatMap((_, dup) =>
-            ['Direct bookings', 'Paid social', 'Google Ads', 'Tracking & attribution', 'CRM reactivation', 'Content & creative'].map(
+            ['Audience', 'Offer', 'Direct bookings', 'Paid media', 'Tracking', 'Reactivation'].map(
               (c) => (
                 <span
                   key={`${dup}-${c}`}
@@ -495,8 +495,8 @@ export default function FullHouse() {
         <div className="mx-auto w-full max-w-7xl px-6 md:px-8">
           <SectionHead
             kicker="The problem"
-            title="The weekend hides the problem. The month still feels thin."
-            lede='Most hospitality marketing reports clicks, impressions and "reach" while Tuesday stays quiet. Busy Saturdays make it look fine — the P&L says otherwise.'
+            title="The room is not the problem. The system is."
+            lede="They know how to serve people. They know how to create a good night. But the system for finding customers, converting them, tracking them and bringing them back is usually missing."
           />
           <div className="grid gap-5 md:grid-cols-2">
             {problems.map((p, i) => (
@@ -521,7 +521,7 @@ export default function FullHouse() {
                 className="h-[340px] w-full object-cover"
               />
               <div className="absolute bottom-4 left-5 rounded-full bg-black/80 px-5 py-2.5 text-[13px] text-white backdrop-blur-sm">
-                Tuesday, 7:45pm. The room your marketing is supposed to fill.
+                Tuesday, 7:45pm. This is the room the system is supposed to fill.
               </div>
             </div>
           </ScrollReveal>
@@ -534,13 +534,12 @@ export default function FullHouse() {
           <ScrollReveal>
             <div className="max-w-[900px] border-l-2 pl-10" style={{ borderColor: RED }}>
               <p className="font-heading text-3xl font-bold uppercase leading-[1.05] tracking-tight text-black md:text-4xl">
-                The gap isn't your food, your fit-out or your effort. It's that every solution
-                treats your venue as <span style={{ color: RED_DEEP }}>one channel to run</span> —
-                instead of a complete system to build.
+                The problem usually isn't the food, the fit-out or the effort. It is that nobody
+                owns <span style={{ color: RED_DEEP }}>the path from attention to booking</span> as a complete system.
               </p>
               <p className="mt-[18px] max-w-[62ch] font-body text-[17px] text-black/60">
-                That's the gap the Full House Campaign was built to close: one operator, one
-                system, one number that matters — profitable covers, attributed to the dollar.
+                That is what the Full House Campaign installs: one operator, one system and one
+                number that matters — paying customers you can trace back to the work.
               </p>
             </div>
           </ScrollReveal>
@@ -553,8 +552,8 @@ export default function FullHouse() {
           <SectionHead
             dark
             kicker="Performance evidence"
-            title="The numbers behind the system."
-            lede="Live, tracked results from campaigns the team runs today. No inflated numbers, no vanity stats — cross-category proof that the acquisition and measurement engine works."
+            title="The system has to prove it can bring people in."
+            lede="These are tracked results from campaigns the team runs today. The categories differ, but the mechanics are the same: find demand, convert it and measure what came back."
           />
           <div className="grid gap-5 lg:grid-cols-3">
             {cases.map((c, i) => (
@@ -596,9 +595,8 @@ export default function FullHouse() {
               ))}
             </div>
             <p className="mt-6 max-w-[74ch] text-[13.5px] text-white/50">
-              These are not hospitality case studies — and that's the point. The same acquisition,
-              measurement and conversion system is being pointed at venues, with hospitality
-              lighthouse case studies in build now.
+              These are not hospitality case studies yet. They show the underlying engine: offer,
+              creative, media, tracking and conversion. That engine is now being pointed at venues.
             </p>
           </ScrollReveal>
         </div>
@@ -610,7 +608,7 @@ export default function FullHouse() {
           <SectionHead
             kicker="The system"
             title="The Venue Activation System."
-            lede="Promise → proof → mechanism → offer. Four stages, installed in order. Nothing scales until the base you already own is activated."
+            lede="Four stages, installed in order: build the audience, track the booking path, reactivate past guests, then scale new demand."
           />
           {steps.map((s, i) => (
             <ScrollReveal key={s.num}>
@@ -659,7 +657,7 @@ export default function FullHouse() {
           <SectionHead
             kicker="What venues get"
             title="Everything required to fill the room. Nothing that isn't."
-            lede="One integrated engine — creative, media, data and retention working the same number. No retainer theatre, no channel silos."
+            lede="One engine: offer, creative, media, data and retention working toward the same number. No channel silos."
           />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {deliverables.map((d, i) => (
@@ -688,7 +686,7 @@ export default function FullHouse() {
           <SectionHead
             kicker="What changes"
             title="Before Fillmore. After Fillmore."
-            lede="Brutally commercial, in plain English — the operational change a venue is actually buying."
+            lede="The change is simple: the venue stops guessing where customers come from."
           />
           <div className="grid gap-5 lg:grid-cols-3">
             {[
@@ -696,30 +694,30 @@ export default function FullHouse() {
                 title: 'Without Fillmore',
                 feat: false,
                 items: [
-                  'Customer data sits idle across four platforms',
-                  'Marketing judged on vanity metrics',
-                  'OTAs and aggregators own the booking relationship',
-                  'Quiet nights treated as "just hospitality"',
+                  'Customer data spread across disconnected tools',
+                  'Marketing judged on reach and posts',
+                  'Bookings arrive with no clear source',
+                  'Quiet nights treated as normal',
                 ],
               },
               {
                 title: 'With Fillmore',
                 feat: true,
                 items: [
-                  'Audience owned, segmented and working every week',
+                  'Audience owned, segmented and working',
                   'Every channel tied to bookings and covers',
-                  'Direct booking becomes the default path',
-                  'Mid-week nights get their own campaign logic',
+                  'Direct booking becomes the main path',
+                  'Slow nights get their own offer and campaign',
                 ],
               },
               {
                 title: 'What that means',
                 feat: false,
                 items: [
-                  'Predictable revenue outside the weekend spike',
-                  'Cheaper growth — reactivation before cold acquisition',
-                  'Margin back from third-party commissions',
-                  'A number the owner can plan staffing and stock on',
+                  'More control over where demand comes from',
+                  'Cheaper growth through reactivation first',
+                  'Less dependence on platforms and hope',
+                  'A number the owner can act on each week',
                 ],
               },
             ].map((col, i) => (
@@ -767,7 +765,7 @@ export default function FullHouse() {
             dark
             kicker="The flagship offer"
             title="The 90-Day Full House Campaign."
-            lede="One flagship engagement — not a menu. The guarantee stays visible, the pricing stays off-page, and the qualification standard is explicit."
+            lede="One engagement to install and run the demand engine. Not a menu of disconnected services."
           />
           <ScrollReveal>
             <div className="grid overflow-hidden rounded-2xl border lg:grid-cols-[1.15fr_0.85fr]" style={{ borderColor: 'rgba(233,255,128,0.3)' }}>
@@ -778,8 +776,8 @@ export default function FullHouse() {
                   the venue keeps the media.
                 </h3>
                 <p className="max-w-[52ch] text-white/60">
-                  The complete Venue Activation System, installed and run for one quarter, judged
-                  on one number: attributed revenue against total investment.
+                  The complete Venue Activation System, installed and run for one quarter. It is
+                  judged on one number: attributed revenue against total investment.
                 </p>
                 <div className="mt-7 border-t border-white/10">
                   {[
@@ -803,10 +801,10 @@ export default function FullHouse() {
                 </h4>
                 <ul>
                   {[
-                    'Existing demand and a proven weekend',
-                    'An offer strong enough to campaign on',
-                    'Tracking access across booking + POS',
-                    'Ability to execute on launch nights',
+                    'A venue people already want',
+                    'An offer strong enough to bring people in',
+                    'Access to booking, POS and customer data',
+                    'Ability to execute when demand lands',
                   ].map((q) => (
                     <li key={q} className="flex gap-3 border-b border-white/10 py-2.5 text-[15px] text-white/60 last:border-b-0">
                       <span className="font-bold" style={{ color: CHARTREUSE }}>—</span>
@@ -822,8 +820,8 @@ export default function FullHouse() {
                   See if your venue qualifies <ArrowRight size={18} strokeWidth={2.5} />
                 </Link>
                 <p className="mt-3.5 text-[12.5px] leading-normal text-white/50">
-                  Maximum 3 Full House Campaigns per quarter. Application-led — not everyone is
-                  approved. Venues that aren't a fit are routed to a lighter starting point.
+                  Boutique by design. We only offer the guarantee where the venue, economics and
+                  offer fit the brief.
                 </p>
               </div>
             </div>
@@ -868,11 +866,11 @@ export default function FullHouse() {
             <ScrollReveal>
               <Kicker tone="chartreuse">Final step</Kicker>
               <h2 className="mb-4 mt-[18px] font-heading text-4xl font-bold uppercase leading-[0.98] tracking-tight text-white md:text-[44px]">
-                See if your venue qualifies for a Full House Campaign.
+                See if your venue qualifies for the Full House system.
               </h2>
               <p className="mb-7 max-w-[48ch] text-white/70">
-                15 minutes. We show you where bookings are leaking, what those gaps are worth in
-                covers, and whether the guarantee is commercially responsible for your venue.
+                15 minutes. We look at how people find you now, where bookings are leaking, and
+                whether the guarantee makes sense for your venue.
               </p>
               <div className="mb-7 rounded-2xl bg-black/20 p-6 backdrop-blur-sm">
                 <div className="mb-3 font-heading text-[13px] font-bold uppercase tracking-[0.14em] text-white/70">
@@ -900,7 +898,7 @@ export default function FullHouse() {
                 </PillButton>
               </div>
               <p className="mt-4 text-[13px] text-white/60">
-                Qualification first. Max 3 venues per quarter. Application — not a sales call.
+                Qualification first. Application-led. No pitch deck.
               </p>
             </ScrollReveal>
           </div>

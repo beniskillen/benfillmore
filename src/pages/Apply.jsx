@@ -74,10 +74,10 @@ export default function Apply() {
       <div className="max-w-2xl mx-auto px-6 md:px-8">
         <ScrollReveal>
           <h1 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-black">
-            Apply for a free strategy call
+            Apply for a strategy call
           </h1>
           <p className="font-body text-black/60 text-lg mt-4">
-            30 minutes. No pitch deck. No fluff. Just an honest conversation about your business.
+            30 minutes. No pitch deck. We look at how people find you now, where bookings leak, and whether Fillmore is the right fit.
           </p>
         </ScrollReveal>
 
@@ -138,7 +138,7 @@ export default function Apply() {
                 onChange={(e) => handleChange('biggest_challenge', e.target.value)}
                 rows={4}
                 className="w-full bg-white border border-black/10 rounded-xl px-4 py-3 font-body text-base text-black placeholder:text-black/30 focus:outline-none focus:ring-2 focus:ring-black/10 transition-all resize-none"
-                placeholder="Tell us what's on your mind..."
+                placeholder="Where are customers leaking right now?"
               />
             </div>
 
