@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   Activity,
-  ArrowRight,
   BarChart3,
   Camera,
   Check,
@@ -13,6 +12,7 @@ import {
   X,
 } from 'lucide-react';
 import ScrollReveal from '../components/shared/ScrollReveal';
+import RoiGuaranteeLink from '../components/shared/RoiGuaranteeLink';
 import benPortrait from '../assets/team/ben-killen.png';
 import noamPortrait from '../assets/team/noam-shabat.jpg';
 import melinaPortrait from '../assets/team/melina-bilotta.jpg';
@@ -200,12 +200,9 @@ export default function About() {
                   Fillmore combines growth strategy, performance marketing and premium creative to help businesses turn attention into bookings, leads, revenue and repeat customers.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <Link
-                    to="/apply"
+                  <RoiGuaranteeLink
                     className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-body text-sm font-bold text-black transition hover:-translate-y-0.5 hover:shadow-xl"
-                  >
-                    Book a Strategy Call <ArrowRight size={17} strokeWidth={2.5} />
-                  </Link>
+                  />
                   <Link
                     to="/work"
                     className="inline-flex items-center rounded-full border border-white/25 px-7 py-3.5 font-body text-sm font-bold text-white transition hover:bg-white/10"
@@ -436,12 +433,9 @@ export default function About() {
                   If your business has something real to amplify, Fillmore can help sharpen the offer, build the campaign and install the system around the number that matters.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <Link
-                    to="/apply"
+                  <RoiGuaranteeLink
                     className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-body text-sm font-bold text-black transition hover:-translate-y-0.5 hover:shadow-xl"
-                  >
-                    See if we are the right fit <ArrowRight size={17} strokeWidth={2.5} />
-                  </Link>
+                  />
                   <Link
                     to="/full-house"
                     className="inline-flex items-center rounded-full border border-white/25 px-7 py-3.5 font-body text-sm font-bold text-white transition hover:bg-white/10"

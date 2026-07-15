@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GALLERY_BY_ID } from '../../lib/galleryImages';
+import RoiGuaranteeLink from '../shared/RoiGuaranteeLink';
 
 const HERO_IMAGE = GALLERY_BY_ID['table-manners-martini'];
 
@@ -42,13 +43,10 @@ export default function HeroSection() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="mt-8 flex flex-col sm:flex-row items-start gap-4"
             >
-              <Link
-                to="/apply"
+              <RoiGuaranteeLink
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                 style={{ background: '#E9FF80', color: '#961621' }}
-              >
-                See if your venue qualifies →
-              </Link>
+              />
               <Link
                 to="/work"
                 className="font-body text-white/60 font-medium text-base relative group inline-flex items-center gap-1 py-3.5 hover:text-white transition-colors"

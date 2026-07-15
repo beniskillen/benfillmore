@@ -4,6 +4,7 @@ import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ScrollReveal from '../components/shared/ScrollReveal';
 import MediaCarousel from '../components/home/MediaCarousel';
+import RoiGuaranteeLink from '../components/shared/RoiGuaranteeLink';
 
 const FOCUS_ITEMS = [
   {
@@ -117,13 +118,10 @@ export default function Hospitality() {
               Most venues can serve a great night. Fewer have a reliable way to create demand. We connect paid media, content, tracking and reactivation so bookings become a system, not a guess.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
-              <Link
-                to="/apply"
+              <RoiGuaranteeLink
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                 style={{ background: '#faf0da' }}
-              >
-                Book a Strategy Call →
-              </Link>
+              />
               <Link
                 to="/pricing"
                 className="inline-flex items-center font-body font-medium text-base py-3.5 text-white relative group"
@@ -230,13 +228,10 @@ export default function Hospitality() {
               Free 30-minute strategy call. We'll show you where customers are leaking and what we'd fix first.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                to="/apply"
+              <RoiGuaranteeLink
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
                 style={{ background: '#faf0da' }}
-              >
-                Book a Strategy Call →
-              </Link>
+              />
               <Link
                 to="/pricing"
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-white border border-white/30 transition-all duration-200 hover:bg-white hover:text-black"

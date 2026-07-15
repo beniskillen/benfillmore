@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ScrollReveal from '../components/shared/ScrollReveal';
 import PillButton from '../components/shared/PillButton';
 import { CASE_STUDIES } from '../lib/caseStudiesData';
+import { ROI_GUARANTEE_CTA_LABEL, ROI_GUARANTEE_FORM_URL } from '../lib/cta';
 
 function getIndustryColor(industry) {
   const i = industry.toLowerCase();
@@ -123,8 +124,8 @@ function CaseStudyDetail({ study, onClose }) {
         </div>
 
         <div className="mt-14 pt-8 border-t border-black/5">
-          <PillButton to="/apply">
-            Book a strategy call →
+          <PillButton href={ROI_GUARANTEE_FORM_URL}>
+            {ROI_GUARANTEE_CTA_LABEL}
           </PillButton>
         </div>
       </motion.div>
@@ -226,8 +227,8 @@ function SectionCTABottom() {
             Free 30-minute strategy call. We look at the booking gap and what we would fix first.
           </p>
           <div className="mt-10">
-            <PillButton to="/apply" variant="primary-inverted">
-              Book a Strategy Call →
+            <PillButton href={ROI_GUARANTEE_FORM_URL} variant="primary-inverted">
+              {ROI_GUARANTEE_CTA_LABEL}
             </PillButton>
           </div>
         </ScrollReveal>

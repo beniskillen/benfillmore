@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { ChevronDown, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ScrollReveal from '../components/shared/ScrollReveal';
+import RoiGuaranteeLink from '../components/shared/RoiGuaranteeLink';
 
 const TIERS = [
   {
@@ -207,13 +207,10 @@ export default function Pricing() {
                   </div>
 
                   <div className="mt-10">
-                    <Link
-                      to="/apply"
+                    <RoiGuaranteeLink
                       className={`block w-full text-center font-semibold text-base px-6 py-3.5 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl text-black`}
                       style={{ background: '#faf0da' }}
-                    >
-                      Get Started →
-                    </Link>
+                    />
                   </div>
                 </div>
               </ScrollReveal>
@@ -233,13 +230,10 @@ export default function Pricing() {
               We build packages around your goals, not around our menu. If none of these fit, talk to us. We'll figure it out together.
             </p>
             <div className="mt-10">
-              <Link
-                to="/apply"
+              <RoiGuaranteeLink
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
                 style={{ background: '#faf0da' }}
-              >
-                Talk to Us →
-              </Link>
+              />
             </div>
           </ScrollReveal>
         </div>
@@ -293,13 +287,10 @@ export default function Pricing() {
               Book a free 30-min call. We'll listen, ask questions, and tell you honestly whether we're the right fit. No pitch, no pressure.
             </p>
             <div className="mt-10">
-              <Link
-                to="/apply"
+              <RoiGuaranteeLink
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
                 style={{ background: '#faf0da' }}
-              >
-                Book a Call →
-              </Link>
+              />
             </div>
           </ScrollReveal>
         </div>

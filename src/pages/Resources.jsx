@@ -1,5 +1,6 @@
 import ScrollReveal from '../components/shared/ScrollReveal';
 import PillButton from '../components/shared/PillButton';
+import { ROI_GUARANTEE_CTA_LABEL, ROI_GUARANTEE_FORM_URL } from '../lib/cta';
 
 const TOPICS = [
   {
@@ -101,8 +102,8 @@ export default function Resources() {
               Book a 30-minute strategy session. We will look at how customers find you now and where the system is leaking.
             </p>
             <div className="mt-10">
-              <PillButton to="/apply" variant="primary-inverted">
-                Book a Strategy Call
+              <PillButton href={ROI_GUARANTEE_FORM_URL} variant="primary-inverted">
+                {ROI_GUARANTEE_CTA_LABEL}
               </PillButton>
             </div>
           </ScrollReveal>

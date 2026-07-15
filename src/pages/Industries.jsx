@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import ScrollReveal from '../components/shared/ScrollReveal';
 import PillButton from '../components/shared/PillButton';
+import { ROI_GUARANTEE_CTA_LABEL, ROI_GUARANTEE_FORM_URL } from '../lib/cta';
 
 const PRIMARY_BLOCKS = [
   {
@@ -137,8 +138,8 @@ export default function Industries() {
               Most businesses we work with have crossover. A restaurant group with an online merchandise store. A trades business with multi-location ambitions. We figure out the actual lever, not the industry label.
             </p>
             <div className="mt-10">
-              <PillButton to="/apply" variant="primary-inverted">
-                Book a Strategy Call →
+              <PillButton href={ROI_GUARANTEE_FORM_URL} variant="primary-inverted">
+                {ROI_GUARANTEE_CTA_LABEL}
               </PillButton>
             </div>
           </ScrollReveal>

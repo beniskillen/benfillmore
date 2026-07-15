@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ScrollReveal from '../components/shared/ScrollReveal';
-import MediaCarousel from '../components/home/MediaCarousel';
+import RoiGuaranteeLink from '../components/shared/RoiGuaranteeLink';
 
 const FOCUS_ITEMS = [
   { title: 'Consistent qualified leads', desc: 'Not just clicks. Leads that turn into booked jobs at margins that work.' },
@@ -73,13 +73,10 @@ export default function Trades() {
               We help service businesses: electricians, plumbers, builders, landscapers, cleaners, and trades. Consistent local leads. Booked jobs.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
-              <Link
-                to="/apply"
+              <RoiGuaranteeLink
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                 style={{ background: '#F7BD01' }}
-              >
-                Book a Strategy Call →
-              </Link>
+              />
               <Link to="/pricing" className="inline-flex items-center font-body font-medium text-base py-3.5 text-white relative group">
                 See pricing
                 <span className="absolute bottom-2 left-0 w-0 h-[1.5px] bg-white transition-all duration-300 group-hover:w-full" />
@@ -201,13 +198,10 @@ export default function Trades() {
               Free 30-min strategy call. We'll show you where your lead flow is breaking, and what we'd fix first.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                to="/apply"
+              <RoiGuaranteeLink
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
                 style={{ background: '#F7BD01' }}
-              >
-                Book a Strategy Call →
-              </Link>
+              />
               <Link
                 to="/pricing"
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-white border border-white/30 transition-all duration-200 hover:bg-white hover:text-black"

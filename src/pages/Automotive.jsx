@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ScrollReveal from '../components/shared/ScrollReveal';
+import RoiGuaranteeLink from '../components/shared/RoiGuaranteeLink';
 
 const FOCUS_ITEMS = [
   { title: 'Qualified test drive leads', desc: 'Not tire kickers. Buyers ready to drive in this week.' },
@@ -67,13 +68,10 @@ export default function Automotive() {
               We help dealerships, used car lots, mechanics, and automotive businesses generate qualified leads, move inventory, and fill service bays. Marketing built around the way people actually buy cars in 2026.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
-              <Link
-                to="/apply"
+              <RoiGuaranteeLink
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                 style={{ background: '#F7BD01' }}
-              >
-                Book a Strategy Call →
-              </Link>
+              />
               <Link to="/pricing" className="inline-flex items-center font-body font-medium text-base py-3.5 text-white relative group">
                 See pricing
                 <span className="absolute bottom-2 left-0 w-0 h-[1.5px] bg-white transition-all duration-300 group-hover:w-full" />
@@ -159,13 +157,10 @@ export default function Automotive() {
                 Talk to us in the meantime — we'll walk through how we've thought about growing automotive businesses, and what we'd do for yours.
               </p>
               <div className="mt-8">
-                <Link
-                  to="/apply"
+                <RoiGuaranteeLink
                   className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5"
                   style={{ background: '#F7BD01' }}
-                >
-                  Book a Strategy Call →
-                </Link>
+                />
               </div>
             </div>
           </ScrollReveal>
@@ -197,13 +192,10 @@ export default function Automotive() {
               Free 30-min strategy call. We'll show you where your marketing is leaking buyers, and what we'd fix first.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                to="/apply"
+              <RoiGuaranteeLink
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
                 style={{ background: '#F7BD01' }}
-              >
-                Book a Strategy Call →
-              </Link>
+              />
               <Link
                 to="/pricing"
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-white border border-white/30 transition-all duration-200 hover:bg-white hover:text-black"

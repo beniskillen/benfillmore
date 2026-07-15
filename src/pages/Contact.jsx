@@ -1,6 +1,6 @@
 import { Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import ScrollReveal from '../components/shared/ScrollReveal';
+import RoiGuaranteeLink from '../components/shared/RoiGuaranteeLink';
 
 export default function Contact() {
   return (
@@ -75,13 +75,10 @@ export default function Contact() {
             <p className="text-black/60 text-lg mb-10 max-w-xl mx-auto">
               Tell us what is happening now. We will tell you if the system fits.
             </p>
-            <Link
-              to="/apply"
+            <RoiGuaranteeLink
               className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
               style={{ background: '#E9FF80' }}
-            >
-              Book a Strategy Call →
-            </Link>
+            />
           </ScrollReveal>
         </div>
       </section>

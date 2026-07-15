@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import ScrollReveal from '../components/shared/ScrollReveal';
+import RoiGuaranteeLink from '../components/shared/RoiGuaranteeLink';
 
 const HOSPITALITY_OUTCOMES = [
   'Build demand without guessing',
@@ -114,9 +115,7 @@ export default function Niches() {
           <ScrollReveal>
             <p className="font-body text-black/50 text-lg md:text-xl">
               Don't fit into one of these? We get it.{' '}
-              <Link to="/apply" className="text-black font-medium underline underline-offset-4 hover:text-black/70 transition-colors">
-                Reach out anyway.
-              </Link>
+              <RoiGuaranteeLink className="text-black font-medium underline underline-offset-4 hover:text-black/70 transition-colors" />
             </p>
           </ScrollReveal>
         </div>

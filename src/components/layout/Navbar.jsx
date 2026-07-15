@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import RoiGuaranteeLink from '../shared/RoiGuaranteeLink';
 
 const NAV_ITEMS = [
   { label: 'Home', path: '/' },
@@ -59,13 +60,10 @@ export default function Navbar() {
                 <span className={`absolute -bottom-1 left-0 h-[1.5px] bg-white transition-all duration-300 ${location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'}`} />
               </Link>
             ))}
-            <Link
-              to="/apply"
+            <RoiGuaranteeLink
               className="text-sm font-semibold px-5 py-2.5 rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 whitespace-nowrap flex-shrink-0 text-black"
               style={{ background: '#faf0da' }}
-            >
-              Book a Strategy Call
-            </Link>
+            />
           </nav>
 
           {/* Mobile menu button */}
@@ -111,12 +109,10 @@ export default function Navbar() {
                 transition={{ delay: 0.3 }}
                 className="mt-4"
               >
-                <Link
-                  to="/apply"
+                <RoiGuaranteeLink
+                  onClick={() => setMobileOpen(false)}
                   className="bg-black text-white text-lg font-semibold px-8 py-3 rounded-full inline-block"
-                >
-                  Book a Strategy Call
-                </Link>
+                />
               </motion.div>
             </nav>
           </motion.div>

@@ -225,7 +225,6 @@ export default function Services() {
       <SectionCTA
         headline="Ready to start?"
         sub="Free 30-min strategy call. We'll show you where your current marketing is leaking revenue."
-        buttonText="Book a Strategy Call →"
       />
     </>
   );

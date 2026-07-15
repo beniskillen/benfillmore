@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Link } from 'react-router-dom';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ScrollReveal from '../components/shared/ScrollReveal';
 import { WORK_PHOTO_ITEMS } from '../lib/galleryImages';
+import RoiGuaranteeLink from '../components/shared/RoiGuaranteeLink';
 
 const VIDEO_WORK_ITEMS = [
   {
@@ -332,12 +332,9 @@ export default function Work() {
               Book a strategy call. We'll show you how the creative, offer and booking path would work for your venue.
             </p>
             <div className="mt-10">
-              <Link
-                to="/apply"
+              <RoiGuaranteeLink
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full bg-black text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
-              >
-                Book a Strategy Call →
-              </Link>
+              />
             </div>
           </ScrollReveal>
         </div>

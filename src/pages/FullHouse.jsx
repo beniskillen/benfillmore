@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  ArrowRight,
   BarChart3,
   Camera,
   Lightbulb,
@@ -13,7 +11,9 @@ import {
 } from 'lucide-react';
 import ScrollReveal from '../components/shared/ScrollReveal';
 import PillButton from '../components/shared/PillButton';
+import RoiGuaranteeLink from '../components/shared/RoiGuaranteeLink';
 import { FULL_HOUSE_IMAGES } from '../lib/galleryImages';
+import { ROI_GUARANTEE_CTA_LABEL, ROI_GUARANTEE_FORM_URL } from '../lib/cta';
 
 /* ------------------------------------------------------------------ */
 /* Design tokens — Fillmore brand system                               */
@@ -373,7 +373,7 @@ export default function FullHouse() {
               <Kicker tone="chartreuse">Customer Acquisition — Hospitality</Kicker>
               <h1 className="mt-6 font-heading font-bold uppercase tracking-tight text-white text-[clamp(2.5rem,6vw,4.75rem)] leading-[0.95]">
                 Most venues have no idea how to acquire customers.{' '}
-                <span style={{ color: CHARTREUSE }}>We build the system.</span>
+                <span style={{ color: CHARTREUSE }}>We build the system that provides clarity.</span>
               </h1>
             </motion.div>
 
@@ -394,13 +394,10 @@ export default function FullHouse() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="mt-9 flex flex-wrap items-center gap-4"
             >
-              <Link
-                to="/apply"
+              <RoiGuaranteeLink
                 className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-base font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                 style={{ background: CHARTREUSE, color: RED }}
-              >
-                See if your venue qualifies <ArrowRight size={18} strokeWidth={2.5} />
-              </Link>
+              />
               <a
                 href="#proof"
                 className="group relative inline-flex items-center gap-1 py-3.5 font-body text-base font-medium text-white/60 transition-colors hover:text-white"
@@ -495,7 +492,7 @@ export default function FullHouse() {
         <div className="mx-auto w-full max-w-7xl px-6 md:px-8">
           <SectionHead
             kicker="The problem"
-            title="The room is not the problem. The system is."
+            title="Most venues have no idea how to acquire customers."
             lede="They know how to serve people. They know how to create a good night. But the system for finding customers, converting them, tracking them and bringing them back is usually missing."
           />
           <div className="grid gap-5 md:grid-cols-2">
@@ -538,8 +535,8 @@ export default function FullHouse() {
                 owns <span style={{ color: RED_DEEP }}>the path from attention to booking</span> as a complete system.
               </p>
               <p className="mt-[18px] max-w-[62ch] font-body text-[17px] text-black/60">
-                That is what the Full House Campaign installs: one operator, one system and one
-                number that matters — paying customers you can trace back to the work.
+                That's the gap Fillmore media was built to close: one system, clear metrics &
+                decisions that help you make the decisions that matter for your growth.
               </p>
             </div>
           </ScrollReveal>
@@ -553,7 +550,7 @@ export default function FullHouse() {
             dark
             kicker="Performance evidence"
             title="The system has to prove it can bring people in."
-            lede="These are tracked results from campaigns the team runs today. The categories differ, but the mechanics are the same: find demand, convert it and measure what came back."
+            lede="Built on 10 years of agency experience. The categories differ, but the mechanics are the same: find demand, convert it and measure what came back."
           />
           <div className="grid gap-5 lg:grid-cols-3">
             {cases.map((c, i) => (
@@ -812,13 +809,10 @@ export default function FullHouse() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  to="/apply"
+                <RoiGuaranteeLink
                   className="mt-7 inline-flex w-full items-center justify-center gap-2.5 rounded-full px-8 py-3.5 text-[15px] font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                   style={{ background: CHARTREUSE, color: '#141400' }}
-                >
-                  See if your venue qualifies <ArrowRight size={18} strokeWidth={2.5} />
-                </Link>
+                />
                 <p className="mt-3.5 text-[12.5px] leading-normal text-white/50">
                   Boutique by design. We only offer the guarantee where the venue, economics and
                   offer fit the brief.
@@ -893,8 +887,8 @@ export default function FullHouse() {
                 </div>
               </div>
               <div>
-                <PillButton to="/apply" variant="primary-inverted">
-                  Start the application <ArrowRight size={18} strokeWidth={2.5} />
+                <PillButton href={ROI_GUARANTEE_FORM_URL} variant="primary-inverted">
+                  {ROI_GUARANTEE_CTA_LABEL}
                 </PillButton>
               </div>
               <p className="mt-4 text-[13px] text-white/60">
