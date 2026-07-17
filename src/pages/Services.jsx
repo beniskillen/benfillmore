@@ -57,6 +57,25 @@ const SERVICE_SECTIONS = [
   },
 ];
 
+const PAID_MEDIA_REPORTS = [
+  {
+    platform: 'Meta / Facebook Ads',
+    title: 'Facebook Ads monthly reporting',
+    body: 'Campaign performance, spend, impressions, clicks, reach, CTR and ad set breakdowns in one place.',
+    metrics: ['Spend', 'Reach', 'CTR'],
+    src: '/images/work/facebook-ads-monthly-report.png',
+    alt: 'Facebook Ads monthly report dashboard showing clicks, impressions, spend, reach, CTR and ad set performance.',
+  },
+  {
+    platform: 'Google Ads',
+    title: 'Google Ads performance overview',
+    body: 'Regional performance, audience insights and conversion signals used to guide weekly optimisation.',
+    metrics: ['Region', 'Spend', 'Impressions'],
+    src: '/images/work/google-ads-performance-overview.png',
+    alt: 'Google Ads performance overview dashboard showing performance by region and impressions by gender.',
+  },
+];
+
 const PROCESS_STEPS = [
   { step: '01', title: 'Discovery', desc: "Understand your business, your margins, and where your real growth opportunities are." },
   { step: '02', title: 'Strategy', desc: "Build a plan based on your AOV, capacity, and growth goals. No 40-page deck. Simple, clear, actionable." },
@@ -155,6 +174,64 @@ export default function Services() {
                 </ScrollReveal>
               ))}
             </div>
+
+            {section.title === 'Paid Media' && (
+              <div className="mt-16 md:mt-20">
+                <ScrollReveal>
+                  <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16 items-end">
+                    <h3 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight">
+                      The ads come with a scoreboard.
+                    </h3>
+                    <p className="font-body text-base md:text-lg leading-relaxed text-white/60 max-w-2xl lg:ml-auto">
+                      We manage Meta/Facebook and Google Ads with reporting that shows what happened, where the money went, and what needs to change next.
+                    </p>
+                  </div>
+                </ScrollReveal>
+
+                <div className="mt-12 space-y-6 md:space-y-8">
+                  {PAID_MEDIA_REPORTS.map((report, index) => (
+                    <ScrollReveal key={report.title} delay={index * 0.08}>
+                      <article className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06]">
+                        <div className="grid grid-cols-1 lg:grid-cols-[0.32fr_0.68fr]">
+                          <div className="p-6 md:p-8 lg:p-10 flex flex-col justify-between gap-8">
+                            <div>
+                              <span className="font-body text-[11px] font-semibold uppercase tracking-widest text-white/40">
+                                {report.platform}
+                              </span>
+                              <h4 className="font-heading font-bold text-2xl md:text-3xl uppercase tracking-tight mt-4">
+                                {report.title}
+                              </h4>
+                              <p className="font-body text-sm md:text-base leading-relaxed text-white/60 mt-4">
+                                {report.body}
+                              </p>
+                            </div>
+                            <div className="grid grid-cols-3 gap-3 text-center">
+                              {report.metrics.map((metric) => (
+                                <span
+                                  key={metric}
+                                  className="rounded-full border border-white/10 px-3 py-2 font-body text-[11px] font-semibold uppercase tracking-wide text-white/60"
+                                >
+                                  {metric}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                          <div className="bg-white p-2 md:p-3">
+                            <img
+                              src={report.src}
+                              alt={report.alt}
+                              loading="lazy"
+                              className="block h-auto w-full rounded-xl"
+                            />
+                          </div>
+                        </div>
+                      </article>
+                    </ScrollReveal>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <ScrollReveal delay={0.3}>
               <div className="mt-10">
                 <a href="/pricing" className={`font-body text-sm font-medium underline underline-offset-4 transition-colors ${si % 2 === 0 ? 'text-white/50 hover:text-white' : 'text-black/40 hover:text-black'}`}>

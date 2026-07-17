@@ -1,10 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   BarChart3,
   Camera,
+  Check,
+  Compass,
   Lightbulb,
   Activity,
+  MapPin,
   MessageSquare,
   UserRound,
   Plus,
@@ -14,6 +18,9 @@ import PillButton from '../components/shared/PillButton';
 import RoiGuaranteeLink from '../components/shared/RoiGuaranteeLink';
 import { FULL_HOUSE_IMAGES } from '../lib/galleryImages';
 import { ROI_GUARANTEE_CTA_LABEL, ROI_GUARANTEE_FORM_URL } from '../lib/cta';
+import benPortrait from '../assets/team/ben-killen.png';
+import noamPortrait from '../assets/team/noam-shabat.jpg';
+import melinaPortrait from '../assets/team/melina-bilotta.jpg';
 
 /* ------------------------------------------------------------------ */
 /* Design tokens — Fillmore brand system                               */
@@ -27,6 +34,30 @@ const CREAM = '#faf0da';
 const CHARTREUSE = '#E9FF80';
 
 const IMG = FULL_HOUSE_IMAGES;
+
+const launchTeam = [
+  {
+    name: 'Ben Killen',
+    role: 'Growth strategy & commercial direction',
+    body: 'Shapes the offer, commercial priorities and growth plan, then keeps every decision tied to the number the venue needs to move.',
+    image: benPortrait,
+    icon: Compass,
+  },
+  {
+    name: 'Noam Shabat',
+    role: 'Performance marketing & attribution',
+    body: 'Builds the paid acquisition and measurement engine across media, booking paths, tracking, reporting and optimisation.',
+    image: noamPortrait,
+    icon: BarChart3,
+  },
+  {
+    name: 'Melina Bilotta',
+    role: 'Creative direction & content',
+    body: 'Turns the venue experience into campaign creative that earns attention, builds desire and gives guests a reason to book.',
+    image: melinaPortrait,
+    icon: Camera,
+  },
+];
 
 const Kicker = ({ children, tone = 'red' }) => {
   const color =
@@ -242,7 +273,7 @@ const faqs = [
   },
   {
     q: 'Why is the proof from outside hospitality?',
-    a: 'Because the core mechanics are demand, tracking and conversion. The system has already produced measured results across categories; venue-specific proof is being built now.',
+    a: 'Our published Fillmore case studies prove the core mechanics of demand, tracking and conversion across other categories. Our hospitality experience was delivered during prior agency roles, so it is not ours to publish here. We can walk you through that experience in a meeting and show how it shaped the Fillmore system.',
   },
   {
     q: 'How fast do we see movement?',
@@ -468,6 +499,151 @@ export default function FullHouse() {
         </div>
       </header>
 
+      {/* SYDNEY FOUNDING PARTNERS — limited launch offer */}
+      <section className="py-24 md:py-32" style={{ background: CREAM }}>
+        <div className="mx-auto w-full max-w-7xl px-6 md:px-8">
+          <ScrollReveal>
+            <div className="grid overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm lg:grid-cols-[1.08fr_0.92fr]">
+              <div className="p-8 md:p-12 lg:p-14">
+                <div className="flex flex-wrap items-center gap-3">
+                  <Kicker>Sydney founding partners</Kicker>
+                  <span
+                    className="rounded-full px-3 py-1.5 font-heading text-[11px] font-bold uppercase tracking-[0.16em]"
+                    style={{ background: RED, color: 'white' }}
+                  >
+                    5 venues only
+                  </span>
+                </div>
+                <h2 className="mt-6 max-w-[17ch] font-heading text-4xl font-bold uppercase leading-[0.98] tracking-tight text-black md:text-6xl">
+                  Five Sydney venues. One growth team with skin in the game.
+                </h2>
+                <p className="mt-6 max-w-[62ch] font-body text-lg leading-relaxed text-black/65">
+                  Fillmore is opening five partnerships for ambitious Sydney venues ready for their
+                  next level. This is for operators who want a quality, integrated growth partner
+                  embedded in the business—not another disconnected supplier or junior account team.
+                </p>
+                <p className="mt-4 max-w-[62ch] font-body text-base leading-relaxed text-black/60">
+                  We connect strategy, offer, content, paid media, tracking and reactivation, then
+                  work against the same growth number as you. For venues that qualify, our ROI
+                  guarantee puts real accountability behind the partnership.
+                </p>
+                <div className="mt-8 flex flex-wrap items-center gap-4">
+                  <RoiGuaranteeLink
+                    className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+                    style={{ background: RED, color: 'white' }}
+                  >
+                    Apply for one of five partnerships
+                  </RoiGuaranteeLink>
+                  <a
+                    href="#launch-team"
+                    className="group relative inline-flex items-center gap-1 py-3 font-body text-sm font-semibold text-black/55 transition-colors hover:text-black"
+                  >
+                    Meet your senior team ↓
+                    <span className="absolute bottom-2 left-0 h-px w-0 bg-black transition-all duration-300 group-hover:w-full" />
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex flex-col justify-between border-t border-black/10 p-8 md:p-12 lg:border-l lg:border-t-0 lg:p-14" style={{ background: '#111111' }}>
+                <div>
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full" style={{ background: 'rgba(233,255,128,0.12)' }}>
+                    <MapPin size={21} strokeWidth={1.9} style={{ color: CHARTREUSE }} />
+                  </div>
+                  <h3 className="mt-6 font-heading text-2xl font-bold uppercase leading-none text-white md:text-3xl">
+                    Why the published proof looks different.
+                  </h3>
+                  <p className="mt-5 text-[15px] leading-relaxed text-white/65">
+                    Our public case studies come from outside hospitality. They demonstrate that the
+                    Fillmore team can build measurable systems for demand, conversion and reliable
+                    growth—not just produce marketing activity.
+                  </p>
+                  <p className="mt-4 text-[15px] leading-relaxed text-white/65">
+                    Hospitality is where we are now focusing that capability. Our team knows the
+                    category intimately from prior agency experience, and those years inside venue
+                    growth shaped the Fillmore system: the clarity, measurement and joined-up execution
+                    hospitality operators rarely get from one partner.
+                  </p>
+                </div>
+                <div className="mt-8 border-t border-white/10 pt-6">
+                  <p className="text-[13.5px] leading-relaxed text-white/50">
+                    The hospitality work was completed within our previous agency roles, so client
+                    confidentiality means it cannot be published on this website. Ask us in a meeting:
+                    we can talk through the experience and show exactly how it informed the system.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* SENIOR TEAM — the people embedded in each launch partnership */}
+      <section id="launch-team" className="bg-background py-24 md:py-32">
+        <div className="mx-auto w-full max-w-7xl px-6 md:px-8">
+          <SectionHead
+            kicker="The team inside your business"
+            title="Senior people stay close to the work."
+            lede="The five Sydney partners get Fillmore's senior strategy, performance and creative team embedded in the business—working together, in the detail, with no junior hand-off."
+          />
+          <div className="grid gap-5 md:grid-cols-3">
+            {launchTeam.map((member, i) => {
+              const Icon = member.icon;
+
+              return (
+                <ScrollReveal key={member.name} delay={i * 0.08} className="h-full">
+                  <article className="h-full overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+                    <div className="aspect-[4/3] overflow-hidden bg-black/5">
+                      <img
+                        src={member.image}
+                        alt={`${member.name} portrait`}
+                        className="h-full w-full object-cover object-top transition-transform duration-500 hover:scale-[1.02]"
+                      />
+                    </div>
+                    <div className="p-7 md:p-8">
+                      <div className="flex items-start justify-between gap-4">
+                        <div>
+                          <h3 className="font-heading text-2xl font-bold uppercase leading-none text-black">
+                            {member.name}
+                          </h3>
+                          <p className="mt-2 text-sm font-semibold" style={{ color: RED }}>
+                            {member.role}
+                          </p>
+                        </div>
+                        <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full" style={{ background: 'rgba(150,22,33,0.08)' }}>
+                          <Icon size={19} strokeWidth={1.9} style={{ color: RED }} />
+                        </div>
+                      </div>
+                      <p className="mt-5 text-[14.5px] leading-relaxed text-black/60">{member.body}</p>
+                    </div>
+                  </article>
+                </ScrollReveal>
+              );
+            })}
+          </div>
+
+          <ScrollReveal delay={0.12}>
+            <div className="mt-6 flex flex-col gap-5 rounded-2xl border border-black/10 bg-white p-7 sm:flex-row sm:items-center sm:justify-between md:p-8">
+              <div className="flex max-w-[74ch] gap-4">
+                <Check className="mt-0.5 flex-none" size={21} strokeWidth={2.2} style={{ color: RED }} />
+                <p className="text-[14.5px] leading-relaxed text-black/60">
+                  <strong className="text-black">Hospitality experience is available on request.</strong>{' '}
+                  We cannot show work owned by previous agencies and their clients on this site, but
+                  we can discuss it in a meeting and connect the experience directly to the Fillmore
+                  system your venue will use.
+                </p>
+              </div>
+              <Link
+                to="/about"
+                className="flex-none font-heading text-sm font-bold uppercase tracking-[0.12em] transition-opacity hover:opacity-60"
+                style={{ color: RED }}
+              >
+                More about Fillmore →
+              </Link>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* CHANNEL STRIP — marquee, Fillmore-style */}
       <div className="overflow-hidden border-y border-black/5 py-5" style={{ background: CREAM }}>
         <div className="animate-marquee flex items-center" style={{ width: 'max-content' }}>
@@ -492,7 +668,7 @@ export default function FullHouse() {
         <div className="mx-auto w-full max-w-7xl px-6 md:px-8">
           <SectionHead
             kicker="The problem"
-            title="Most venues have no idea how to acquire customers."
+            title="Most venues have no idea where bookings come from."
             lede="They know how to serve people. They know how to create a good night. But the system for finding customers, converting them, tracking them and bringing them back is usually missing."
           />
           <div className="grid gap-5 md:grid-cols-2">
@@ -550,7 +726,7 @@ export default function FullHouse() {
             dark
             kicker="Performance evidence"
             title="The system has to prove it can bring people in."
-            lede="Built on 10 years of agency experience. The categories differ, but the mechanics are the same: find demand, convert it and measure what came back."
+            lede="Our public case studies come from other categories. They prove the mechanics of reliable growth: find demand, convert it and measure what came back. Our hospitality experience comes from prior agency roles and is available to discuss on request."
           />
           <div className="grid gap-5 lg:grid-cols-3">
             {cases.map((c, i) => (
@@ -592,8 +768,10 @@ export default function FullHouse() {
               ))}
             </div>
             <p className="mt-6 max-w-[74ch] text-[13.5px] text-white/50">
-              These are not hospitality case studies yet. They show the underlying engine: offer,
-              creative, media, tracking and conversion. That engine is now being pointed at venues.
+              These are not hospitality case studies. They show the underlying engine: offer,
+              creative, media, tracking and conversion. The team's prior hospitality work cannot be
+              published here because it was completed within other agencies, but we can talk through
+              it in a meeting and show how it shaped the Fillmore system for venues.
             </p>
           </ScrollReveal>
         </div>
