@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Link } from 'react-router-dom';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ScrollReveal from '../components/shared/ScrollReveal';
+import { WORK_PHOTO_ITEMS } from '../lib/galleryImages';
+import RoiGuaranteeLink from '../components/shared/RoiGuaranteeLink';
 
-const WORK_ITEMS = [
+const VIDEO_WORK_ITEMS = [
   {
-    id: 1,
+    id: 'video-content-reel',
     type: 'video',
     category: ['Hospitality', 'UGC', 'Video'],
     label: 'Hospitality',
@@ -17,7 +18,7 @@ const WORK_ITEMS = [
     size: 'large',
   },
   {
-    id: 2,
+    id: 'video-promo',
     type: 'video',
     category: ['Hospitality', 'Video'],
     label: 'Hospitality',
@@ -28,27 +29,7 @@ const WORK_ITEMS = [
     size: 'tall',
   },
   {
-    id: 3,
-    type: 'photo',
-    category: ['Hospitality', 'Photo'],
-    label: 'Hospitality',
-    project: 'Food Photography',
-    kind: 'Food Photography',
-    src: 'https://media.base44.com/images/public/69fac9355f793a9829c2542e/b97a3ab43_DSC04405.jpg',
-    size: 'small',
-  },
-  {
-    id: 4,
-    type: 'photo',
-    category: ['Hospitality', 'Photo'],
-    label: 'Hospitality',
-    project: 'Food Photography',
-    kind: 'Food Photography',
-    src: 'https://media.base44.com/images/public/69fac9355f793a9829c2542e/022c48bdd_DSC03812.jpg',
-    size: 'small',
-  },
-  {
-    id: 5,
+    id: 'video-teaser',
     type: 'video',
     category: ['Hospitality', 'UGC'],
     label: 'Hospitality',
@@ -59,17 +40,7 @@ const WORK_ITEMS = [
     size: 'wide',
   },
   {
-    id: 6,
-    type: 'photo',
-    category: ['Hospitality', 'Photo'],
-    label: 'Hospitality',
-    project: 'Bar Photography',
-    kind: 'Brand Photography',
-    src: 'https://media.base44.com/images/public/69fac9355f793a9829c2542e/f0cf50d1c_DSC01469.jpg',
-    size: 'large',
-  },
-  {
-    id: 7,
+    id: 'video-ugc',
     type: 'video',
     category: ['Hospitality', 'UGC', 'Video'],
     label: 'Hospitality',
@@ -79,39 +50,11 @@ const WORK_ITEMS = [
     poster: null,
     size: 'tall',
   },
-  {
-    id: 8,
-    type: 'photo',
-    category: ['Hospitality', 'Photo'],
-    label: 'Hospitality',
-    project: 'Venue Photography',
-    kind: 'Brand Photography',
-    src: 'https://media.base44.com/images/public/69fac9355f793a9829c2542e/4c0f30115_DSC00979_1.jpg',
-    size: 'small',
-  },
-  {
-    id: 9,
-    type: 'photo',
-    category: ['Hospitality', 'Photo'],
-    label: 'Hospitality',
-    project: 'Food Photography',
-    kind: 'Food Photography',
-    src: 'https://media.base44.com/images/public/69fac9355f793a9829c2542e/903e14c29_DSC09250.jpg',
-    size: 'wide',
-  },
-  {
-    id: 10,
-    type: 'photo',
-    category: ['Hospitality', 'Photo'],
-    label: 'Hospitality',
-    project: 'Portrait',
-    kind: 'Brand Photography',
-    src: 'https://media.base44.com/images/public/69fac9355f793a9829c2542e/658d71de7_DSC09622-portrait.jpg',
-    size: 'small',
-  },
 ];
 
-const FILTERS = ['All', 'Hospitality', 'Video', 'Photo', 'UGC'];
+const WORK_ITEMS = [...VIDEO_WORK_ITEMS, ...WORK_PHOTO_ITEMS];
+
+const FILTERS = ['All', 'Hospitality', 'Video', 'Photo', 'Food', 'Beverage', 'Venue', 'Lifestyle', 'People', 'UGC'];
 
 // CSS grid span classes by size
 const SIZE_CLASSES = {
@@ -131,6 +74,7 @@ const ASPECT_CLASSES = {
 function WorkTile({ item, onClick }) {
   const videoRef = useRef(null);
   const tileRef = useRef(null);
+  const visibleTags = item.category.filter((tag) => !['Hospitality', 'Photo'].includes(tag)).slice(0, 3);
 
   useEffect(() => {
     if (item.type !== 'video') return;
@@ -152,10 +96,18 @@ function WorkTile({ item, onClick }) {
     <div
       ref={tileRef}
       onClick={() => onClick(item)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          onClick(item);
+        }
+      }}
       className={`${SIZE_CLASSES[item.size]} cursor-pointer group relative overflow-hidden rounded-xl bg-black`}
       style={{ minHeight: item.size === 'tall' ? '300px' : undefined }}
     >
-      <div className={`w-full h-full ${item.size === 'large' || item.size === 'small' ? 'aspect-square' : item.size === 'tall' ? '' : 'aspect-video'}`}>
+      <div className={`w-full h-full ${item.size === 'tall' ? '' : ASPECT_CLASSES[item.size]}`}>
         {item.type === 'video' ? (
           <video
             ref={videoRef}
@@ -171,15 +123,31 @@ function WorkTile({ item, onClick }) {
         ) : (
           <img
             src={item.src}
-            alt={item.project}
+            alt={item.alt || item.project}
             loading="lazy"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
           />
         )}
       </div>
 
-      {/* Hover overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 md:group-focus-within:opacity-100 transition-opacity duration-300" />
+      <div className="absolute inset-x-0 bottom-0 p-3 md:p-4 text-white opacity-100 md:opacity-0 md:translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0 md:group-focus-within:opacity-100 md:group-focus-within:translate-y-0 transition-all duration-300">
+        <p className="font-heading font-bold text-sm md:text-base uppercase tracking-tight">
+          {item.label}
+        </p>
+        <p className="font-body text-xs text-white/70 mt-0.5">
+          {item.kind}
+        </p>
+        {visibleTags.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 mt-2">
+            {visibleTags.map((tag) => (
+              <span key={tag} className="rounded-full bg-white/15 px-2 py-0.5 font-body text-[10px] uppercase tracking-wide text-white/80">
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
@@ -251,7 +219,7 @@ function Lightbox({ items, activeIndex, onClose, onPrev, onNext }) {
           ) : (
             <img
               src={item.src}
-              alt={item.project}
+              alt={item.alt || item.project}
               className="w-full object-contain"
               style={{ maxHeight: '70vh' }}
             />
@@ -262,6 +230,13 @@ function Lightbox({ items, activeIndex, onClose, onPrev, onNext }) {
           <div className="flex items-center justify-center gap-3 mt-2">
             <span className="font-body text-xs px-3 py-1 rounded-full bg-white/10 text-white/60">{item.label}</span>
             <span className="font-body text-xs px-3 py-1 rounded-full bg-white/10 text-white/60">{item.kind}</span>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-2 mt-3">
+            {item.category.filter((tag) => tag !== 'Hospitality').map((tag) => (
+              <span key={tag} className="font-body text-[11px] px-2.5 py-1 rounded-full bg-white/5 text-white/45 uppercase tracking-wide">
+                {tag}
+              </span>
+            ))}
           </div>
         </div>
       </motion.div>
@@ -294,12 +269,12 @@ export default function Work() {
           <ScrollReveal>
             <span className="font-body text-xs font-semibold uppercase tracking-widest text-black/40">Work</span>
             <h1 className="font-heading font-bold text-[clamp(2.5rem,8vw,7rem)] leading-[0.9] uppercase tracking-tight text-black mt-4">
-              The work speaks
+              Creative built
               <br />
-              for itself.
+              to help venues book.
             </h1>
             <p className="font-body text-black/60 text-lg md:text-xl leading-relaxed mt-6 max-w-2xl">
-              Creative, UGC, photography, and content produced in-house for hospitality brands.
+              Food, room, people and proof. The assets are built to support an offer, not just fill a feed.
             </p>
           </ScrollReveal>
         </div>
@@ -351,18 +326,15 @@ export default function Work() {
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-black">
-              Want work like this for your brand?
+              Want work like this tied to bookings?
             </h2>
             <p className="font-body text-black/60 text-lg mt-6 max-w-xl mx-auto">
-              Book a strategy call. We'll show you the creative we'd produce for your business.
+              Book a strategy call. We'll show you how the creative, offer and booking path would work for your venue.
             </p>
             <div className="mt-10">
-              <Link
-                to="/apply"
+              <RoiGuaranteeLink
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full bg-black text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
-              >
-                Book a Strategy Call →
-              </Link>
+              />
             </div>
           </ScrollReveal>
         </div>

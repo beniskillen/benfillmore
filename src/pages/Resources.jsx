@@ -1,30 +1,31 @@
 import ScrollReveal from '../components/shared/ScrollReveal';
 import PillButton from '../components/shared/PillButton';
+import { ROI_GUARANTEE_CTA_LABEL, ROI_GUARANTEE_FORM_URL } from '../lib/cta';
 
 const TOPICS = [
   {
-    title: 'How to Lower Customer Acquisition Cost on Meta Ads',
+    title: 'Why Most Venue Marketing Does Not Acquire Customers',
     category: 'Paid Media',
     summary:
-      "Most businesses running Meta ads are paying too much to acquire a customer. The root cause is usually a mismatch between audience targeting, creative format, and landing page intent. When these three elements are aligned, CAC drops. When they are not, you burn budget chasing the wrong people with the wrong message. The fix starts with creative -- specifically, testing UGC-style content against polished brand ads. In most hospitality and e-commerce accounts, raw and authentic outperforms produced at 2:1. Combine that with tighter audience segmentation using first-party data, and you can reduce acquisition cost by 30-50% without cutting spend.",
+      "Most venues are not short on content. They are short on a system. The offer, creative, audience, booking path and follow-up are usually disconnected. That is why spend goes out and the owner still cannot say where the next booking came from. The fix is not more posting. It is a clearer demand loop: define the guest, give them a reason to book, track the booking, then bring them back.",
   },
   {
-    title: 'Why Hospitality Brands Underinvest in Retargeting',
+    title: 'Why Past Guests Are the Cheapest Customers to Acquire',
     category: 'Hospitality',
     summary:
-      "A guest who visited your venue page but did not book is your warmest lead. Yet most hospitality brands spend 90% of their ad budget on cold prospecting and leave retargeting as an afterthought. A properly structured retargeting funnel -- with separate ads for page visitors, menu viewers, and abandoned booking flows -- consistently delivers the lowest cost-per-reservation in any account. The key is sequenced messaging: first, a reminder with social proof; second, a direct offer or reason to act now. Restaurants and hotels that build this architecture see 20-40% more conversions from existing traffic before spending another dollar on acquisition.",
+      "A guest who booked once, visited the menu, joined Wi-Fi or opened an email already knows the venue. Most venues still spend more on cold audiences than on bringing those people back. A simple reactivation system uses recency, spend and interest to send the right offer at the right time. It is usually the fastest way to create bookings before scaling new demand.",
   },
   {
-    title: 'The UGC Content Framework That Actually Drives E-Commerce Sales',
-    category: 'E-Commerce',
+    title: 'Creative Only Works When It Has a Booking Job',
+    category: 'Creative',
     summary:
-      "User-generated content has become the default creative format for high-performing DTC brands, but most UGC is produced without a brief, without a performance goal, and without an understanding of what drives someone to purchase. The brands seeing consistent return on UGC follow a framework: hook in the first two seconds, product demonstration in the middle, a clear single call to action at the end. They also test creators by niche, not by follower count -- a micro-creator with 8,000 followers in your exact product vertical will almost always outperform a generalist with 200,000. Volume matters too: brands producing 20+ assets per month have more signal to optimise from.",
+      "Good creative makes the venue feel worth choosing. Great creative also gives the customer a clear next step. For venues, that means the shoot, hook, copy and call to action need to support the same offer. Food, room, people and proof all matter, but only when they help someone decide to book.",
   },
   {
-    title: 'Google Ads vs Meta Ads for Lead Generation: Which Channel Wins?',
+    title: 'Meta Creates Demand. Google Captures It.',
     category: 'Strategy',
     summary:
-      "The honest answer is both -- but at different stages of the funnel. Google Search captures demand that already exists. If someone is searching for a restaurant marketing agency in Sydney, they are actively looking for a solution, and Google is where you intercept them. Meta creates demand. It puts your offer in front of people who have not thought to search yet, building awareness and intent over time. For most service businesses, the highest-performing setup runs Google Search for branded and high-intent terms, and uses Meta for prospecting and retargeting. Running one without the other leaves revenue on the table. The ratio of spend between them depends on your category, your average deal size, and your current brand awareness.",
+      "A venue needs both sides of the system. Meta puts the offer in front of the right local audience before they are searching. Google catches people already looking for somewhere to book. Retargeting keeps the venue in front of warm prospects. The mix depends on demand, location, offer and how much customer data the venue already owns.",
   },
 ];
 
@@ -39,12 +40,12 @@ export default function Resources() {
               Performance Marketing Insights
             </p>
             <h1 className="font-heading font-bold text-[clamp(2rem,5.5vw,4.5rem)] leading-[0.95] uppercase tracking-tight text-white max-w-5xl">
-              What we know about growing hospitality brands with paid media and content.
+              Simple notes on demand, bookings and repeat guests.
             </h1>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <p className="text-white/60 text-lg md:text-xl mt-8 max-w-3xl leading-relaxed">
-              These are the frameworks, observations, and strategies we apply every day across hospitality accounts. Not theory -- patterns we have seen work at scale, across hundreds of campaigns and millions in managed spend.
+              Most venues do not have a clear way to turn attention into bookings. These notes explain the parts of the system: offer, audience, creative, media, booking path, tracking and reactivation.
             </p>
           </ScrollReveal>
         </div>
@@ -55,13 +56,13 @@ export default function Resources() {
         <div className="max-w-3xl mx-auto px-6 md:px-8">
           <ScrollReveal>
             <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed">
-              Performance marketing for hospitality businesses operates on different rules than most agencies acknowledge. A restaurant group scaling across three suburbs has completely different attribution needs than a hotel or venue brand. The platforms are the same -- Meta, Google, TikTok -- but the strategy, creative format, audience architecture, and measurement frameworks need to be rebuilt from the ground up for this vertical.
+              Hospitality marketing is usually split into pieces: someone posts, someone runs ads, someone checks bookings, and no one owns the path from attention to booking. That is the problem Fillmore is built to solve.
             </p>
             <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6">
-              At Fillmore, our paid media work is always paired with in-house creative production. This matters because the biggest variable in any paid campaign is not the targeting -- it is the creative. The businesses that consistently grow are the ones testing more assets, moving faster, and treating creative as a performance lever, not a branding exercise.
+              The mechanism is simple. Build a strong reason to book. Put it in front of the right people. Track what turns into bookings. Bring past guests back. Then use the data to make the next campaign cheaper and sharper.
             </p>
             <p className="font-body text-black/70 text-lg md:text-xl leading-relaxed mt-6">
-              The resources below cover the specific challenges we solve most often: reducing customer acquisition cost, building retargeting infrastructure, producing UGC that converts, and choosing the right channels for your growth stage. If any of them describe a problem you are facing right now, the next step is a strategy session.
+              The resources below cover the pieces we see break most often. If they describe your venue, the next step is a strategy session.
             </p>
           </ScrollReveal>
         </div>
@@ -95,14 +96,14 @@ export default function Resources() {
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-4xl md:text-6xl uppercase tracking-tight">
-              Want us to apply this to your business?
+              Want us to apply this to your venue?
             </h2>
             <p className="font-body text-white/60 text-lg md:text-xl mt-6 max-w-xl mx-auto">
-              Book a 30-minute strategy session. We will look at your current setup and tell you exactly where the gaps are.
+              Book a 30-minute strategy session. We will look at how customers find you now and where the system is leaking.
             </p>
             <div className="mt-10">
-              <PillButton to="/apply" variant="primary-inverted">
-                Book a Strategy Call
+              <PillButton href={ROI_GUARANTEE_FORM_URL} variant="primary-inverted">
+                {ROI_GUARANTEE_CTA_LABEL}
               </PillButton>
             </div>
           </ScrollReveal>

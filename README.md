@@ -1,5 +1,16 @@
 **Welcome to your Base44 project** 
 
+---
+
+## Update — Full House home page
+
+- `src/pages/FullHouse.jsx` — the Full House Campaign page, rebuilt in the Fillmore design system (League Spartan headings, red `#961621` / cream `#faf0da` / chartreuse `#E9FF80` palette, pill buttons, framer-motion scroll reveals + staggered hero, marquee channel strip, recoloured attribution/compounding SVG visuals).
+- Routing (`src/App.jsx`): `/` and `/full-house` now render the Full House page inside the existing `SiteLayout` (site Navbar + Footer). The previous homepage is preserved at `/overview`.
+- Images: the page currently uses hosted Unsplash stand-ins (see `IMG` at the top of `FullHouse.jsx`). Swap in your shoot assets (`hero`, `quiet`, `data`, `service`, `exterior`) when ready — either as URLs or local imports from `src/assets/full-house/`.
+
+---
+
+
 **About**
 
 View and Edit  your app on [Base44.com](http://Base44.com) 

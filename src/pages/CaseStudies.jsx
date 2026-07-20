@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ScrollReveal from '../components/shared/ScrollReveal';
 import PillButton from '../components/shared/PillButton';
 import { CASE_STUDIES } from '../lib/caseStudiesData';
+import { ROI_GUARANTEE_CTA_LABEL, ROI_GUARANTEE_FORM_URL } from '../lib/cta';
 
 function getIndustryColor(industry) {
   const i = industry.toLowerCase();
@@ -123,8 +124,8 @@ function CaseStudyDetail({ study, onClose }) {
         </div>
 
         <div className="mt-14 pt-8 border-t border-black/5">
-          <PillButton to="/apply">
-            Book a strategy call →
+          <PillButton href={ROI_GUARANTEE_FORM_URL}>
+            {ROI_GUARANTEE_CTA_LABEL}
           </PillButton>
         </div>
       </motion.div>
@@ -149,10 +150,10 @@ export default function CaseStudies() {
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <ScrollReveal>
             <h1 className="font-heading font-bold text-[clamp(2.2rem,6vw,5rem)] leading-[0.95] uppercase tracking-tight text-black">
-              Real work. Strategic thinking.
+              Real work. Clear commercial thinking.
             </h1>
             <p className="font-body text-black/60 text-lg md:text-xl leading-relaxed mt-6 max-w-2xl">
-              Some of these are clients we've worked with. Some are brands we'd love to work with — broken down to show how we think and how we'd grow them. Either way: real strategy, no fluff.
+              Some are clients we've worked with. Some are brands we have broken down to show how we would bring the right customers in. Either way: offer, creative, media, tracking and the commercial logic behind it.
             </p>
           </ScrollReveal>
         </div>
@@ -196,7 +197,7 @@ export default function CaseStudies() {
                 Strategic Example Breakdowns
               </h3>
               <p className="font-body text-white/60 text-base leading-relaxed mt-3 max-w-xl mx-auto">
-                In-depth breakdowns showing exactly how we'd grow real hospitality brands. Real strategy, no fluff.
+                In-depth breakdowns showing how we would build booking systems for real hospitality brands.
               </p>
             </div>
           </ScrollReveal>
@@ -220,14 +221,14 @@ function SectionCTABottom() {
       <div className="max-w-4xl mx-auto px-6 md:px-8 text-center">
         <ScrollReveal>
           <h2 className="font-heading font-bold text-4xl md:text-6xl uppercase tracking-tight">
-            Want results like these?
+            Want a system like this?
           </h2>
           <p className="font-body text-white/60 text-lg md:text-xl mt-6 max-w-xl mx-auto">
-            Free 30-min strategy call. No pitch deck. No fluff.
+            Free 30-minute strategy call. We look at the booking gap and what we would fix first.
           </p>
           <div className="mt-10">
-            <PillButton to="/apply" variant="primary-inverted">
-              Book a Strategy Call →
+            <PillButton href={ROI_GUARANTEE_FORM_URL} variant="primary-inverted">
+              {ROI_GUARANTEE_CTA_LABEL}
             </PillButton>
           </div>
         </ScrollReveal>

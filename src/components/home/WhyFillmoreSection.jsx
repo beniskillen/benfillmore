@@ -4,15 +4,15 @@ import ScrollReveal from '../shared/ScrollReveal';
 const POINTS = [
   {
     title: 'No handoffs.',
-    desc: 'The person you talk to is the person doing the work.',
+    desc: 'The people you talk to stay close to the work and the numbers.',
   },
   {
-    title: 'No vanity metrics.',
-    desc: 'We track bookings, purchases, leads, and revenue.',
+    title: 'No fake scoreboards.',
+    desc: 'We track bookings, covers, revenue and return visits.',
   },
   {
     title: 'No templated strategies.',
-    desc: "Every brand gets work built around its margins and goals.",
+    desc: "Every venue gets work built around its offer, economics and slow nights.",
   },
 ];
 

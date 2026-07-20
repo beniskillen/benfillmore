@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ScrollReveal from '../components/shared/ScrollReveal';
 import MediaCarousel from '../components/home/MediaCarousel';
 import { CASE_STUDIES } from '../lib/caseStudiesData';
+import RoiGuaranteeLink from '../components/shared/RoiGuaranteeLink';
 
 const OUTCOMES = [
   {
@@ -27,8 +28,8 @@ const OUTCOMES = [
 
 const BREAKS_FIRST = [
   { title: 'Creative fatigue.', desc: "Your winning ad stops working at 2-3x your usual spend. Frequency climbs. CTR drops." },
-  { title: 'Rising CACs.', desc: "What used to cost A$30 to acquire now costs A$60. Margins compress." },
-  { title: 'Weak retention.', desc: "All your revenue depends on new acquisition. Repeat purchase rate is below 20%." },
+  { title: 'Rising CACs.', desc: "What used to cost A$30 to win now costs A$60. Margins compress." },
+  { title: 'Weak retention.', desc: "All your revenue depends on new buyers. Repeat purchase rate is below 20%." },
   { title: 'Scaling too fast.', desc: "You doubled spend overnight. ROAS halved. Now you don't know if it's the algorithm, the creative, or the audience." },
   { title: 'Poor attribution.', desc: "Meta says 4x ROAS. Shopify says 2x. You don't know who to trust." },
   { title: 'Low repeat purchase rate.', desc: "Your AOV is fine. Your first-purchase margin is fine. But customers don't come back." },
@@ -118,13 +119,10 @@ export default function Ecommerce() {
               We help DTC brands turn ad spend into revenue. Lower CAC. Higher LTV. Creative that converts. Systems that scale e-commerce profitably.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
-              <Link
-                to="/apply"
+              <RoiGuaranteeLink
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                 style={{ background: '#EF6A3F' }}
-              >
-                Book a Strategy Call →
-              </Link>
+              />
               <Link
                 to="/pricing"
                 className="inline-flex items-center font-body font-medium text-base py-3.5 relative group"
@@ -281,13 +279,10 @@ export default function Ecommerce() {
               Free 30-min strategy call. We'll show you where your account is leaking revenue, what's limiting scale, and what we'd fix first.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                to="/apply"
+              <RoiGuaranteeLink
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-black transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
                 style={{ background: '#D9F855' }}
-              >
-                Book a Strategy Call →
-              </Link>
+              />
               <Link
                 to="/pricing"
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full text-white border border-white/30 transition-all duration-200 hover:bg-white hover:text-black"

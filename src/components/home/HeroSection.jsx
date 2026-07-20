@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { GALLERY_BY_ID } from '../../lib/galleryImages';
+import RoiGuaranteeLink from '../shared/RoiGuaranteeLink';
+
+const HERO_IMAGE = GALLERY_BY_ID['table-manners-martini'];
 
 export default function HeroSection() {
   return (
@@ -16,9 +20,9 @@ export default function HeroSection() {
               transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
             >
               <h1 className="font-heading font-bold text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.95] uppercase tracking-tight text-white">
-                Fill every table,
+                Most venues are guessing where new bookings
                 <br />
-                cart and pipeline.
+                come from.
               </h1>
             </motion.div>
 
@@ -29,7 +33,7 @@ export default function HeroSection() {
               className="mt-6 max-w-xl"
             >
               <p className="font-body text-white/70 text-lg md:text-xl leading-relaxed">
-                We're growth operators for hospitality brands. We don't just run marketing. We build the systems that turn ad spend into revenue, content into bookings, and seats into regulars.
+                We install the system: offer, content, paid media, tracking and reactivation. So bookings stop depending on luck.
               </p>
             </motion.div>
 
@@ -39,24 +43,21 @@ export default function HeroSection() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="mt-8 flex flex-col sm:flex-row items-start gap-4"
             >
-              <Link
-                to="/apply"
+              <RoiGuaranteeLink
                 className="inline-flex items-center font-semibold text-base px-8 py-3.5 rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                 style={{ background: '#E9FF80', color: '#961621' }}
-              >
-                Book a Strategy Call →
-              </Link>
+              />
               <Link
                 to="/work"
                 className="font-body text-white/60 font-medium text-base relative group inline-flex items-center gap-1 py-3.5 hover:text-white transition-colors"
               >
-                See how we'd grow your brand →
+                See how the system works →
                 <span className="absolute bottom-2 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full" />
               </Link>
             </motion.div>
           </div>
 
-          {/* Right — video tile */}
+          {/* Right media tile */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -73,21 +74,23 @@ export default function HeroSection() {
                 background: '#0d0d0d',
               }}
             >
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
+              <img
+                src={HERO_IMAGE.src}
+                alt={HERO_IMAGE.alt}
                 className="w-full h-full object-cover"
-                onError={(e) => { e.target.style.display = 'none'; }}
-              >
-                <source src="https://media.base44.com/videos/public/69fac9355f793a9829c2542e/6aa7f289b_Teaser1.mp4" type="video/mp4" />
-              </video>
+              />
               <div
                 className="absolute inset-0"
                 style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 60%)' }}
               />
-
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="font-heading font-bold text-white text-lg uppercase tracking-tight">
+                  {HERO_IMAGE.client}
+                </p>
+                <p className="font-body text-white/65 text-xs mt-1">
+                  {HERO_IMAGE.kind}
+                </p>
+              </div>
             </div>
           </motion.div>
 
